@@ -26,7 +26,10 @@
             android:label="@string/title_activity_login1" />
         <activity
             android:name=".controllers.Register"
-            android:label="@string/title_activity_register"></activity>
+            android:label="@string/title_activity_register" />
+        <activity
+            android:name=".controllers.ApplicationAcitivity"
+            android:label="@string/title_activity_application_acitivity"></activity>
     </application>
 
 </manifest>
