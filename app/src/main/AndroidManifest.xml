@@ -22,9 +22,8 @@
             </intent-filter>
         </activity>
 <<<<<<< HEAD
-        <activity android:name=".Login" />
-        <activity android:name=".Register"></activity>
-=======
+
+        =======
         <activity
             android:name=".controllers.Login"
             android:label="@string/title_activity_login1" />
