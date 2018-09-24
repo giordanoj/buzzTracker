@@ -5,7 +5,7 @@ import android.app.Activity;
 
 import com.cs2340.team.buzztracker.R;
 
-public class RegisterActivity extends Activity {
+public class Register extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
