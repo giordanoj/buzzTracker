@@ -4,10 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-<<<<<<< HEAD
-    tools:context=".Register">
-=======
-    tools:context=".controllers.Register">
->>>>>>> junchen
+    tools:context=".controllers.Login">
 
 </android.support.constraint.ConstraintLayout>
