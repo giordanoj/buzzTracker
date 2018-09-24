@@ -40,7 +40,17 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/cancel"
+        android:layout_marginBottom="96dp"
         android:text="Login" />
+
+    <Button
+        android:id="@+id/cancel"
+        android:layout_width="368dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:text="Cancel" />
 
 </RelativeLayout>
