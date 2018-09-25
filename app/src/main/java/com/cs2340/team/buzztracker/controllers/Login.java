@@ -47,7 +47,7 @@ public class Login extends Activity {
                 public void onClick(View v) {
 
                     if(loginUsername.getText().toString().equals("User") &&
-                            loginPassword.getText().toString().equals("Password")) {
+                            loginPassword.getText().toString().equals("Pass")) {
                         Intent loginA = new Intent(Login.this, ApplicationAcitivity.class);
                         startActivity(loginA);
                     } else {

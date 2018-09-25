@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".controllers.Register">
 
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="332dp" />
 </android.support.constraint.ConstraintLayout>
