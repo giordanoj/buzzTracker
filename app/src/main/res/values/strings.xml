@@ -17,4 +17,5 @@
     <string name="title_activity_login1">LoginActivity1</string>
     <string name="title_activity_register">RegisterActivity</string>
     <string name="title_activity_application_acitivity">ApplicationAcitivity</string>
+    <string name="title_activity_user_profile">UserProfile</string>
 </resources>

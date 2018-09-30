@@ -29,7 +29,10 @@
             android:label="@string/title_activity_register" />
         <activity
             android:name=".controllers.ApplicationAcitivity"
-            android:label="@string/title_activity_application_acitivity"></activity>
+            android:label="@string/title_activity_application_acitivity" />
+        <activity
+            android:name=".controllers.UserProfile"
+            android:label="@string/title_activity_user_profile"></activity>
     </application>
 
 </manifest>

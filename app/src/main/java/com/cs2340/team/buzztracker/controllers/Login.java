@@ -14,6 +14,10 @@ import org.w3c.dom.Text;
 
 public class Login extends Activity {
 
+    private EditText loginUsername;
+    private EditText loginPassword;
+    private TextView badlogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,14 +32,15 @@ public class Login extends Activity {
             public void onClick(View v) {
                 Intent cancel = new Intent(Login.this, MainActivity.class);
                 startActivity(cancel);
-            }}
+            }
+        }
 
 
         );
 
-        final EditText loginUsername = (EditText) findViewById(R.id.username);
-        final EditText loginPassword = (EditText) findViewById(R.id.passwordText);
-        final TextView badlogin = (TextView) findViewById(R.id.badLogin);
+        loginUsername = (EditText) findViewById(R.id.username);
+        loginPassword = (EditText) findViewById(R.id.passwordText);
+        badlogin = (TextView) findViewById(R.id.badLogin);
         badlogin.setVisibility(View.INVISIBLE);
         Button loginBtn = (Button) findViewById(R.id.loginbtn1);
 
