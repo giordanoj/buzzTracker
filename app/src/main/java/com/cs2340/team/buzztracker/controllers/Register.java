@@ -2,8 +2,6 @@ package com.cs2340.team.buzztracker.controllers;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.app.Activity;
-import android.os.Parcelable;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
@@ -26,7 +24,7 @@ public class Register extends AppCompatActivity {
     private EditText _name;
     private TextView idField;
     private Model _model;
-    private TextView badlogin;
+    private TextView badLogin;
 
 
     /* ***********************
@@ -47,12 +45,12 @@ public class Register extends AppCompatActivity {
         _username =  (EditText) findViewById(R.id.usernameText);
         _password = (EditText) findViewById(R.id.passwordText);
         idField = (TextView) findViewById(R.id.idView);
-        badlogin = (TextView)findViewById(R.id.badLogin);
+        badLogin = (TextView)findViewById(R.id.badLogin);
 
 
         _model = Model.getInstance();
 
-         badlogin.setVisibility(View.INVISIBLE);
+         badLogin.setVisibility(View.INVISIBLE);
 
         Button cancelButton = (Button) findViewById(R.id.cancelButton);
         cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -72,7 +70,7 @@ public class Register extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                if (usernameAvailable()) {
+                if (_model.usernameAvailable(_username.toString())) {
                     Log.d("Edit","Done");
                     Intent register = new Intent(Register.this, ApplicationAcitivity.class);
                     String username1 = _username.getText().toString();
@@ -83,7 +81,7 @@ public class Register extends AppCompatActivity {
                     startActivity(register);
 
                 } else {
-                    badlogin.setVisibility(View.VISIBLE);
+                    badLogin.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -97,19 +95,5 @@ public class Register extends AppCompatActivity {
         useradapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userSpinner.setAdapter(useradapter);
 
-
-
-    }
-
-    private boolean usernameAvailable() {
-        for (User u : _model.getList()) {
-            Log.d("Edit","Testing User Availiabilty");
-            if (_username.getText().toString().equals(u.get_Username())) {
-                Log.d("Edit","Testing User Availiabilty Pass");
-                return false;
-            }
-
-        }
-        return true;
     }
 }

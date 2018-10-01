@@ -49,25 +49,24 @@ public class User implements Parcelable {
     /**
      * Make a new User
      * @param username      the User's Username
-     * @param password     the User's Passwod
-     * @param usertype   the User's user Type
+     * @param password     the User's Password
+     * @param userType   the User's user Type
      */
-    public User(String username, String password, UserTypes usertype) {
-        this(username, password);
-        _userType = usertype;
+    public User(String username, String password, UserTypes userType) {
+        _username = username;
+        _userType = userType;
+        _password = password;
         _id = User.Next_Id++;
     }
 
     /**
-     * Make a new User
+     * Make a new User, default to type User
      * @param username      the User's Username
-     * @param password     the User's Passwod
+     * @param password     the User's Password
      *
      */
     public User(String username, String password) {
-        _username =username;
-        _password= password;
-
+        this(username, password, UserTypes.User);
     }
 
     /**

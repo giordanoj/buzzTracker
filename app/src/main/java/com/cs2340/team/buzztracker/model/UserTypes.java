@@ -14,8 +14,6 @@ public enum  UserTypes {
         this.var = value;
     }
 
-
-
     /**
      *
      * @return the  User Type

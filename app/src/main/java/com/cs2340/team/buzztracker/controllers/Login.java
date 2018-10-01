@@ -9,20 +9,19 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.cs2340.team.buzztracker.R;
-
-import org.w3c.dom.Text;
+import com.cs2340.team.buzztracker.model.Model;
 
 public class Login extends Activity {
 
     private EditText loginUsername;
     private EditText loginPassword;
-    private TextView badlogin;
+    private TextView badLogin;
+    private Model _model;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
 
 
         Button cancelButton = (Button) findViewById(R.id.cancelbtn);
@@ -38,10 +37,12 @@ public class Login extends Activity {
 
         );
 
+        _model = Model.getInstance();
+
         loginUsername = (EditText) findViewById(R.id.username);
         loginPassword = (EditText) findViewById(R.id.passwordText);
-        badlogin = (TextView) findViewById(R.id.badLogin);
-        badlogin.setVisibility(View.INVISIBLE);
+        badLogin = (TextView) findViewById(R.id.badLogin);
+        badLogin.setVisibility(View.INVISIBLE);
         Button loginBtn = (Button) findViewById(R.id.loginbtn1);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
@@ -50,14 +51,13 @@ public class Login extends Activity {
 
                 @Override
                 public void onClick(View v) {
-
-                    if(loginUsername.getText().toString().equals("User") &&
-                            loginPassword.getText().toString().equals("Pass")) {
+                    String username = loginUsername.getText().toString();
+                    String password = loginPassword.getText().toString();
+                    if(_model.userLogin(username, password)) {
                         Intent loginA = new Intent(Login.this, ApplicationAcitivity.class);
                         startActivity(loginA);
                     } else {
-                        badlogin.setVisibility(View.VISIBLE);
-
+                        badLogin.setVisibility(View.VISIBLE);
                     }
                 }}
 
