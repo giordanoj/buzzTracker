@@ -49,6 +49,7 @@ public class Register extends AppCompatActivity {
         idField = (TextView) findViewById(R.id.idView);
         badlogin = (TextView)findViewById(R.id.badLogin);
 
+
         _model = Model.getInstance();
 
          badlogin.setVisibility(View.INVISIBLE);
@@ -77,7 +78,7 @@ public class Register extends AppCompatActivity {
                     String username1 = _username.getText().toString();
                     String password1 = _password.getText().toString();
                     UserTypes users = (UserTypes)userSpinner.getSelectedItem();
-                    User user1 = new User(username1, password1, users );
+                    User user1 = new User(username1, password1, users);
                     _model.addUser(user1);
                     startActivity(register);
 
@@ -95,6 +96,7 @@ public class Register extends AppCompatActivity {
         ArrayAdapter<UserTypes> useradapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserTypes.values());
         useradapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userSpinner.setAdapter(useradapter);
+
 
 
     }
