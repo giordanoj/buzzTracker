@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.GET_ACCOUNTS" />
     <uses-permission android:name="android.permission.READ_PROFILE" />
     <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -33,6 +34,9 @@
         <activity
             android:name=".controllers.UserProfile"
             android:label="@string/title_activity_user_profile"></activity>
+        <service android:enabled="true" android:name=".controllers.CheckRegistrationIntentService"></service>
+        <service android:enabled="true" android:name=".controllers.RegisterUserIntentService"></service>
+        <service android:enabled="true" android:name=".controllers.LoginIntentService"></service>
     </application>
 
 </manifest>

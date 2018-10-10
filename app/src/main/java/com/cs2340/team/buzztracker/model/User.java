@@ -3,12 +3,11 @@ package com.cs2340.team.buzztracker.model;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 import java.util.List;
 
 public class User implements Parcelable {
-
-    /** allow us to assign unique id numbers to each student */
-    private static int Next_Id = 0;
 
     /** this user id number */
     private int _id;
@@ -48,39 +47,36 @@ public class User implements Parcelable {
 
     /**
      * Make a new User
+     * @param name          the User's Name
      * @param username      the User's Username
      * @param password     the User's Password
      * @param userType   the User's user Type
+     * @param id          the User's id number
      */
-    public User(String username, String password, UserTypes userType) {
+    public User(int id, String name, String username, String password, UserTypes userType) {
+        _id = id;
+        _name = name;
         _username = username;
         _userType = userType;
         _password = password;
-        _id = User.Next_Id++;
     }
 
     /**
      * Make a new User, default to type User
+     * @param id            the User's id number
+     * @param name          the User's Name
      * @param username      the User's Username
      * @param password     the User's Password
      *
      */
-    public User(String username, String password) {
-        this(username, password, UserTypes.User);
-    }
-
-    /**
-     * No param constructor -- DO NOT CALL NORMALLY
-     * This constructor only for GUI use in edit/new student dialog
-     */
-    public User() {
-        this("enter username" , "*****");
+    public User(int id, String name, String username, String password) {
+        this(id, name, username, password, UserTypes.User);
     }
 
     @Override
     public boolean equals(Object c) {
         User o = (User) c;
-        return (o.get_Username().equals(_username) && o.get_Password().equals(_password));
+        return (o.get_Name().equals(_name) && o.get_Username().equals(_username) && o.get_Password().equals(_password));
     }
 
 
@@ -100,9 +96,11 @@ public class User implements Parcelable {
      * @param in  the parcel containing the student information
      */
     private User(Parcel in) {
-        _username = in.readString();
-        _userType = (UserTypes) in.readSerializable();
         _id = in.readInt();
+        _name = in.readString();
+        _username = in.readString();
+        _password = in.readString();
+        _userType = (UserTypes) in.readSerializable();
     }
 
 
@@ -124,10 +122,11 @@ public class User implements Parcelable {
      */
     @Override
     public void writeToParcel(Parcel dest, int flags) {
+        dest.writeInt(_id);
+        dest.writeString(_name);
         dest.writeString(_username);
+        dest.writeString(_password);
         dest.writeSerializable(_userType);
-
-
     }
 
     /**
@@ -144,6 +143,5 @@ public class User implements Parcelable {
             return new User[size];
         }
     };
-
 
 }

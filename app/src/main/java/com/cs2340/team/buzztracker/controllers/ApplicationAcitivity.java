@@ -5,15 +5,27 @@ import android.os.Bundle;
 import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.cs2340.team.buzztracker.R;
+import com.cs2340.team.buzztracker.model.User;
 
 public class ApplicationAcitivity extends Activity {
+
+    private User user;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_application_acitivity);
+
+        Bundle b = getIntent().getExtras();
+        if(b != null) {
+            user = b.getParcelable("user");
+            TextView usernameText = (TextView) findViewById(R.id.usernameView);
+            usernameText.setText("Welcome " + user.get_Username() + "!");
+        }
+
         Button logoutBtn = (Button) findViewById(R.id.logoutBtn);
         logoutBtn.setOnClickListener(new View.OnClickListener() {
 
