@@ -24,7 +24,7 @@ public class CheckRegistrationIntentService extends IntentService {
 
         try {
 
-            url = new URL("http://10.0.2.2:80/buzzTracker/checkRegistration.php?username=" + intent.getStringExtra("username"));
+            url = new URL("http://10.0.2.2:80/buzzTrackerScripts/checkRegistration.php?username=" + intent.getStringExtra("username"));
 
             urlConnection = (HttpURLConnection) url.openConnection();
 

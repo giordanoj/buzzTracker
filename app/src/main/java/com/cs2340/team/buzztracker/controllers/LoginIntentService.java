@@ -24,7 +24,7 @@ public class LoginIntentService extends IntentService {
 
         try {
 
-            url = new URL("http://10.0.2.2:80/buzzTracker/checkUser.php?"
+            url = new URL("http://10.0.2.2:80/buzzTrackerScripts/checkUser.php?"
                     + "&username=" + intent.getStringExtra("username")
                     + "&password=" + intent.getStringExtra("password"));
 
