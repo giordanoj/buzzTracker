@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.cs2340.team.buzztracker.R;
+import com.cs2340.team.buzztracker.model.LocationList;
 import com.cs2340.team.buzztracker.model.User;
 
 public class ApplicationAcitivity extends Activity {
@@ -23,7 +24,7 @@ public class ApplicationAcitivity extends Activity {
         if(b != null) {
             user = b.getParcelable("user");
             TextView usernameText = (TextView) findViewById(R.id.usernameView);
-            usernameText.setText("Welcome " + user.get_Username() + "!");
+            usernameText.setText(LocationList.getList().get(1).toString());
         }
 
         Button logoutBtn = (Button) findViewById(R.id.logoutBtn);
@@ -33,6 +34,7 @@ public class ApplicationAcitivity extends Activity {
             public void onClick(View v) {
                 Intent logout = new Intent(ApplicationAcitivity.this, MainActivity.class);
                 startActivity(logout);
+                finish();
             }}
 
 

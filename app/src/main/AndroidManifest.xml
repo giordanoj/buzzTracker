@@ -37,6 +37,7 @@
         <service android:enabled="true" android:name=".controllers.CheckRegistrationIntentService"></service>
         <service android:enabled="true" android:name=".controllers.RegisterUserIntentService"></service>
         <service android:enabled="true" android:name=".controllers.LoginIntentService"></service>
+        <service android:enabled="true" android:name=".controllers.GetLocationsIntentService"></service>
     </application>
 
 </manifest>

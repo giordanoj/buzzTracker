@@ -35,6 +35,7 @@ public class Login extends Activity {
             public void onClick(View v) {
                 Intent cancel = new Intent(Login.this, MainActivity.class);
                 startActivity(cancel);
+                finish();
             }
         }
 
@@ -115,6 +116,7 @@ public class Login extends Activity {
                 b.putParcelable("user", newUser);
                 loginA.putExtras(b);
                 startActivity(loginA);
+                finish();
             }
         }
 

@@ -60,6 +60,7 @@ public class Register extends AppCompatActivity {
             public void onClick(View v) {
                 Intent cancel = new Intent(Register.this, MainActivity.class);
                 startActivity(cancel);
+                finish();
             }}
 
 
@@ -180,6 +181,7 @@ public class Register extends AppCompatActivity {
                 b.putParcelable("user", newUser);
                 loginA.putExtras(b);
                 startActivity(loginA);
+                finish();
             }
         }
 
