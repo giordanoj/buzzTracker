@@ -24,7 +24,7 @@ public class ApplicationAcitivity extends Activity {
         if(b != null) {
             user = b.getParcelable("user");
             TextView usernameText = (TextView) findViewById(R.id.usernameView);
-            usernameText.setText(LocationList.getList().get(1).toString());
+            usernameText.setText("Welcome " + user.get_Name());
         }
 
         Button logoutBtn = (Button) findViewById(R.id.logoutBtn);
