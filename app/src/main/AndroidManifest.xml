@@ -32,6 +32,12 @@
             android:name=".controllers.ApplicationAcitivity"
             android:label="@string/title_activity_application_acitivity" />
         <activity
+            android:name=".controllers.LocationActivity"
+            android:label="LocationActivity" />
+        <activity
+            android:name=".controllers.LocationDetailActivity"
+            android:label="LocationDetailActivity" />
+        <activity
             android:name=".controllers.UserProfile"
             android:label="@string/title_activity_user_profile"></activity>
         <service android:enabled="true" android:name=".controllers.CheckRegistrationIntentService"></service>

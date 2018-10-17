@@ -3,6 +3,7 @@ package com.cs2340.team.buzztracker.controllers;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -36,9 +37,19 @@ public class ApplicationAcitivity extends Activity {
                 startActivity(logout);
                 finish();
             }}
-
-
         );
+
+        Button locationsBtn = (Button) findViewById(R.id.locationsBtn);
+        locationsBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent locations = new Intent(ApplicationAcitivity.this, LocationActivity.class);
+                startActivity(locations);
+                finish();
+            }}
+        );
+
     }
 
 

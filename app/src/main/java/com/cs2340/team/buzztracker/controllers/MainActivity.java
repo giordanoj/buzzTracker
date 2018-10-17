@@ -13,6 +13,9 @@ import android.widget.Toast;
 import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Location;
 import com.cs2340.team.buzztracker.model.LocationList;
+import com.cs2340.team.buzztracker.model.Model;
+
+import java.util.ArrayList;
 
 /*
    Main screen that displays Login and Registration
@@ -85,7 +88,8 @@ public class MainActivity extends AppCompatActivity {
                     Location currentLocation = new Location(Integer.parseInt(locationData[0]), locationData[1],
                             locationData[2], locationData[3], locationData[4], locationData[5], locationData[6],
                             locationData[7], locationData[8], locationData[9], locationData[10]);
-                    LocationList.getList().add(currentLocation);
+                    Model model = Model.getInstance();
+                    model.addLocation(currentLocation);
                 }
             }
         }
