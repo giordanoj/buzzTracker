@@ -95,5 +95,28 @@ public class Location {
         this._graph = _graph;
     }
 
-
+    /**
+     * Make a new Location
+     *
+     * @param _name             The name of a location
+     * @param _coordinates      The (gps) coordinates of a location
+     * @param _webLink          The link to the locations website
+     * @param _id               The id of a location
+     * @param _phoneNumber      The phone Number for a location
+     * @param _type             The categorical type of a location
+     * @param _inventory        The inventory at a location
+     * @param _graph            The analytics graphs at a location
+     */
+    public Location(String _name, float[] _coordinates, String _webLink,
+                    int _id, String _phoneNumber,
+                    String _type, Inventory _inventory, Graph _graph) {
+        this._name = _name;
+        this._coordinates = _coordinates;
+        this._webLink = _webLink;
+        this._id = _id;
+        this._phoneNumber = _phoneNumber;
+        this._type = _type;
+        this._inventory = _inventory;
+        this._graph = _graph;
+    }
 }

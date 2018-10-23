@@ -154,4 +154,35 @@ public class Item {
         this._soldBy = _soldBy;
     }
 
+
+    /**
+     * Make an item
+     *
+     * @param _category             The category an item falls into
+     * @param _donationTime         The donation time of an item
+     * @param _value                The Value assigned to an item
+     * @param _picture              The link to a picture of an item
+     * @param _comment              Any comments attached to an item
+     * @param _shortDescription     A short description of an item
+     * @param _fullDescription      A full description of an item
+     * @param _origin               The origin of an item (by id of inventory)
+     * @param _saleTime             The sale time of an item
+     * @param _enteredBy            Who entered an item into a system (by id of employee)
+     * @param _soldBy               Who sold an item (by id of employee)
+     */
+    public Item(String _category, String _donationTime, String _value, String _picture,
+                String _comment, String _shortDescription, String _fullDescription, int _origin,
+                String _saleTime, int _enteredBy, int _soldBy) {
+        this._category = _category;
+        this._donationTime = _donationTime;
+        this._value = _value;
+        this._picture = _picture;
+        this._comment = _comment;
+        this._shortDescription = _shortDescription;
+        this._fullDescription = _fullDescription;
+        this._origin = _origin;
+        this._saleTime = _saleTime;
+        this._enteredBy = _enteredBy;
+        this._soldBy = _soldBy;
+    }
 }

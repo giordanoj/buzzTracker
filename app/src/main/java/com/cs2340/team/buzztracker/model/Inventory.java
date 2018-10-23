@@ -34,4 +34,15 @@ public class Inventory {
     public void set_location(Location _location) {
         this._location = _location;
     }
+
+    /**
+     * make a new Inventory
+     *
+     * @param _items            the collection of items at an Inventory
+     * @param _location         The location of an inventory
+     */
+    public Inventory(ArrayList<Item> _items, Location _location) {
+        this._items = _items;
+        this._location = _location;
+    }
 }
