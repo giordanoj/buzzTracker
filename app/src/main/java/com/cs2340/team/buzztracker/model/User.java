@@ -25,6 +25,15 @@ public class User implements Parcelable {
     /** this user's password */
     private String _password;
 
+    /**this is the user's email */
+    private String _email;
+
+    /**this is the user's location*/
+    private Location _location;
+
+    /**This stores if the users account is locked*/
+    private Boolean _locked;
+
 
     /* **********************
      * Getters and setters
@@ -38,6 +47,14 @@ public class User implements Parcelable {
     public String get_Password() { return _password; }
     public void set_Password(String password) { _password = password ; }
 
+    public String get_Email() { return _email; }
+    public void set_Emial(String email) { _email = email; }
+
+    public Location get_Location() { return _location; }
+    public void set_location(Location location) { _location = location; }
+
+    public Boolean get_locked() { return _locked; }
+    public void set_Locked (Boolean locked) { _locked = locked; }
 
     //no setter for this.  id is a read only field
     public int getId() { return _id; }
