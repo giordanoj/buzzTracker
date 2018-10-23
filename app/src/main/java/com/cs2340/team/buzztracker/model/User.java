@@ -1,8 +1,10 @@
 package com.cs2340.team.buzztracker.model;
 
+import android.os.NetworkOnMainThreadException;
 import android.os.Parcel;
 import android.os.Parcelable;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class User implements Parcelable {
@@ -162,6 +164,118 @@ public class User implements Parcelable {
             return new User[size];
         }
     };
+
+    /**
+     * should add a new location to the database
+     *
+     * @param location the location to be added
+     * @return whether or not it succeeded
+     * @throws NoSuchMethodException not implemented
+     */
+    public boolean addLocation(Location location) throws NoSuchMethodException{
+        throw new NoSuchMethodException();
+    }
+
+    /**
+     * adds a new user to the database
+     *
+     * @param user the user to be added
+     * @return whether or not it succeeded
+     * @throws NoSuchMethodException not implemented
+     */
+    public boolean addUser(User user) throws NoSuchMethodException {
+        throw new NoSuchMethodException();
+    }
+
+    /**
+     * adds a new item to the inventory of the location of the user
+     *
+     * @param item the item to be added
+     * @return whether or not it succeeded
+     * @throws NoSuchMethodException not implemented
+     */
+    public boolean addItem(Item item) throws NoSuchMethodException {
+        throw new NoSuchMethodException();
+    }
+
+    /**
+     * makes a graph of total item by category, of the users location
+     *
+     *
+     * @return location of graph
+     * @throws NoSuchMethodException not implemented yet
+     */
+    public String makeCatGraph() throws NoSuchMethodException {
+        throw new NoSuchMethodException();
+    }
+
+    /**
+     * makes a graph of inventory value  of the users location
+     *
+     * @return location of graph
+     * @throws NoSuchMethodException not implemented yet
+     */
+    public String makeValuebyMonthGraph() throws NoSuchMethodException {
+        throw new NoSuchMethodException();
+    }
+
+    /**
+     * makes a graph of the income per month of the userss location
+     *
+     * @return the location of the graph
+     * @throws NoSuchMethodException not implemented
+     */
+    public String makeIncomePerMonthGraph() throws NoSuchMethodException {
+        throw new NoSuchMethodException();
+    }
+
+    /**
+     * makes a graph of the donations per month of the users location
+     * @return the location of the graph
+     * @throws NoSuchMethodException not implemented
+     */
+    public String makeDonationsPerMonthGraph() throws NoSuchMethodException {
+        throw new NoSuchMethodException();
+    }
+
+    /**
+     * search for a location that has a specific item
+     *
+     * @param item the item we are searching for
+     * @return an arraylist containing the locations of the items
+     * @throws NoSuchMethodException not implemented yet
+     */
+    public ArrayList<Location> searchForLocationByItem(String item) throws NoSuchMethodException {
+        throw new NoSuchMethodException();
+    }
+
+    /**
+     * searches for a location based on items that are within a desired category
+     *
+     * @param itemCategory the category to be searched for
+     * @return an arraylist of locations
+     * @throws NoSuchMethodException not implemented yet
+     */
+    public ArrayList<Location> searchForLocationByCategory(String itemCategory)
+            throws NoSuchMethodException {
+        throw new NoSuchMethodException();
+    }
+
+    /**
+     * searches for nearby locations
+     *
+     * @param location the location to look near (default current location?)
+     * @return arraylist of nearby locations
+     * @throws NoSuchMethodException not implemented
+     */
+    public ArrayList<Location> searchForNearbyLocations(String location)
+            throws NoSuchMethodException {
+        throw new NoSuchMethodException();
+    }
+
+
+
+
 
 
 }
