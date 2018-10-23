@@ -32,7 +32,8 @@
             android:label="@string/title_activity_application_acitivity" />
         <activity
             android:name=".controllers.UserProfile"
-            android:label="@string/title_activity_user_profile"></activity>
+            android:label="@string/title_activity_user_profile" />
+        <activity android:name=".controllers.AddDonationActivity"></activity>
     </application>
 
 </manifest>
