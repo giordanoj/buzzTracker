@@ -1,122 +1,122 @@
 package com.cs2340.team.buzztracker.model;
 
-import android.os.Parcel;
-import android.os.Parcelable;
-
 public class Location {
 
-    /** the location's id number */
-    private int _id;
-
-    /** the location's name */
+    /** this is the name of the location */
     private String _name;
 
-    /** the location's latitude */
-    private String _latitude;
+    /** this is the locations gps coordinates should only contain 2 floats*/
+    private float[] _coordinates;
 
-    /** the location's longitude */
-    private String _longitude;
+    /** this is a web link to the location */
+    private String _webLink;
 
-    /** the location's street address*/
-    private String _streetAddress;
+    /** this is the id for a location */
+    private int _id;
 
-    /** the location's city*/
-    private String _city;
+    /** this is a phone number for a location */
+    private String _phoneNumber;
 
-    /** the location's state*/
-    private String _state;
-
-    /** the location's zip code*/
-    private String _zip;
-
-    /** the location's type*/
+    /** this is the type of the location */
     private String _type;
 
-    /** the location's phone number*/
-    private String _phone;
+    /** this is the inventory for a location */
+    private Inventory _inventory;
 
-    /** the location's website*/
-    private String _website;
+    /** this is the graphs for a particular location */
+    private Graph _graph;
 
 
-    /* **********************
-     * Getters and setters
+    /*
+     *  getters and setters
      */
 
-    //no setter for this.  id is a read only field
-    public int getId() { return _id; }
+    public String get_name() {
+        return _name;
+    }
 
-    public String get_Name() { return _name; }
-    public void set_Name(String name) { _name = name; }
+    public void set_name(String _name) {
+        this._name = _name;
+    }
 
-    public String get_Latitude() { return _latitude; }
-    public void set_Latitude(String latitude) { _latitude = latitude; }
+    public float[] get_coordinates() {
+        return _coordinates;
+    }
 
-    public String get_Longitude() { return _longitude; }
-    public void set_Longitude(String longitude) { _longitude = longitude; }
+    public void set_coordinates(float[] _coordinates) {
+        this._coordinates = _coordinates;
+    }
 
-    public String get_Address() { return _streetAddress; }
-    public void set_Address(String streetAddress) { _streetAddress = streetAddress; }
+    public String get_webLink() {
+        return _webLink;
+    }
 
-    public String get_City() { return _city; }
-    public void set_City(String city) { _city = city; }
+    public void set_webLink(String _webLink) {
+        this._webLink = _webLink;
+    }
 
-    public String get_State() { return _state; }
-    public void set_State(String state) { _state = state; }
+    public int get_id() {
+        return _id;
+    }
 
-    public String get_Zip() { return _zip; }
-    public void set_Zip(String zip) { _zip = zip; }
+    public void set_id(int _id) {
+        this._id = _id;
+    }
 
-    public String get_Type() { return _type; }
-    public void set_Type(String type) { _type = type; }
+    public String get_phoneNumber() {
+        return _phoneNumber;
+    }
 
-    public String get_Phone() { return _phone; }
-    public void set_Phone(String phone) { _phone = phone; }
+    public void set_phoneNumber(String _phoneNumber) {
+        this._phoneNumber = _phoneNumber;
+    }
 
-    public String get_Website() { return _website; }
-    public void set_Website(String website) { _website = website; }
+    public String get_type() {
+        return _type;
+    }
+
+    public void set_type(String _type) {
+        this._type = _type;
+    }
+
+    public Inventory get_inventory() {
+        return _inventory;
+    }
+
+    public void set_inventory(Inventory _inventory) {
+        this._inventory = _inventory;
+    }
+
+    public Graph get_graph() {
+        return _graph;
+    }
+
+    public void set_graph(Graph _graph) {
+        this._graph = _graph;
+    }
 
     /**
      * Make a new Location
-     * @param id            the Location's id number
-     * @param name          the Location's name
-     * @param latitude      the Location's latitude
-     * @param longitude     the Location's longitude
-     * @param address       the Location's street address
-     * @param city          the Location's city
-     * @param state         the Location's state
-     * @param zip           the Location's zip code
-     * @param type          the Location's type
-     * @param phone         the Location's phone number
-     * @param website       the Location's website
+     *
+     * @param _name             The name of a location
+     * @param _coordinates      The (gps) coordinates of a location
+     * @param _webLink          The link to the locations website
+     * @param _id               The id of a location
+     * @param _phoneNumber      The phone Number for a location
+     * @param _type             The categorical type of a location
+     * @param _inventory        The inventory at a location
+     * @param _graph            The analytics graphs at a location
      */
-    public Location(int id, String name, String latitude, String longitude, String address, String city, String state, String zip, String type, String phone, String website) {
-        _id = id;
-        _name = name;
-        _latitude = latitude;
-        _longitude = longitude;
-        _streetAddress = address;
-        _city = city;
-        _state = state;
-        _zip = zip;
-        _type = type;
-        _phone = phone;
-        _website = website;
+    public Location(String _name, float[] _coordinates, String _webLink,
+                    int _id, String _phoneNumber,
+                    String _type, Inventory _inventory, Graph _graph) {
+        this._name = _name;
+        this._coordinates = _coordinates;
+        this._webLink = _webLink;
+        this._id = _id;
+        this._phoneNumber = _phoneNumber;
+        this._type = _type;
+        this._inventory = _inventory;
+        this._graph = _graph;
     }
-
-    @Override
-    public boolean equals(Object c) {
-        Location o = (Location) c;
-        return (o.get_Name().equals(_name) && o.get_Latitude().equals(_latitude) && o.get_Longitude().equals(_longitude)
-                && o.get_Address().equals(_streetAddress) && o.get_City().equals(_city) && o.get_State().equals(_state)
-                && o.get_Zip().equals(_zip) && o.get_Type().equals(_type) && o.get_Phone().equals(_phone)
-                && o.get_Website().equals(_website));
-    }
-
-    @Override
-    public String toString() {
-        return _id + " " + _name + " " + _latitude + " " + _longitude + " " + _streetAddress + " " +
-                _city + " " + _state + " " + _zip + " " + _type + " " + _phone + " " + _website;
-    }
-
 }

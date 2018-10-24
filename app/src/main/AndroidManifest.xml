@@ -39,6 +39,8 @@
             android:label="LocationDetailActivity" />
         <activity
             android:name=".controllers.UserProfile"
+            android:label="@string/title_activity_user_profile" />
+        <activity android:name=".controllers.AddDonationActivity">
             android:label="@string/title_activity_user_profile"></activity>
         <service android:enabled="true" android:name=".controllers.CheckRegistrationIntentService"></service>
         <service android:enabled="true" android:name=".controllers.RegisterUserIntentService"></service>
