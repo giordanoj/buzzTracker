@@ -40,12 +40,19 @@
         <activity
             android:name=".controllers.UserProfile"
             android:label="@string/title_activity_user_profile" />
-        <activity android:name=".controllers.AddDonationActivity">
-            android:label="@string/title_activity_user_profile"></activity>
+        <activity android:name=".controllers.AddDonationActivity"
+            android:label="AddDonationActivity" />
+        <activity android:name=".controllers.InventoryActivity"
+            android:label="InventoryActivity" />
+        <activity android:name=".controllers.ItemDetailActivity"
+            android:label="ItemDetailActivity" />
+
         <service android:enabled="true" android:name=".controllers.CheckRegistrationIntentService"></service>
         <service android:enabled="true" android:name=".controllers.RegisterUserIntentService"></service>
         <service android:enabled="true" android:name=".controllers.LoginIntentService"></service>
         <service android:enabled="true" android:name=".controllers.GetLocationsIntentService"></service>
+        <service android:enabled="true" android:name=".controllers.AddDonationIntentService"></service>
+        <service android:enabled="true" android:name=".controllers.GetInventoryIntentService"></service>
     </application>
 
 </manifest>

@@ -9,10 +9,10 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class CheckRegistrationIntentService extends IntentService {
+public class AddDonationIntentService extends IntentService {
 
-    public CheckRegistrationIntentService() {
-        super("CheckRegistrationIntentService");
+    public AddDonationIntentService() {
+        super("AddDonationIntentService");
     }
 
     @Override
@@ -24,7 +24,16 @@ public class CheckRegistrationIntentService extends IntentService {
 
         try {
 
-            url = new URL("http://10.0.2.2:80/buzzTrackerScripts/checkRegistration.php?email=" + intent.getStringExtra("email"));
+            url = new URL("http://10.0.2.2:80/buzzTrackerScripts/addDonation.php?" +
+                    "name=" + intent.getStringExtra("name") +
+                    "&description=" + intent.getStringExtra("description") +
+                    "&value=" + intent.getStringExtra("value") +
+                    "&category=" + intent.getStringExtra("category") +
+                    "&donationTime=" + intent.getStringExtra("donationTime") +
+                    "&enteredBy=" + intent.getStringExtra("enteredBy") +
+                    "&origin=" + intent.getStringExtra("origin") +
+                    "&currentLocation=" + intent.getStringExtra("currentLocation")
+            );
 
             urlConnection = (HttpURLConnection) url.openConnection();
 
@@ -48,7 +57,7 @@ public class CheckRegistrationIntentService extends IntentService {
         }
 
         Intent broadcastIntent = new Intent();
-        broadcastIntent.setAction(Register.CheckRegistrationResponseReceiver.ACTION_RESP);
+        broadcastIntent.setAction(AddDonationActivity.AddDonationResponseReceiver.ACTION_RESP);
         broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
         broadcastIntent.putExtra("output", output);
         sendBroadcast(broadcastIntent);

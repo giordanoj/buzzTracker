@@ -15,18 +15,20 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs2340.team.buzztracker.R;
+import com.cs2340.team.buzztracker.model.Location;
+import com.cs2340.team.buzztracker.model.Model;
 import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
 
 public class Register extends AppCompatActivity {
 
     private Spinner userSpinner;
-    private EditText _username;
+    private EditText _email;
     private EditText _password;
     private EditText _name;
     private TextView idField;
     private TextView badName;
-    private TextView badUsername;
+    private TextView badEmail;
     private TextView badPassword;
 
 
@@ -46,11 +48,11 @@ public class Register extends AppCompatActivity {
 
         userSpinner = (Spinner) findViewById(R.id.typeUser);
         _name = (EditText) findViewById(R.id.nameText);
-        _username =  (EditText) findViewById(R.id.usernameText);
+        _email =  (EditText) findViewById(R.id.emailText);
         _password = (EditText) findViewById(R.id.passwordText);
         idField = (TextView) findViewById(R.id.idView);
         badName = (TextView)findViewById(R.id.badName);
-        badUsername = (TextView)findViewById(R.id.badUsername);
+        badEmail = (TextView)findViewById(R.id.badEmail);
         badPassword = (TextView)findViewById(R.id.badPassword);
 
         Button cancelButton = (Button) findViewById(R.id.cancelButton);
@@ -77,19 +79,25 @@ public class Register extends AppCompatActivity {
                 /**
                  *  Make sure none of the text fields are empty
                  */
-                if (_name.getText().toString().equals("")) {
+                if (_name.getText().toString().trim().equals("")) {
                     badName.setText("Name cannot be blank!");
+                    validRegistration = false;
+                } else if (_name.getText().toString().contains("|") || _name.getText().toString().contains(",")) {
+                    badName.setText("Name contains an illegal character.");
                     validRegistration = false;
                 } else {
                     badName.setText("");
                 }
-                if (_username.getText().toString().equals("")) {
-                    badUsername.setText("Username cannot be blank!");
+                if (_email.getText().toString().trim().equals("")) {
+                    badEmail.setText("Email cannot be blank!");
+                    validRegistration = false;
+                } else if (_email.getText().toString().contains("|") || _email.getText().toString().contains(",")) {
+                    badEmail.setText("Email contains an illegal character.");
                     validRegistration = false;
                 } else {
-                    badUsername.setText("");
+                    badEmail.setText("");
                 }
-                if (_password.getText().toString().equals("")) {
+                if (_password.getText().toString().trim().equals("")) {
                     badPassword.setText("Password cannot be blank!");
                     validRegistration = false;
                 } else {
@@ -102,11 +110,10 @@ public class Register extends AppCompatActivity {
                      *  If unused, add the user to the database and return to the welcome page
                      */
                     Intent checkRegistration = new Intent(Register.this, CheckRegistrationIntentService.class);
-                    checkRegistration.putExtra("username", _username.getText().toString());
+                    checkRegistration.putExtra("email", _email.getText().toString());
                     startService(checkRegistration);
                 }
             }
-
 
         });
 
@@ -139,16 +146,16 @@ public class Register extends AppCompatActivity {
         public void onReceive(Context context, Intent intent) {
             String result = intent.getStringExtra("output");
             if (result.startsWith("invalid")) {
-                badUsername.setText("Username already taken; select another username.");
+                badEmail.setText("Email already in use; select another email.");
             } else {
                 String uName = _name.getText().toString();
-                String uUsername = _username.getText().toString();
+                String uEmail = _email.getText().toString();
                 String uPassword = _password.getText().toString();
                 String uType = userSpinner.getSelectedItem().toString();
 
                 Intent registerUser = new Intent(Register.this, RegisterUserIntentService.class);
                 registerUser.putExtra("name", uName);
-                registerUser.putExtra("username", uUsername);
+                registerUser.putExtra("email", uEmail);
                 registerUser.putExtra("password", Util.generateHash(uPassword));
                 registerUser.putExtra("accountType", uType);
                 startService(registerUser);
@@ -166,20 +173,20 @@ public class Register extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), "An error occurred: new user not added.",
                         Toast.LENGTH_LONG).show();
             } else {
+                Model model = Model.getInstance();
 
                 int id;
                 id = Integer.parseInt(result.trim());
                 String uName = _name.getText().toString();
-                String uUsername = _username.getText().toString();
+                String uEmail = _email.getText().toString();
                 String uPassword = _password.getText().toString();
+                boolean uLocked = false;
                 UserTypes uType = (UserTypes) userSpinner.getSelectedItem();
 
-                User newUser = new User(id, uName, uUsername, uPassword, uType);
+                User newUser = new User(id, uName, uEmail, uPassword, uLocked, uType);
+                model.setCurrentUser(newUser);
 
                 Intent loginA = new Intent(Register.this, ApplicationAcitivity.class);
-                Bundle b = new Bundle();
-                b.putParcelable("user", newUser);
-                loginA.putExtras(b);
                 startActivity(loginA);
                 finish();
             }

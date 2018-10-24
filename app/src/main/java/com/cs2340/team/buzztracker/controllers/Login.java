@@ -13,12 +13,16 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs2340.team.buzztracker.R;
+import com.cs2340.team.buzztracker.model.Location;
+import com.cs2340.team.buzztracker.model.Model;
 import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
 
+import java.util.ArrayList;
+
 public class Login extends Activity {
 
-    private EditText loginUsername;
+    private EditText loginEmail;
     private EditText loginPassword;
     private TextView badLogin;
 
@@ -42,7 +46,7 @@ public class Login extends Activity {
 
         );
 
-        loginUsername = (EditText) findViewById(R.id.username);
+        loginEmail = (EditText) findViewById(R.id.email);
         loginPassword = (EditText) findViewById(R.id.passwordText);
         badLogin = (TextView) findViewById(R.id.badLogin);
         badLogin.setVisibility(View.INVISIBLE);
@@ -54,14 +58,14 @@ public class Login extends Activity {
 
                 @Override
                 public void onClick(View v) {
-                    String inputUsername = loginUsername.getText().toString();
+                    String inputEmail = loginEmail.getText().toString();
                     String inputPassword = loginPassword.getText().toString();
                     /**
                      *  Check with the database to validate login info
                      *  If valid, log the user in
                      */
                     Intent login = new Intent(Login.this, LoginIntentService.class);
-                    login.putExtra("username", inputUsername);
+                    login.putExtra("email", inputEmail);
                     login.putExtra("password", Util.generateHash(inputPassword));
                     startService(login);
                 }}
@@ -87,34 +91,60 @@ public class Login extends Activity {
         public void onReceive(Context context, Intent intent) {
             String result = intent.getStringExtra("output");
             if (result.startsWith("user not found")) {
-                Toast.makeText(getBaseContext(), "Incorrect username/password",
+                Toast.makeText(getBaseContext(), "Incorrect email/password",
                         Toast.LENGTH_LONG).show();
             } else {
+                /**
+                 * Parse the response String with all of the User data, then create a User object
+                 * out of the data and set it as the current User in the Model
+                 */
+                int startInd = result.indexOf("|");
+                int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") + result.indexOf("|") + 1;
+                String userString = result.substring(startInd + 1, endInd);
 
-                String[] results = result.split("_");
+                int idStartInd = userString.indexOf("Id:") + 3;
+                int id = Integer.parseInt(userString.substring(idStartInd, idStartInd + userString.substring(idStartInd).indexOf(",")));
 
-                int id;
-                id = Integer.parseInt(results[0]);
-                String uName = results[1];
-                String uUsername = loginUsername.getText().toString();
-                String uPassword = loginPassword.getText().toString();
+                int nameStartInd = userString.indexOf("Name:") + 5;
+                String name = userString.substring(nameStartInd, nameStartInd + userString.substring(nameStartInd).indexOf(","));
+
+                int emailStartInd = userString.indexOf("Email:") + 6;
+                String email = userString.substring(emailStartInd, emailStartInd + userString.substring(emailStartInd).indexOf(","));
+
+                int passStartInd = userString.indexOf("Password:") + 9;
+                String password = userString.substring(passStartInd, passStartInd + userString.substring(passStartInd).indexOf(","));
+
+                int lockStartInd = userString.indexOf("Locked:") + 7;
+                boolean locked = Boolean.getBoolean(userString.substring(lockStartInd, lockStartInd + userString.substring(lockStartInd).indexOf(",")));
+
+                int typeStartInd = userString.indexOf("Type:") + 5;
+                String type = userString.substring(typeStartInd, typeStartInd + userString.substring(typeStartInd).indexOf(","));
                 UserTypes uType;
-                if (results[2].equals("Admin")) {
+                if (type.equals("Admin")) {
                     uType = UserTypes.Admin;
-                } else if (results[2].equals("Location Employee")) {
+                } else if (type.equals("Location Employee")) {
                     uType = UserTypes.Location_Employee;
-                } else if (results[2].equals("Manager")) {
+                } else if (type.equals("Manager")) {
                     uType = UserTypes.Manager;
                 } else {
                     uType = UserTypes.User;
                 }
 
-                User newUser = new User(id, uName, uUsername, uPassword, uType);
+                Model model = Model.getInstance();
+
+                int locStartInd = userString.indexOf("Location:") + 9;
+                int location = Integer.parseInt(userString.substring(locStartInd, locStartInd + userString.substring(locStartInd).indexOf(",")));
+                Location uLocation = Model.getInstance().theNullLocation;
+                for (Location l : model.getLocations()) {
+                    if (l.get_id() == location) {
+                        uLocation = l;
+                    }
+                }
+
+                User newUser = new User(id, name, email, password, locked, uType, uLocation);
+                model.setCurrentUser(newUser);
 
                 Intent loginA = new Intent(Login.this, ApplicationAcitivity.class);
-                Bundle b = new Bundle();
-                b.putParcelable("user", newUser);
-                loginA.putExtras(b);
                 startActivity(loginA);
                 finish();
             }

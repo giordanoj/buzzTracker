@@ -26,7 +26,7 @@ public class RegisterUserIntentService extends IntentService {
 
             url = new URL("http://10.0.2.2:80/buzzTrackerScripts/registerUser.php?"
                     + "name=" + intent.getStringExtra("name")
-                    + "&username=" + intent.getStringExtra("username")
+                    + "&email=" + intent.getStringExtra("email")
                     + "&password=" + intent.getStringExtra("password")
                     + "&accountType=" + intent.getStringExtra("accountType"));
 

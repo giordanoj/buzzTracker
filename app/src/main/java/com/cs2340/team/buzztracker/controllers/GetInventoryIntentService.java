@@ -9,9 +9,9 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-public class LoginIntentService extends IntentService {
+public class GetInventoryIntentService extends IntentService {
 
-    public LoginIntentService() {
+    public GetInventoryIntentService() {
         super("CheckRegistrationIntentService");
     }
 
@@ -24,9 +24,8 @@ public class LoginIntentService extends IntentService {
 
         try {
 
-            url = new URL("http://10.0.2.2:80/buzzTrackerScripts/checkUser.php?"
-                    + "&email=" + intent.getStringExtra("email")
-                    + "&password=" + intent.getStringExtra("password"));
+            url = new URL("http://10.0.2.2:80/buzzTrackerScripts/getInventory.php?"
+                    + "location=" + intent.getStringExtra("location"));
 
             urlConnection = (HttpURLConnection) url.openConnection();
 
@@ -50,7 +49,7 @@ public class LoginIntentService extends IntentService {
         }
 
         Intent broadcastIntent = new Intent();
-        broadcastIntent.setAction(Login.LoginResponseReceiver.ACTION_RESP);
+        broadcastIntent.setAction(LocationDetailActivity.GetInventoryResponseReceiver.ACTION_RESP);
         broadcastIntent.addCategory(Intent.CATEGORY_DEFAULT);
         broadcastIntent.putExtra("output", output);
         sendBroadcast(broadcastIntent);

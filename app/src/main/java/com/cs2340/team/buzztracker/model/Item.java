@@ -3,10 +3,14 @@ package com.cs2340.team.buzztracker.model;
 public class Item {
 
     /**
+     * this is the unique id number for the item
+     */
+    private int _id;
+
+    /**
      * this is the category for a particular item
      */
     private String _category;
-
 
     /**
      * This is the donation time of a particular item
@@ -62,9 +66,18 @@ public class Item {
      */
     private int _soldBy;
 
+    /**
+     * this is the id number of current location of the item
+     */
+    private int _currentLocation;
+
     /*
         getters and setters
      */
+
+    public int get_id() {
+        return _id;
+    }
 
     public String get_category() {
         return _category;
@@ -154,10 +167,19 @@ public class Item {
         this._soldBy = _soldBy;
     }
 
+    public int get_currentLocation() {
+        return _currentLocation;
+    }
+
+    public void set_currentLocation(int _currentLocation) {
+        this._soldBy = _currentLocation;
+    }
+
 
     /**
      * Make an item
      *
+     * @param _id                   The item's unique id number
      * @param _category             The category an item falls into
      * @param _donationTime         The donation time of an item
      * @param _value                The Value assigned to an item
@@ -165,14 +187,16 @@ public class Item {
      * @param _comment              Any comments attached to an item
      * @param _shortDescription     A short description of an item
      * @param _fullDescription      A full description of an item
-     * @param _origin               The origin of an item (by id of inventory)
+     * @param _origin               The origin of an item (by id of location)
      * @param _saleTime             The sale time of an item
      * @param _enteredBy            Who entered an item into a system (by id of employee)
      * @param _soldBy               Who sold an item (by id of employee)
+     * @param _currentLocation      The current location of the item (by id of location)
      */
-    public Item(String _category, String _donationTime, String _value, String _picture,
+    public Item(int _id, String _category, String _donationTime, String _value, String _picture,
                 String _comment, String _shortDescription, String _fullDescription, int _origin,
-                String _saleTime, int _enteredBy, int _soldBy) {
+                String _saleTime, int _enteredBy, int _soldBy, int _currentLocation) {
+        this._id = _id;
         this._category = _category;
         this._donationTime = _donationTime;
         this._value = _value;
@@ -184,5 +208,6 @@ public class Item {
         this._saleTime = _saleTime;
         this._enteredBy = _enteredBy;
         this._soldBy = _soldBy;
+        this._currentLocation = _currentLocation;
     }
 }

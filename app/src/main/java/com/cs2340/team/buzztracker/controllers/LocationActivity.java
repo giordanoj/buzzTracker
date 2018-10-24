@@ -77,7 +77,7 @@ public class LocationActivity extends AppCompatActivity {
             final Model model = Model.getInstance();
             final Location location = locationsData.get(position);
 
-            holder.viewholderName.setText(locationsData.get(position).get_Name());
+            holder.viewholderName.setText(locationsData.get(position).get_name());
 
             holder.viewholderView.setOnClickListener(new View.OnClickListener() {
                 @Override

@@ -13,13 +13,11 @@
         android:layout_height="500dp"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <include
-            layout="@layout/location_list"
-            />
+        <include layout="@layout/item_list" />
     </FrameLayout>
 
     <Button
-        android:id="@+id/backButton2"
+        android:id="@+id/backButton"
         android:layout_width="110dp"
         android:layout_height="50dp"
         android:layout_marginEnd="137dp"

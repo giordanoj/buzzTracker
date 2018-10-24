@@ -27,77 +27,77 @@
         app:layout_constraintTop_toBottomOf="@+id/idText" />
 
     <TextView
-        android:id="@+id/websiteText"
+        android:id="@+id/currentLocationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Website"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/phoneText" />
+        app:layout_constraintTop_toBottomOf="@+id/originText" />
 
     <TextView
-        android:id="@+id/phoneText"
+        android:id="@+id/originText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Phone Number"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/typeText" />
+        app:layout_constraintTop_toBottomOf="@+id/soldByText" />
 
     <TextView
-        android:id="@+id/typeText"
+        android:id="@+id/soldByText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Location Type"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/zipText" />
+        app:layout_constraintTop_toBottomOf="@+id/enteredByText" />
 
     <TextView
-        android:id="@+id/zipText"
+        android:id="@+id/enteredByText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="ZIP Code"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stateText" />
+        app:layout_constraintTop_toBottomOf="@+id/saleTimeText" />
 
     <TextView
-        android:id="@+id/stateText"
+        android:id="@+id/saleTimeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="State"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cityText" />
+        app:layout_constraintTop_toBottomOf="@+id/donationTimeText" />
 
     <TextView
-        android:id="@+id/cityText"
+        android:id="@+id/donationTimeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="City"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/addressText" />
+        app:layout_constraintTop_toBottomOf="@+id/categoryText" />
 
     <TextView
-        android:id="@+id/longitudeText"
+        android:id="@+id/valueText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Longitude"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/latitudeText" />
+        app:layout_constraintTop_toBottomOf="@+id/descriptionText" />
 
     <TextView
-        android:id="@+id/latitudeText"
+        android:id="@+id/descriptionText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -107,14 +107,14 @@
         app:layout_constraintTop_toBottomOf="@+id/nameText" />
 
     <TextView
-        android:id="@+id/addressText"
+        android:id="@+id/categoryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:text="Street Address"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/longitudeText" />
+        app:layout_constraintTop_toBottomOf="@+id/valueText" />
 
     <Button
         android:id="@+id/backButton"
@@ -124,5 +124,15 @@
         android:layout_marginTop="50dp"
         android:text="Back"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/websiteText" />
+        app:layout_constraintTop_toBottomOf="@+id/currentLocationText" />
+
+    <Button
+        android:id="@+id/inventoryButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="50dp"
+        android:text="Inventory"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
+        app:layout_constraintTop_toBottomOf="@+id/currentLocationText" />
 </android.support.constraint.ConstraintLayout>
