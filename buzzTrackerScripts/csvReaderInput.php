@@ -6,16 +6,27 @@ $password = "password";
 $db_name = "dt";
 $table_name = "location";
 
-$input_name = str_replace("_", " ", $_REQUEST["name"]);
-$input_latitude = str_replace("_", " ", $_REQUEST["latitude"]);
-$input_longitude = str_replace("_", " ", $_REQUEST["longitude"]);
-$input_streetAddress = str_replace("_", " ", $_REQUEST["streetAddress"]);
-$input_city = str_replace("_", " ", $_REQUEST["city"]);
-$input_state = str_replace("_", " ", $_REQUEST["state"]);
-$input_zip = str_replace("_", " ", $_REQUEST["zip"]);
-$input_type = str_replace("_", " ", $_REQUEST["type"]);
-$input_phone = str_replace("_", " ", $_REQUEST["phone"]);
-$input_website = str_replace("_", " ", $_REQUEST["website"]);
+$input_name = str_replace("+", " ", $_REQUEST["name"]);
+$input_latitude = str_replace("+", " ", $_REQUEST["latitude"]);
+$input_longitude = str_replace("+", " ", $_REQUEST["longitude"]);
+$input_streetAddress = str_replace("+", " ", $_REQUEST["streetAddress"]);
+$input_city = str_replace("+", " ", $_REQUEST["city"]);
+$input_state = str_replace("+", " ", $_REQUEST["state"]);
+$input_zip = str_replace("+", " ", $_REQUEST["zip"]);
+$input_type = str_replace("+", " ", $_REQUEST["type"]);
+$input_phone = str_replace("+", " ", $_REQUEST["phone"]);
+$input_website = str_replace("+", " ", $_REQUEST["website"]);
+
+$input_name = str_replace("%26", "&", $input_name);
+$input_latitude = str_replace("%26", "&", $input_latitude);
+$input_longitude = str_replace("%26", "&", $input_longitude);
+$input_streetAddress = str_replace("%26", "&", $input_streetAddress);
+$input_city = str_replace("%26", "&", $input_city);
+$input_state = str_replace("%26", "&", $input_state);
+$input_zip = str_replace("%26", "&", $input_zip);
+$input_type = str_replace("%26", "&", $input_type);
+$input_phone = str_replace("%26", "&", $input_phone);
+$input_website = str_replace("%26", "&", $input_website);
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $db_name);

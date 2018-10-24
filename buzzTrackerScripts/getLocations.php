@@ -18,15 +18,10 @@ $sql = "SELECT * FROM $table_name";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
-    $a = 1;
 	while($row = $result->fetch_assoc()) {
-        if ($a > 1) {
-            echo "~" . $row["id"] . "_" . $row["name"] . "_" . $row["latitude"] . "_" . $row["longitude"] . "_" . $row["streetAddress"] . "_" . $row["city"] . "_" . $row["state"] . "_" . $row["zip"] . "_" . $row["type"] . "_" . $row["phone"] . "_" . $row["website"];
-        } else {
-            echo $row["id"] . "_" . $row["name"] . "_" . $row["latitude"] . "_" . $row["longitude"] . "_" . $row["streetAddress"] . "_" . $row["city"] . "_" . $row["state"] . "_" . $row["zip"] . "_" . $row["type"] . "_" . $row["phone"] . "_" . $row["website"];
-        }
-       $a++;
+        echo "|Id:" . $row["id"] . ", Name:" . $row["name"] . ", Latitude:" . $row["latitude"] . ", Longitude:" . $row["longitude"] . ", Street Address:" . $row["streetAddress"] . ", City:" . $row["city"] . ", State:" . $row["state"] . ", Zip:" . $row["zip"] . ", Type:" . $row["type"] . ", Phone:" . $row["phone"] . ", Website:" . $row["website"] . ",";
     }
+    echo "|";
 } else {
     echo "no locations found";
 }

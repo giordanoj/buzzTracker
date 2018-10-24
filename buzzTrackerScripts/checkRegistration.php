@@ -6,7 +6,7 @@ $password = "password";
 $db_name = "dt";
 $table_name = "user";
 
-$input_username = $_REQUEST["username"];
+$input_email = $_REQUEST["email"];
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $db_name);
@@ -15,7 +15,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM $table_name WHERE username = '$input_username'";
+$sql = "SELECT * FROM $table_name WHERE email = '$input_email'";
 
 $result = $conn->query($sql);
 
