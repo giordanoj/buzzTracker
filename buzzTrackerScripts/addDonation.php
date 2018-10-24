@@ -15,6 +15,13 @@ $input_enteredBy = $_REQUEST["enteredBy"];
 $input_origin = $_REQUEST["origin"];
 $input_currentLocation = $_REQUEST["currentLocation"];
 
+$input_name = str_replace("~1~", "''", $input_name );
+$input_name = str_replace("~2~", "\"", $input_name );
+$input_description = str_replace("~1~", "''", $input_description );
+$input_description = str_replace("~2~", "\"", $input_description );
+$input_category = str_replace("~1~", "''", $input_category );
+$input_category = str_replace("~2~", "\"", $input_category );
+
 // Create connection
 $conn = new mysqli($servername, $username, $password, $db_name);
 // Check connection
