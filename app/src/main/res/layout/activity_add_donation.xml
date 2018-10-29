@@ -48,19 +48,16 @@
         android:hint="Value ($)"
         android:inputType="numberDecimal" />
 
-    <EditText
+    <Spinner
         android:id="@+id/etCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/etValue"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Category"
-        android:inputType="text" />
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/etFullDescription"

@@ -25,7 +25,7 @@ public class AddDonationActivity extends Activity {
 
     private EditText _name;
     private EditText _value;
-    private EditText _category;
+    private Spinner _category;
     private EditText _description;
 
     @Override
@@ -39,7 +39,7 @@ public class AddDonationActivity extends Activity {
 
         _name = (EditText) findViewById(R.id.etName);
         _value =  (EditText) findViewById(R.id.etValue);
-        _category = (EditText) findViewById(R.id.etCategory);
+        _category = (Spinner) findViewById(R.id.etCategory);
         _description = (EditText) findViewById(R.id.etFullDescription);
 
         Button cancelBtn = (Button) findViewById(R.id.bCancel);
@@ -79,15 +79,7 @@ public class AddDonationActivity extends Activity {
                     Toast.makeText(getBaseContext(), "Item value contains an illegal character.",
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;
-                } else if (_category.getText().toString().trim().equals("")) {
-                    Toast.makeText(getBaseContext(), "Item category cannot be blank.",
-                            Toast.LENGTH_LONG).show();
-                    validRegistration = false;
-                } else if (_category.getText().toString().contains("~")) {
-                    Toast.makeText(getBaseContext(), "Item category contains an illegal character.",
-                            Toast.LENGTH_LONG).show();
-                    validRegistration = false;
-                } else if (_description.getText().toString().trim().equals("")) {
+                }else if (_description.getText().toString().trim().equals("")) {
                     Toast.makeText(getBaseContext(), "Item description cannot be blank.",
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;
@@ -108,7 +100,7 @@ public class AddDonationActivity extends Activity {
                     description = description.replaceAll("'", "~1~");
                     description = description.replaceAll("\"","~2~");
                     String value = _value.getText().toString().trim();
-                    String category = _category.getText().toString().trim();
+                    String category = _category.getSelectedItem().toString().trim();
                     category = category.replaceAll("'", "~1~");
                     category = category.replaceAll("\"","~2~");
                     Calendar calender = Calendar.getInstance();
@@ -157,7 +149,7 @@ public class AddDonationActivity extends Activity {
                 _name.setText("");
                 _value.setText("");
                 _description.setText("");
-                _category.setText("");
+                _category.setSelection(0); // 0 sets back to first
                 Toast.makeText(getBaseContext(), "Donation added successfully!",
                         Toast.LENGTH_LONG).show();
             }
