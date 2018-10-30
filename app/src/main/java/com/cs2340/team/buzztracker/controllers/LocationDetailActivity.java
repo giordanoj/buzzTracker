@@ -13,6 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs2340.team.buzztracker.R;
+import com.cs2340.team.buzztracker.model.CategoryTypes;
 import com.cs2340.team.buzztracker.model.Inventory;
 import com.cs2340.team.buzztracker.model.Item;
 import com.cs2340.team.buzztracker.model.Location;
@@ -130,7 +131,7 @@ public class LocationDetailActivity extends Activity{
                     String value = itemString.substring(valStartInd, valStartInd + itemString.substring(valStartInd).indexOf("~"));
 
                     int catStartInd = itemString.indexOf("Category:") + 9;
-                    String category = itemString.substring(catStartInd, catStartInd + itemString.substring(catStartInd).indexOf("~"));
+                    CategoryTypes category = CategoryTypes.fromString(itemString.substring(catStartInd, catStartInd + itemString.substring(catStartInd).indexOf("~")));
 
                     int donStartInd = itemString.indexOf("Donation Time:") + 14;
                     String donationTime = itemString.substring(donStartInd, donStartInd + itemString.substring(donStartInd).indexOf("~"));

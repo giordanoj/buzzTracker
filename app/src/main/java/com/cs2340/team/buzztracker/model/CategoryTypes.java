@@ -38,6 +38,20 @@ public enum CategoryTypes {
     public String toString() {return var;}
 
 
+    /**
+     * method loops through all enums to get the value that matches the input string
+     * @param string the input string that should be an enum
+     * @return the enum or null if it doesn't exist
+     */
+    public static CategoryTypes fromString(String string) {
+        for (CategoryTypes ct: CategoryTypes.values()) {
+            if(ct.toString().equals(string)) {
+                return ct;
+            }
+        }
+        return null;
+    }
+
 
 
 

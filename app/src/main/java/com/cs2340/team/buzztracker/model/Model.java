@@ -3,6 +3,7 @@ package com.cs2340.team.buzztracker.model;
 import java.util.ArrayList;
 import java.util.List;
 
+
 public class Model {
     /** Singleton instance */
     private static final Model _instance = new Model();
@@ -35,7 +36,7 @@ public class Model {
     public final Inventory theNullInventory = new Inventory(null, null);
 
     /** Null Item pattern, returned when no item is found */
-    public final Item theNullItem = new Item(0, "", "", "", ""
+    public final Item theNullItem = new Item(0, CategoryTypes.AllCategories, "", "", ""
             , "", "No such item.", "", 0, "",
             0, 0, 0);
 
