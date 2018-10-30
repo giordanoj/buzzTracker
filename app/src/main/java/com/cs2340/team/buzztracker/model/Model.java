@@ -39,7 +39,7 @@ public class Model {
     public final Inventory theNullInventory = new Inventory(null, null);
 
     /** Null Item pattern, returned when no item is found */
-    public final Item theNullItem = new Item(0, CategoryTypes.AllCategories, "", "", ""
+    public final Item theNullItem = new Item(0, "", "", "", ""
             , "", "No such item.", "", 0, "",
             0, 0, 0);
 

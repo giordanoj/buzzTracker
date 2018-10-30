@@ -15,10 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs2340.team.buzztracker.R;
-import com.cs2340.team.buzztracker.model.CategoryTypes;
 import com.cs2340.team.buzztracker.model.Model;
-
-import java.util.Calendar;
 
 public class ItemSearchActivity extends Activity {
 
@@ -43,7 +40,7 @@ public class ItemSearchActivity extends Activity {
         /**
             setting up adapter to pull in category types
          */
-        ArrayAdapter<CategoryTypes> categoryTypesArrayAdapter = new ArrayAdapter (this,android.R.layout.simple_spinner_item, CategoryTypes.values());
+        ArrayAdapter<String> categoryTypesArrayAdapter = new ArrayAdapter (this,android.R.layout.simple_spinner_item, model.getCategories());
         categoryTypesArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _category.setAdapter(categoryTypesArrayAdapter);
 
