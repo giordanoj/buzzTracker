@@ -60,6 +60,17 @@ public class ApplicationAcitivity extends Activity {
                 finish();
             }}
         );
+
+        Button itemSearchBtn = (Button) findViewById(R.id.itemSearchBtn);
+        itemSearchBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent itemSearch = new Intent(ApplicationAcitivity.this, ItemSearchActivity.class);
+                startActivity(itemSearch);
+                finish();
+            }}
+        );
     }
 
 

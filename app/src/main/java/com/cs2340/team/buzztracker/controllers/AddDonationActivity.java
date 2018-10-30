@@ -45,7 +45,7 @@ public class AddDonationActivity extends Activity {
         _category = (Spinner) findViewById(R.id.etCategory);
         _description = (EditText) findViewById(R.id.etFullDescription);
 
-
+        Model model = Model.getInstance();
         /**
             setting up adapter to pull in category types
          */

@@ -56,6 +56,17 @@ public class LocationDetailActivity extends Activity{
             }}
         );
 
+        Button itemSearchBtn = (Button) findViewById(R.id.itemSearchBtn);
+        itemSearchBtn.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent itemSearch = new Intent(LocationDetailActivity.this, ItemSearchActivity.class);
+                startActivity(itemSearch);
+                finish();
+            }}
+        );
+
         if (!model.getCurrentLocation().equals(model.theNullLocation)) {
             Location currentLocation = model.getCurrentLocation();
 

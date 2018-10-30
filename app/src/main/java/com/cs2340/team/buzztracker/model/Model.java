@@ -12,6 +12,9 @@ public class Model {
     /** holds the list of all courses */
     private ArrayList<Location> _locations;
 
+    /** hold the list of all item categories */
+    private ArrayList<String> _categories;
+
     /** the inventory of the location currently being viewed
      *  will not be set until the user requests to see a particular location's inventory
      */
@@ -45,6 +48,7 @@ public class Model {
      */
     private Model() {
         _locations = new ArrayList<>();
+        _categories = new ArrayList<>();
 
         setCurrentLocation(theNullLocation);
         setCurrentInventory(theNullInventory);
@@ -68,6 +72,16 @@ public class Model {
             }
         }
         return null;
+    }
+
+    public ArrayList<String> getCategories() { return _categories; }
+
+    public boolean addCategory(String category) {
+        for (String c : _categories) {
+            if (c.equals(category)) return false;
+        }
+        _categories.add(category);
+        return true;
     }
 
     public Location getCurrentLocation() { return _currentLocation;}

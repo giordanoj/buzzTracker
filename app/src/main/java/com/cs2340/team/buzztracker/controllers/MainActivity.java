@@ -60,6 +60,12 @@ public class MainActivity extends AppCompatActivity {
         startService(getLocations);
 
         /**
+         *  Get category names from database and put them in a list in the Model
+         */
+        Intent getCategories = new Intent(this, GetCategoriesIntentService.class);
+        startService(getCategories);
+
+        /**
          *  Register all the ResponseReceivers to receive async results
          */
         GetLocationsResponseReceiver receiver1;
@@ -67,6 +73,12 @@ public class MainActivity extends AppCompatActivity {
         filter1.addCategory(Intent.CATEGORY_DEFAULT);
         receiver1 = new GetLocationsResponseReceiver();
         registerReceiver(receiver1, filter1);
+
+        GetCategoriesResponseReceiver receiver2;
+        IntentFilter filter2 = new IntentFilter(GetCategoriesResponseReceiver.ACTION_RESP);
+        filter2.addCategory(Intent.CATEGORY_DEFAULT);
+        receiver2 = new GetCategoriesResponseReceiver();
+        registerReceiver(receiver2, filter2);
 
     }
 
@@ -133,4 +145,24 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    public class GetCategoriesResponseReceiver extends BroadcastReceiver {
+        public static final String ACTION_RESP = "Get category data from database";
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            String result = intent.getStringExtra("output");
+
+            if (result.startsWith("no categories found")) {
+                Toast.makeText(getBaseContext(), "No category data imported.",
+                        Toast.LENGTH_LONG).show();
+            } else {
+                Model model = Model.getInstance();
+
+                String[] categories = result.split("\\|");
+                for (String c : categories) {
+                    model.addCategory(c);
+                }
+            }
+        }
+
+    }
 }

@@ -53,6 +53,8 @@
         <service android:enabled="true" android:name=".controllers.GetLocationsIntentService"></service>
         <service android:enabled="true" android:name=".controllers.AddDonationIntentService"></service>
         <service android:enabled="true" android:name=".controllers.GetInventoryIntentService"></service>
+        <service android:enabled="true" android:name=".controllers.GetCategoriesIntentService"></service>
+        <service android:enabled="true" android:name=".controllers.ItemSearchIntentService"></service>
     </application>
 
 </manifest>
