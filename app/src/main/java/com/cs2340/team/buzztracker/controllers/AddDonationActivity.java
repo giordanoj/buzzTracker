@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.content.Intent;
 import android.app.Activity;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
@@ -18,6 +20,7 @@ import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Model;
 import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
+import com.cs2340.team.buzztracker.model.CategoryTypes;
 
 import java.util.Calendar;
 
@@ -41,6 +44,14 @@ public class AddDonationActivity extends Activity {
         _value =  (EditText) findViewById(R.id.etValue);
         _category = (Spinner) findViewById(R.id.etCategory);
         _description = (EditText) findViewById(R.id.etFullDescription);
+
+
+        /**
+            setting up adapter to pull in category types
+         */
+        ArrayAdapter<CategoryTypes> categoryTypesArrayAdapter = new ArrayAdapter (this,android.R.layout.simple_spinner_item, CategoryTypes.values());
+        categoryTypesArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        _category.setAdapter(categoryTypesArrayAdapter);
 
         Button cancelBtn = (Button) findViewById(R.id.bCancel);
         cancelBtn.setOnClickListener(new View.OnClickListener() {

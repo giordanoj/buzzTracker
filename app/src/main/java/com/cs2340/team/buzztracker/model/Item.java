@@ -10,7 +10,7 @@ public class Item {
     /**
      * this is the category for a particular item
      */
-    private String _category;
+    private CategoryTypes _category;
 
     /**
      * This is the donation time of a particular item
@@ -79,11 +79,11 @@ public class Item {
         return _id;
     }
 
-    public String get_category() {
+    public CategoryTypes get_category() {
         return _category;
     }
 
-    public void set_category(String _category) {
+    public void set_category(CategoryTypes _category) {
         this._category = _category;
     }
 
@@ -193,7 +193,7 @@ public class Item {
      * @param _soldBy               Who sold an item (by id of employee)
      * @param _currentLocation      The current location of the item (by id of location)
      */
-    public Item(int _id, String _category, String _donationTime, String _value, String _picture,
+    public Item(int _id, CategoryTypes _category, String _donationTime, String _value, String _picture,
                 String _comment, String _shortDescription, String _fullDescription, int _origin,
                 String _saleTime, int _enteredBy, int _soldBy, int _currentLocation) {
         this._id = _id;
