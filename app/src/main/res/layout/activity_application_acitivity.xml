@@ -7,6 +7,32 @@
     tools:context=".controllers.ApplicationAcitivity">
 
     <Button
+        android:id="@+id/addDonationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="250dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="36dp"
+        android:text="Add Donation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationsBtn" />
+
+    <Button
+        android:id="@+id/itemSearchBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="250dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="36dp"
+        android:text="Item Search"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addDonationBtn" />
+
+    <Button
         android:id="@+id/logoutBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -24,8 +50,8 @@
 
     <TextView
         android:id="@+id/usernameView"
-        android:layout_width="99dp"
-        android:layout_height="41dp"
+        android:layout_width="157dp"
+        android:layout_height="66dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="32dp"
@@ -35,4 +61,16 @@
         app:layout_constraintHorizontal_bias="0.069"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/locationsBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="250dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="65dp"
+        android:text="Locations"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/usernameView" />
 </android.support.constraint.ConstraintLayout>

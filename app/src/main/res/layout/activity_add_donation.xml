@@ -8,7 +8,7 @@
 
 
     <TextView
-        android:id="@+id/tvAddDonation"
+        android:id="@+id/tvItemSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -21,34 +21,6 @@
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/etDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_below="@+id/tvAddDonation"
-        android:ems="10"
-        android:hint="DD/MM/YY"
-        android:inputType="datetime" />
-
-    <EditText
-        android:id="@+id/etTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_below="@+id/etDate"
-        android:ems="10"
-        android:hint="HH:MM"
-        android:inputType="time" />
-
-    <EditText
         android:id="@+id/etName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -57,81 +29,69 @@
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginTop="16dp"
-        android:layout_below="@+id/etTime"
+        android:layout_below="@+id/tvItemSearch"
         android:ems="10"
         android:hint="Name"
-        android:inputType="text" />
-
-    <EditText
-        android:id="@+id/etLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginTop="16dp"
-        android:layout_below="@+id/etName"
-        android:ems="10"
-        android:hint="Location"
+        android:maxLength="50"
         android:inputType="text" />
 
     <EditText
         android:id="@+id/etValue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etLocation"
+        android:layout_below="@+id/etName"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:maxLength="10"
         android:ems="10"
         android:hint="Value ($)"
         android:inputType="numberDecimal" />
 
-    <EditText
+    <Spinner
         android:id="@+id/etCategory"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/etValue"
-        android:layout_marginTop="16dp"
-        android:ems="10"
-        android:hint="Category"
-        android:inputType="text" />
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp" />
 
     <EditText
         android:id="@+id/etFullDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="32dp"
-        android:layout_marginEnd="32dp"
+        android:layout_alignParentStart="true"
         android:layout_below="@+id/etCategory"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
+        android:maxLength="400"
         android:ems="10"
-        android:hint="A complete description of the item and its condition."
+        android:hint="A complete description of the item and its condition (400 characters max)."
         android:inputType="textMultiLine" />
 
     <Button
         android:id="@+id/bAddDonation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/etLocation"
-        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/etFullDescription"
+        android:layout_below="@+id/etFullDescription"
+        android:layout_marginTop="16dp"
         android:text="Add Donation" />
 
     <Button
         android:id="@+id/bCancel"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignEnd="@+id/etLocation"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/etFullDescription"
+        android:layout_marginTop="16dp"
+        android:layout_alignEnd="@+id/etFullDescription"
         android:text="Cancel" />
 
 
