@@ -159,7 +159,9 @@ public class MainActivity extends AppCompatActivity {
 
                 String[] categories = result.split("\\|");
                 for (String c : categories) {
-                    model.addCategory(c);
+                    if (!c.trim().equals("")) {
+                        model.addCategory(c);
+                    }
                 }
             }
         }

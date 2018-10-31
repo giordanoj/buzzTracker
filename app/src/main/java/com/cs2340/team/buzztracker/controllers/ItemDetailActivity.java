@@ -33,8 +33,6 @@ public class ItemDetailActivity extends Activity{
             @Override
             public void onClick(View v) {
                 model.setCurrentItem(model.theNullItem);
-                Intent back = new Intent(ItemDetailActivity.this, InventoryActivity.class);
-                startActivity(back);
                 finish();
             }}
         );

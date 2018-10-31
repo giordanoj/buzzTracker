@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -39,9 +40,17 @@ public class InventoryActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(InventoryActivity.this, LocationDetailActivity.class);
-                startActivity(back);
-                finish();
+                String previous = getIntent().getStringExtra("previous");
+                Log.e("hi",previous);
+                if (previous.equals("LocationDetailActivity")) {
+                    Intent back = new Intent(InventoryActivity.this, LocationDetailActivity.class);
+                    startActivity(back);
+                    finish();
+                } else if (previous.equals("ItemSearchActivity")) {
+                    Intent back = new Intent(InventoryActivity.this, ItemSearchActivity.class);
+                    startActivity(back);
+                    finish();
+                }
             }}
         );
     }
@@ -85,7 +94,6 @@ public class InventoryActivity extends AppCompatActivity {
                     Intent itemDetail = new Intent(InventoryActivity.this, ItemDetailActivity.class);
 
                     startActivity(itemDetail);
-                    finish();
                 }
             });
         }

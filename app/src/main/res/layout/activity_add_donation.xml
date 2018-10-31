@@ -32,6 +32,7 @@
         android:layout_below="@+id/tvItemSearch"
         android:ems="10"
         android:hint="Name"
+        android:maxLength="50"
         android:inputType="text" />
 
     <EditText
@@ -44,6 +45,7 @@
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
+        android:maxLength="10"
         android:ems="10"
         android:hint="Value ($)"
         android:inputType="numberDecimal" />
@@ -69,6 +71,7 @@
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="16dp"
+        android:maxLength="400"
         android:ems="10"
         android:hint="A complete description of the item and its condition (400 characters max)."
         android:inputType="textMultiLine" />

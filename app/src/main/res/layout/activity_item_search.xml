@@ -62,6 +62,7 @@
         android:layout_alignStart="@+id/etSearch"
         android:layout_below="@+id/etCategory"
         android:layout_marginTop="64dp"
+        android:maxLength="50"
         android:text="Search" />
 
     <Button

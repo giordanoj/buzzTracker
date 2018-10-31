@@ -22,6 +22,7 @@ import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
 
 
+import java.util.ArrayList;
 import java.util.Calendar;
 
 public class AddDonationActivity extends Activity {
@@ -49,7 +50,14 @@ public class AddDonationActivity extends Activity {
         /**
             setting up adapter to pull in category types
          */
-        ArrayAdapter<String> categoryArrayAdapter = new ArrayAdapter (this,android.R.layout.simple_spinner_item, model.getCategories());
+        ArrayList<String> categories = new ArrayList<>();
+        for (String s : model.getCategories()) {
+            if (!s.equals("All Categories")) {
+                categories.add(s);
+            }
+        }
+
+        ArrayAdapter<String> categoryArrayAdapter = new ArrayAdapter (this,android.R.layout.simple_spinner_item, categories);
         categoryArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _category.setAdapter(categoryArrayAdapter);
 

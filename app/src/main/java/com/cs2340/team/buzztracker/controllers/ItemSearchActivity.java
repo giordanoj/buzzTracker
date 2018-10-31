@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,7 +16,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs2340.team.buzztracker.R;
+import com.cs2340.team.buzztracker.model.Inventory;
+import com.cs2340.team.buzztracker.model.Item;
 import com.cs2340.team.buzztracker.model.Model;
+
+import java.util.ArrayList;
 
 public class ItemSearchActivity extends Activity {
 
@@ -37,6 +42,12 @@ public class ItemSearchActivity extends Activity {
         _category = (Spinner) findViewById(R.id.etCategory);
 
         Model model = Model.getInstance();
+
+        if (model.getCurrentLocation() != model.theNullLocation) {
+            _location.setText("Location: " + model.getCurrentLocation().get_name());
+        } else {
+            _location.setText("Location: All Locations");
+        }
         /**
             setting up adapter to pull in category types
          */
@@ -71,11 +82,7 @@ public class ItemSearchActivity extends Activity {
                  */
                 boolean validRegistration = true;
 
-                if (_search.getText().toString().trim().equals("")) {
-                    Toast.makeText(getBaseContext(), "Search cannot be blank.",
-                            Toast.LENGTH_LONG).show();
-                    validRegistration = false;
-                } else if (_search.getText().toString().contains("~")) {
+                if (_search.getText().toString().contains("~")) {
                     Toast.makeText(getBaseContext(), "Search contains an illegal character.",
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;
@@ -87,6 +94,9 @@ public class ItemSearchActivity extends Activity {
                      */
                     Model model = Model.getInstance();
                     String query = _search.getText().toString().trim();
+                    if (query.equals("")) {
+                        query = "~blank~";
+                    }
                     query = query.replaceAll("'", "~1~");
                     query = query.replaceAll("\"","~2~");
                     String location = model.getCurrentLocation().get_id() + "";
@@ -120,11 +130,38 @@ public class ItemSearchActivity extends Activity {
         public void onReceive(Context context, Intent intent) {
             String result = intent.getStringExtra("output");
 
-            if (result.startsWith("item not added")) {
-                Toast.makeText(getBaseContext(), "An error occurred: new donation not added.",
+            if (result.startsWith("no items found")) {
+                Toast.makeText(getBaseContext(), "No items were found",
                         Toast.LENGTH_LONG).show();
             } else {
+                /**
+                 * For each item in the response String, parse the Item data, put the data into
+                 * an Item object, and put that Item into an ArrayList
+                 */
+                Model model = Model.getInstance();
+                ArrayList<Item> items = new ArrayList<>();
+                while (result.trim().length() > 1) {
+                    int startInd = result.indexOf("|");
+                    int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") + result.indexOf("|") + 1;
+                    String itemString = result.substring(startInd + 1, endInd);
+                    result = result.substring(endInd );
 
+                    items.add(Util.parseItemString(itemString));
+                }
+                /**
+                 * Create an Inventory object from the ArrayList of Items and the current
+                 * Location from the Model
+                 */
+                Inventory inventory = new Inventory(items, model.getCurrentLocation());
+                model.setCurrentInventory(inventory);
+
+                /**
+                 * Move on to the Inventory screen
+                 */
+                Intent invent = new Intent(ItemSearchActivity.this, InventoryActivity.class);
+                invent.putExtra("previous", "ItemSearchActivity");
+                startActivity(invent);
+                finish();
             }
         }
 

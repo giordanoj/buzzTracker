@@ -24,15 +24,10 @@ public class ItemSearchIntentService extends IntentService {
 
         try {
 
-            url = new URL("http://10.0.2.2:80/buzzTrackerScripts/addDonation.php?" +
-                    "name=" + intent.getStringExtra("name") +
-                    "&description=" + intent.getStringExtra("description") +
-                    "&value=" + intent.getStringExtra("value") +
-                    "&category=" + intent.getStringExtra("category") +
-                    "&donationTime=" + intent.getStringExtra("donationTime") +
-                    "&enteredBy=" + intent.getStringExtra("enteredBy") +
-                    "&origin=" + intent.getStringExtra("origin") +
-                    "&currentLocation=" + intent.getStringExtra("currentLocation")
+            url = new URL("http://10.0.2.2:80/buzzTrackerScripts/itemSearch.php?" +
+                    "query=" + intent.getStringExtra("query") +
+                    "&location=" + intent.getStringExtra("location") +
+                    "&category=" + intent.getStringExtra("category")
             );
 
             urlConnection = (HttpURLConnection) url.openConnection();

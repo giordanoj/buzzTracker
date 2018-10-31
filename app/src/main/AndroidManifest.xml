@@ -46,6 +46,8 @@
             android:label="InventoryActivity" />
         <activity android:name=".controllers.ItemDetailActivity"
             android:label="ItemDetailActivity" />
+        <activity android:name=".controllers.ItemSearchActivity"
+            android:label="ItemSearchActivity" />
 
         <service android:enabled="true" android:name=".controllers.CheckRegistrationIntentService"></service>
         <service android:enabled="true" android:name=".controllers.RegisterUserIntentService"></service>
