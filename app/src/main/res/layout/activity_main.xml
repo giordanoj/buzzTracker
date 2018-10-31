@@ -4,24 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_cs4good_gradient"
     tools:context=".controllers.MainActivity">
-
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="214dp"
-        android:layout_height="46dp"
-        android:layout_marginStart="24dp"
-        android:fontFamily="cursive"
-        android:text="Welcome"
-        android:textAlignment="center"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.417"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.063" />
 
     <Button
         android:id="@+id/loginButton"
@@ -40,12 +24,24 @@
         android:id="@+id/registerButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="80dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="150dp"
+        android:layout_marginEnd="80dp"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/loginButton"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="125dp"
+        android:layout_height="64dp"
+        android:layout_marginTop="55dp"
+        android:layout_centerInParent="true"
+        android:adjustViewBounds="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/cs4good_symbol" />
 
 </android.support.constraint.ConstraintLayout>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_cs4good_gradient"
     tools:context=".controllers.AddDonationActivity">
 
 
@@ -90,8 +91,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/etFullDescription"
-        android:layout_marginTop="16dp"
         android:layout_alignEnd="@+id/etFullDescription"
+        android:layout_marginTop="16dp"
         android:text="Cancel" />
 
 
