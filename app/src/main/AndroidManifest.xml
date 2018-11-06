@@ -8,6 +8,13 @@
     <uses-permission android:name="android.permission.READ_CONTACTS" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -40,23 +47,58 @@
         <activity
             android:name=".controllers.UserProfile"
             android:label="@string/title_activity_user_profile" />
-        <activity android:name=".controllers.AddDonationActivity"
+        <activity
+            android:name=".controllers.AddDonationActivity"
             android:label="AddDonationActivity" />
-        <activity android:name=".controllers.InventoryActivity"
+        <activity
+            android:name=".controllers.InventoryActivity"
             android:label="InventoryActivity" />
-        <activity android:name=".controllers.ItemDetailActivity"
+        <activity
+            android:name=".controllers.ItemDetailActivity"
             android:label="ItemDetailActivity" />
-        <activity android:name=".controllers.ItemSearchActivity"
+        <activity
+            android:name=".controllers.ItemSearchActivity"
             android:label="ItemSearchActivity" />
 
-        <service android:enabled="true" android:name=".controllers.CheckRegistrationIntentService"></service>
-        <service android:enabled="true" android:name=".controllers.RegisterUserIntentService"></service>
-        <service android:enabled="true" android:name=".controllers.LoginIntentService"></service>
-        <service android:enabled="true" android:name=".controllers.GetLocationsIntentService"></service>
-        <service android:enabled="true" android:name=".controllers.AddDonationIntentService"></service>
-        <service android:enabled="true" android:name=".controllers.GetInventoryIntentService"></service>
-        <service android:enabled="true" android:name=".controllers.GetCategoriesIntentService"></service>
-        <service android:enabled="true" android:name=".controllers.ItemSearchIntentService"></service>
+        <service
+            android:name=".controllers.CheckRegistrationIntentService"
+            android:enabled="true" />
+        <service
+            android:name=".controllers.RegisterUserIntentService"
+            android:enabled="true" />
+        <service
+            android:name=".controllers.LoginIntentService"
+            android:enabled="true" />
+        <service
+            android:name=".controllers.GetLocationsIntentService"
+            android:enabled="true" />
+        <service
+            android:name=".controllers.AddDonationIntentService"
+            android:enabled="true" />
+        <service
+            android:name=".controllers.GetInventoryIntentService"
+            android:enabled="true" />
+        <service
+            android:name=".controllers.GetCategoriesIntentService"
+            android:enabled="true" />
+        <service
+            android:name=".controllers.ItemSearchIntentService"
+            android:enabled="true" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".controllers.MapsActivity"
+            android:label="@string/title_activity_maps"></activity>
     </application>
 
 </manifest>

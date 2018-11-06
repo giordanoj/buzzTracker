@@ -141,8 +141,8 @@ public class LocationDetailActivity extends Activity{
                  * Move on to the Inventory screen
                 */
                 Intent invent = new Intent(LocationDetailActivity.this, InventoryActivity.class);
-                startActivity(invent);
                 invent.putExtra("previous", "LocationDetailActivity");
+                startActivity(invent);
                 finish();
             }
         }
