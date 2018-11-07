@@ -8,6 +8,19 @@
     tools:context=".controllers.ApplicationAcitivity">
 
     <Button
+        android:id="@+id/mapBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="250dp"
+        android:layout_marginStart="33dp"
+        android:layout_marginTop="36dp"
+        android:text="Map"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/itemSearchBtn" />
+
+    <Button
         android:id="@+id/addDonationBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

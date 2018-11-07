@@ -58,11 +58,15 @@ public class Model {
     public ArrayList<Location> getLocations() { return _locations; }
 
     public boolean addLocation(Location location) {
-        for (Location l : _locations ) {
-            if (l.equals(location)) return false;
+        if (location != null) {
+            for (Location l : _locations ) {
+                if (l.equals(location)) return false;
+            }
+            _locations.add(location);
+            return true;
+        } else {
+            return false;
         }
-        _locations.add(location);
-        return true;
     }
 
     public Location getLocationById(int id) {
