@@ -37,7 +37,7 @@ public class LocationActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        Button backBtn = (Button) findViewById(R.id.backButton2);
+        Button backBtn = (Button) findViewById(R.id.backButton);
         backBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
