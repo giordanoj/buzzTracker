@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_cs4good_gradient"
     tools:context=".controllers.AddDonationActivity">
 
 
@@ -16,9 +17,8 @@
         android:layout_marginTop="16dp"
         android:contentDescription='Displays "Item Search at the top of the screen'
         android:text="Item Search"
-        android:textColor="@android:color/black"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/tvLocation"
@@ -27,8 +27,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvItemSearch"
+        android:textColor="@android:color/white"
         android:textSize="15sp"
-        android:text="TextView" />
+        android:text="Location" />
 
     <EditText
         android:id="@+id/etSearch"
@@ -42,6 +43,9 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Search"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
         android:inputType="text" />
 
     <Spinner
@@ -53,12 +57,20 @@
         android:layout_below="@+id/etSearch"
         android:layout_marginEnd="32dp"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp" />
+        android:layout_marginTop="16dp"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white" />
 
     <Button
         android:id="@+id/bSearch"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/cs4good_button"
+        android:textColor="#ffffff"
+        tools:paddingLeft="20dp"
+        tools:paddingRight="20dp"
+        tools:textAlignment="center"
         android:layout_alignStart="@+id/etSearch"
         android:layout_below="@+id/etCategory"
         android:layout_marginTop="64dp"
@@ -67,8 +79,13 @@
 
     <Button
         android:id="@+id/bBack"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/cs4good_button"
+        android:textColor="#ffffff"
+        tools:paddingLeft="20dp"
+        tools:paddingRight="20dp"
+        tools:textAlignment="center"
         android:layout_alignEnd="@+id/etSearch"
         android:layout_below="@+id/etCategory"
         android:layout_marginTop="64dp"

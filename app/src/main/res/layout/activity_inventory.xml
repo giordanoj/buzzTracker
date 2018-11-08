@@ -30,22 +30,22 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/InventoryTitle" >
+        app:layout_constraintTop_toBottomOf="@+id/InventoryTitle"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white" >
 
         <include layout="@layout/item_list" />
     </FrameLayout>
 
     <Button
         android:id="@+id/backButton"
-        android:layout_width="120dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/cs4good_button"
         android:textColor="#ffffff"
         tools:paddingLeft="20dp"
         tools:paddingRight="20dp"
         tools:textAlignment="center"
-        android:layout_marginEnd="137dp"
-        android:layout_marginStart="137dp"
         android:layout_marginBottom="12dp"
         android:text="Back"
         app:layout_constraintEnd_toEndOf="parent"

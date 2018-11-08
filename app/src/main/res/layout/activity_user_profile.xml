@@ -4,18 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/ic_cs4good_gradient"
     tools:context=".controllers.UserProfile">
+
+    <TextView
+        android:id="@+id/userProfileTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:contentDescription='Displays "Add Donation at the top of the screen'
+        android:text="User Profile"
+        android:textColor="@android:color/white"
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/tvUsertype"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/userProfileTitle"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
-        android:text="User Type"
-        tools:layout_height="wrap_content" />
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
+        android:text="User Type" />
 
     <TextView
         android:id="@+id/tvUserTypeDisplay"
@@ -25,6 +40,9 @@
         android:layout_alignStart="@+id/tvUsertype"
         android:layout_marginTop="16dp"
         android:contentDescription="The actual user type of the profile"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
         android:text="TextView" />
 
     <TextView
@@ -35,6 +53,9 @@
         android:layout_marginTop="32dp"
         android:layout_alignStart="@+id/tvUsertype"
         android:contentDescription="displays title of following textview, the name of the acssociated profile"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
         android:text="Name" />
 
     <TextView
@@ -45,6 +66,9 @@
         android:layout_below="@+id/tvName"
         android:layout_marginTop="16dp"
         android:contentDescription="Displays name associated with profile"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
         android:text="TextView" />
 
     <TextView
@@ -55,6 +79,9 @@
         android:layout_below="@+id/tvNameDisplay"
         android:layout_marginTop="32dp"
         android:contentDescription="Displays description of following text view, the actual username of profile"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
         android:text="Username" />
 
     <TextView
@@ -65,17 +92,11 @@
         android:layout_below="@+id/tvUsername"
         android:layout_marginTop="16dp"
         android:contentDescription="Displays username of profile"
+        android:textColorHint="@android:color/white"
+        android:textColor="@android:color/white"
+        android:backgroundTint="@android:color/white"
         android:text="TextView" />
 
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_below="@+id/tvUsertype"
-        android:layout_marginTop="-20dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="32dp" />
 
     <TextView
         android:id="@+id/tvMainScreen"
@@ -86,6 +107,7 @@
         android:layout_marginTop="40dp"
         android:contentDescription="link to Main Screen"
         android:text="Main Screen"
+        android:textColor="#985F99"
         android:textStyle="italic" />
 
 </RelativeLayout>
