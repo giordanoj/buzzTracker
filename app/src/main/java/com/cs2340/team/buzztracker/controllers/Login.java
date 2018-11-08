@@ -46,11 +46,11 @@ public class Login extends Activity {
 
         );
 
-        loginEmail = (EditText) findViewById(R.id.email);
+        loginEmail = (EditText) findViewById(R.id.tvEmail);
         loginPassword = (EditText) findViewById(R.id.passwordText);
         badLogin = (TextView) findViewById(R.id.badLogin);
         badLogin.setVisibility(View.INVISIBLE);
-        Button loginBtn = (Button) findViewById(R.id.loginbtn1);
+        Button loginBtn = (Button) findViewById(R.id.loginbtn);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
 

@@ -8,4 +8,5 @@
     android:layout_marginLeft="16dp"
     android:layout_marginRight="16dp"
     tools:context="com.cs2340.team.buzztracker.controllers.LocationActivity"
-    tools:listitem="@layout/location_list_content" />
+    tools:listitem="@layout/location_list_content"
+    android:textColor="@android:color/white"/>

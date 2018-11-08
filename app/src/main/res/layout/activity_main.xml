@@ -9,11 +9,16 @@
 
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="32dp"
+        android:background="@drawable/cs4good_button"
+        android:textColor="#ffffff"
+        tools:paddingLeft="20dp"
+        tools:paddingRight="20dp"
+        tools:textAlignment="center"
         android:layout_marginStart="80dp"
         android:layout_marginTop="150dp"
+        android:layout_marginEnd="32dp"
         android:text="LOGIN"
         app:layout_constraintEnd_toStartOf="@+id/registerButton"
         app:layout_constraintHorizontal_bias="0.875"
@@ -22,15 +27,20 @@
 
     <Button
         android:id="@+id/registerButton"
-        android:layout_width="wrap_content"
+        android:layout_width="120dp"
         android:layout_height="wrap_content"
+        android:background="@drawable/cs4good_button"
+        android:textColor="#ffffff"
+        tools:paddingLeft="20dp"
+        tools:paddingRight="20dp"
+        tools:textAlignment="center"
         android:layout_marginStart="16dp"
         android:layout_marginTop="150dp"
         android:layout_marginEnd="80dp"
         android:text="Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/loginButton"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/imageView3"
@@ -42,6 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cs4good_symbol" />
+        app:srcCompat="@drawable/cs4good_symbol_white" />
 
 </android.support.constraint.ConstraintLayout>
