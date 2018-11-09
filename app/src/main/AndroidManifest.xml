@@ -36,7 +36,7 @@
             android:name=".controllers.Register"
             android:label="@string/title_activity_register" />
         <activity
-            android:name=".controllers.ApplicationAcitivity"
+            android:name=".controllers.ApplicationActivity"
             android:label="@string/title_activity_application_acitivity" />
         <activity
             android:name=".controllers.LocationActivity"

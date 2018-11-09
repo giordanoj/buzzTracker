@@ -133,10 +133,12 @@ import java.util.List;
          * @param password      the User's password
          * @param locked        the User's account status
          * @param userType      the User's account type
-         * @param location      the User's home location (only applies to Users of type Location Employee
+         * @param location      the User's home location (only applies to Users of type
+         *                      Location Employee
          * @param
          */
-        public User(int id, String name, String email, String password, boolean locked, UserTypes userType, Location location) {
+        public User(int id, String name, String email, String password, boolean locked,
+                    UserTypes userType, Location location) {
             _id = id;
             _name = name;
             _email = email;
@@ -147,7 +149,8 @@ import java.util.List;
         }
 
         /**
-         * Make a new User; defaults the location to be the null location (empty) for non Location Employees
+         * Make a new User; defaults the location to be the null location (empty) for non
+         *      Location Employees
          * @param id            the User's id
          * @param name          the User's name
          * @param email         the User's email
@@ -156,7 +159,8 @@ import java.util.List;
          * @param userType      the User's account type
          *
          */
-        public User(int id, String name, String email, String password, boolean locked, UserTypes userType) {
+        public User(int id, String name, String email,
+                    String password, boolean locked, UserTypes userType) {
             this(id, name, email, password, locked, userType, Model.getInstance().theNullLocation);
         }
 
@@ -266,12 +270,12 @@ import java.util.List;
          * @return location of graph
          * @throws NoSuchMethodException not implemented yet
          */
-        public String makeValuebyMonthGraph() throws NoSuchMethodException {
+        public String makeValueByMonthGraph() throws NoSuchMethodException {
             throw new NoSuchMethodException();
         }
 
         /**
-         * makes a graph of the income per month of the userss location
+         * makes a graph of the income per month of the user's location
          *
          * @return the location of the graph
          * @throws NoSuchMethodException not implemented
@@ -293,10 +297,11 @@ import java.util.List;
          * search for a location that has a specific item
          *
          * @param item the item we are searching for
-         * @return an arraylist containing the locations of the items
+         * @return an ArrayList containing the locations of the items
          * @throws NoSuchMethodException not implemented yet
          */
-        public ArrayList<Location> searchForLocationByItem(String item) throws NoSuchMethodException {
+        public ArrayList<Location> searchForLocationByItem(String item)
+                throws NoSuchMethodException {
             throw new NoSuchMethodException();
         }
 
@@ -304,7 +309,7 @@ import java.util.List;
          * searches for a location based on items that are within a desired category
          *
          * @param itemCategory the category to be searched for
-         * @return an arraylist of locations
+         * @return an ArrayList of locations
          * @throws NoSuchMethodException not implemented yet
          */
         public ArrayList<Location> searchForLocationByCategory(String itemCategory)
@@ -316,7 +321,7 @@ import java.util.List;
          * searches for nearby locations
          *
          * @param location the location to look near (default current location?)
-         * @return arraylist of nearby locations
+         * @return ArrayList of nearby locations
          * @throws NoSuchMethodException not implemented
          */
         public ArrayList<Location> searchForNearbyLocations(String location)

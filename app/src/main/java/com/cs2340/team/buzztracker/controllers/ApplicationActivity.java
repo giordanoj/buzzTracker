@@ -6,13 +6,12 @@ import android.app.Activity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Model;
 import com.cs2340.team.buzztracker.model.User;
 
-public class ApplicationAcitivity extends Activity {
+public class ApplicationActivity extends Activity {
 
     private User user;
 
@@ -33,7 +32,7 @@ public class ApplicationAcitivity extends Activity {
             public void onClick(View v) {
                 Model model = Model.getInstance();
                 model.setCurrentUser(model.theNullUser);
-                Intent logout = new Intent(ApplicationAcitivity.this, MainActivity.class);
+                Intent logout = new Intent(ApplicationActivity.this, MainActivity.class);
                 startActivity(logout);
                 finish();
             }}
@@ -44,7 +43,7 @@ public class ApplicationAcitivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent locations = new Intent(ApplicationAcitivity.this, LocationActivity.class);
+                Intent locations = new Intent(ApplicationActivity.this, LocationActivity.class);
                 startActivity(locations);
                 finish();
             }}
@@ -55,7 +54,7 @@ public class ApplicationAcitivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent addDonation = new Intent(ApplicationAcitivity.this, AddDonationActivity.class);
+                Intent addDonation = new Intent(ApplicationActivity.this, AddDonationActivity.class);
                 startActivity(addDonation);
                 finish();
             }}
@@ -66,7 +65,7 @@ public class ApplicationAcitivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent itemSearch = new Intent(ApplicationAcitivity.this, ItemSearchActivity.class);
+                Intent itemSearch = new Intent(ApplicationActivity.this, ItemSearchActivity.class);
                 startActivity(itemSearch);
                 finish();
             }}
@@ -77,7 +76,7 @@ public class ApplicationAcitivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent map = new Intent(ApplicationAcitivity.this, MapsActivity.class);
+                Intent map = new Intent(ApplicationActivity.this, MapsActivity.class);
                 startActivity(map);
 
             }}

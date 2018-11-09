@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/ic_cs4good_gradient"
-    tools:context=".controllers.ApplicationAcitivity">
+    tools:context=".controllers.ApplicationActivity">
 
 
     <TextView

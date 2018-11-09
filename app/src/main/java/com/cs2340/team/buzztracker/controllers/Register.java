@@ -15,7 +15,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs2340.team.buzztracker.R;
-import com.cs2340.team.buzztracker.model.Location;
 import com.cs2340.team.buzztracker.model.Model;
 import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
@@ -120,9 +119,9 @@ public class Register extends AppCompatActivity {
         /**
           Set up the adapter to display the allowable Users in the spinner
          */
-        ArrayAdapter<UserTypes> useradapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserTypes.values());
-        useradapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        userSpinner.setAdapter(useradapter);
+        ArrayAdapter<UserTypes> userAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserTypes.values());
+        userAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        userSpinner.setAdapter(userAdapter);
 
         /**
          *  Register all the ResponseReceivers to receive async results
@@ -186,7 +185,7 @@ public class Register extends AppCompatActivity {
                 User newUser = new User(id, uName, uEmail, uPassword, uLocked, uType);
                 model.setCurrentUser(newUser);
 
-                Intent loginA = new Intent(Register.this, ApplicationAcitivity.class);
+                Intent loginA = new Intent(Register.this, ApplicationActivity.class);
                 startActivity(loginA);
                 finish();
             }

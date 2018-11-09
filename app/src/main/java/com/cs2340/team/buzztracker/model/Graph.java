@@ -9,7 +9,7 @@ public class Graph {
 
     /**
      * no arg constructor for an empty class
-     * delete once this class is emplemented
+     * delete once this class is implemented
      */
     public Graph() {
     }

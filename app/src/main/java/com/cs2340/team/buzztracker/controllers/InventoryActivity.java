@@ -15,7 +15,6 @@ import android.widget.TextView;
 
 import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Item;
-import com.cs2340.team.buzztracker.model.Location;
 import com.cs2340.team.buzztracker.model.Model;
 
 import java.util.List;
@@ -83,9 +82,9 @@ public class InventoryActivity extends AppCompatActivity {
             final Model model = Model.getInstance();
             final Item item = itemsData.get(position);
 
-            holder.viewholderName.setText(itemsData.get(position).get_shortDescription());
+            holder.viewHolderName.setText(itemsData.get(position).get_shortDescription());
 
-            holder.viewholderView.setOnClickListener(new View.OnClickListener() {
+            holder.viewHolderView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
@@ -105,13 +104,13 @@ public class InventoryActivity extends AppCompatActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
 
-            public final View viewholderView;
-            public final TextView viewholderName;
+            public final View viewHolderView;
+            public final TextView viewHolderName;
 
             public ViewHolder(View view) {
                 super(view);
-                viewholderView = view;
-                viewholderName = (TextView) view.findViewById(R.id.name);
+                viewHolderView = view;
+                viewHolderName = (TextView) view.findViewById(R.id.name);
             }
 
             @Override

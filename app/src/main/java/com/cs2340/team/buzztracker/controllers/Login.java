@@ -18,8 +18,6 @@ import com.cs2340.team.buzztracker.model.Model;
 import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
 
-import java.util.ArrayList;
-
 public class Login extends Activity {
 
     private EditText loginEmail;
@@ -144,7 +142,7 @@ public class Login extends Activity {
                 User newUser = new User(id, name, email, password, locked, uType, uLocation);
                 model.setCurrentUser(newUser);
 
-                Intent loginA = new Intent(Login.this, ApplicationAcitivity.class);
+                Intent loginA = new Intent(Login.this, ApplicationActivity.class);
                 startActivity(loginA);
                 finish();
             }

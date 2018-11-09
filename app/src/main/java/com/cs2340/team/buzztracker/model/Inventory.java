@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class Inventory {
 
 
-    /** this is an Arraylist to hold the items in a particular iventory
+    /** this is an ArrayList to hold the items in a particular inventory
      * this should only hold around a hundred or so for the user
      * then refreshing when more is needed
      */

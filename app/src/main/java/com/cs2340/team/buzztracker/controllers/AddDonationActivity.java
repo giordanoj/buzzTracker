@@ -3,23 +3,18 @@ package com.cs2340.team.buzztracker.controllers;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.IntentFilter;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.content.Intent;
 import android.app.Activity;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Model;
-import com.cs2340.team.buzztracker.model.User;
-import com.cs2340.team.buzztracker.model.UserTypes;
 
 
 import java.util.ArrayList;
@@ -57,7 +52,8 @@ public class AddDonationActivity extends Activity {
             }
         }
 
-        ArrayAdapter<String> categoryArrayAdapter = new ArrayAdapter (this,android.R.layout.simple_spinner_item, categories);
+        ArrayAdapter<String> categoryArrayAdapter =
+                new ArrayAdapter (this,android.R.layout.simple_spinner_item, categories);
         categoryArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _category.setAdapter(categoryArrayAdapter);
 
@@ -66,7 +62,7 @@ public class AddDonationActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent cancel = new Intent(AddDonationActivity.this, ApplicationAcitivity.class);
+                Intent cancel = new Intent(AddDonationActivity.this, ApplicationActivity.class);
                 startActivity(cancel);
                 finish();
             }}
@@ -103,7 +99,8 @@ public class AddDonationActivity extends Activity {
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;
                 } else if (_description.getText().toString().contains("~")) {
-                    Toast.makeText(getBaseContext(), "Item description contains an illegal character.",
+                    Toast.makeText(getBaseContext(),
+                            "Item description contains an illegal character.",
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;
                 }
@@ -125,13 +122,15 @@ public class AddDonationActivity extends Activity {
                     Calendar calender = Calendar.getInstance();
                     String donationTime = calender.getTime().toString();
                     String enteredBy = Model.getInstance().getCurrentUser().getId() + "";
-                    String origin = Model.getInstance().getCurrentUser().get_Location().get_id() + "";
+                    String origin = Model.getInstance().getCurrentUser().get_Location().get_id()
+                            + "";
                     String currentLocation = origin;
 
                     /**
                      * Add the new item to the database
                      */
-                    Intent addDonation = new Intent(AddDonationActivity.this, AddDonationIntentService.class);
+                    Intent addDonation = new Intent(AddDonationActivity.this,
+                            AddDonationIntentService.class);
                     addDonation.putExtra("name", name);
                     addDonation.putExtra("description", description);
                     addDonation.putExtra("value", value);
@@ -149,7 +148,8 @@ public class AddDonationActivity extends Activity {
          *  Register all the ResponseReceivers to receive async results
          */
         AddDonationActivity.AddDonationResponseReceiver receiver1;
-        IntentFilter filter1 = new IntentFilter(AddDonationActivity.AddDonationResponseReceiver.ACTION_RESP);
+        IntentFilter filter1 =
+                new IntentFilter(AddDonationActivity.AddDonationResponseReceiver.ACTION_RESP);
         filter1.addCategory(Intent.CATEGORY_DEFAULT);
         receiver1 = new AddDonationActivity.AddDonationResponseReceiver();
         registerReceiver(receiver1, filter1);

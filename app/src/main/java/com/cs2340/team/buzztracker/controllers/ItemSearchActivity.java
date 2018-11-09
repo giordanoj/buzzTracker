@@ -6,7 +6,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -63,7 +62,7 @@ public class ItemSearchActivity extends Activity {
                 Model model = Model.getInstance();
                 Intent back;
                 if (model.getCurrentLocation() == model.theNullLocation) {
-                    back = new Intent(ItemSearchActivity.this, ApplicationAcitivity.class);
+                    back = new Intent(ItemSearchActivity.this, ApplicationActivity.class);
                 } else {
                     back = new Intent(ItemSearchActivity.this, LocationDetailActivity.class);
                 }

@@ -3,12 +3,10 @@ package com.cs2340.team.buzztracker.controllers;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -42,7 +40,7 @@ public class LocationActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
-                Intent back = new Intent(LocationActivity.this, ApplicationAcitivity.class);
+                Intent back = new Intent(LocationActivity.this, ApplicationActivity.class);
                 startActivity(back);
                 finish();
             }}
@@ -77,9 +75,9 @@ public class LocationActivity extends AppCompatActivity {
             final Model model = Model.getInstance();
             final Location location = locationsData.get(position);
 
-            holder.viewholderName.setText(locationsData.get(position).get_name());
+            holder.viewHolderName.setText(locationsData.get(position).get_name());
 
-            holder.viewholderView.setOnClickListener(new View.OnClickListener() {
+            holder.viewHolderView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
 
@@ -100,13 +98,13 @@ public class LocationActivity extends AppCompatActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
 
-            public final View viewholderView;
-            public final TextView viewholderName;
+            public final View viewHolderView;
+            public final TextView viewHolderName;
 
             public ViewHolder(View view) {
                 super(view);
-                viewholderView = view;
-                viewholderName = (TextView) view.findViewById(R.id.name);
+                viewHolderView = view;
+                viewHolderName = (TextView) view.findViewById(R.id.name);
             }
 
             @Override
