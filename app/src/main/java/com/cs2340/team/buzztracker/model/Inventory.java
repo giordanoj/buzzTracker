@@ -45,4 +45,15 @@ public class Inventory {
         this._items = _items;
         this._location = _location;
     }
+
+    public boolean addItem(Item item) {
+        if (item != null) {
+            for (Item i : _items) {
+                if (i.equals(item)) return false;
+            }
+            _items.add(item);
+            return true;
+        }
+        return false;
+    }
 }

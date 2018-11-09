@@ -115,27 +115,26 @@ public class LocationDetailActivity extends Activity{
                 Toast.makeText(getBaseContext(), "Location inventory is empty.",
                         Toast.LENGTH_LONG).show();
             } else {
-                /**
-                 * For each item in the response String, parse the Item data, put the data into
-                 * an Item object, and put that Item into an ArrayList
-                 */
                 Model model = Model.getInstance();
                 ArrayList<Item> items = new ArrayList<>();
+                /**
+                 * Create an Inventory object and make it the current Inventory in the Model
+                 */
+                Inventory inventory = new Inventory(items, model.getCurrentLocation());
+                model.setCurrentInventory(inventory);
+
+                /**
+                 * For each item in the response String, parse the Item data, put the data into
+                 * an Item object, and add that item to the Model
+                 */
                 while (result.trim().length() > 1) {
                     int startInd = result.indexOf("|");
                     int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") + result.indexOf("|") + 1;
                     String itemString = result.substring(startInd + 1, endInd);
                     result = result.substring(endInd );
 
-                    items.add(Util.parseItemString(itemString));
+                    model.getCurrentInventory().addItem(Util.parseItemString(itemString));
                 }
-
-                /**
-                 * Create an Inventory object from the ArrayList of Items and the current
-                 * Location from the Model
-                 */
-                Inventory inventory = new Inventory(items, model.getCurrentLocation());
-                model.setCurrentInventory(inventory);
 
                 /**
                  * Move on to the Inventory screen
