@@ -30,84 +30,154 @@ public class Util {
             return Model.getInstance().theNullItem;
         }
 
+        boolean nullItem = true;
+
         int id = 0;
         if (itemString.contains("Id:")) {
             int idStartInd = itemString.indexOf("Id:") + 3;
-            id = Integer.parseInt(itemString.substring(idStartInd, idStartInd + itemString.substring(idStartInd).indexOf("~")));
+            if (itemString.substring(idStartInd).contains("~")) {
+                id = Integer.parseInt(itemString.substring(idStartInd, idStartInd + itemString.substring(idStartInd).indexOf("~")));
+            } else {
+                id = Integer.parseInt(itemString.substring(idStartInd, idStartInd + itemString.substring(idStartInd).indexOf("|")));
+            }
+            nullItem = false;
         }
 
         String name = "";
         if (itemString.contains("Name:")) {
             int nameStartInd = itemString.indexOf("Name:") + 5;
-            name = itemString.substring(nameStartInd, nameStartInd + itemString.substring(nameStartInd).indexOf("~"));
+            if (itemString.substring(nameStartInd).contains("~")) {
+                name = itemString.substring(nameStartInd, nameStartInd + itemString.substring(nameStartInd).indexOf("~"));
+            } else {
+                name = itemString.substring(nameStartInd, nameStartInd + itemString.substring(nameStartInd).indexOf("|"));
+            }
+            nullItem = false;
         }
 
         String description = "";
         if (itemString.contains("Description:")) {
             int descStartInd = itemString.indexOf("Description:") + 12;
-            description = itemString.substring(descStartInd, descStartInd + itemString.substring(descStartInd).indexOf("~"));
+            if (itemString.substring(descStartInd).contains("~")) {
+                description = itemString.substring(descStartInd, descStartInd + itemString.substring(descStartInd).indexOf("~"));
+            } else {
+                description = itemString.substring(descStartInd, descStartInd + itemString.substring(descStartInd).indexOf("|"));
+            }
+            nullItem = false;
         }
 
         String value = "";
         if (itemString.contains("Value:")) {
             int valStartInd = itemString.indexOf("Value:") + 6;
-            value = itemString.substring(valStartInd, valStartInd + itemString.substring(valStartInd).indexOf("~"));
+            if (itemString.substring(valStartInd).contains("~")) {
+                value = itemString.substring(valStartInd, valStartInd + itemString.substring(valStartInd).indexOf("~"));
+            } else {
+                value = itemString.substring(valStartInd, valStartInd + itemString.substring(valStartInd).indexOf("|"));
+            }
+            nullItem = false;
         }
 
         String category = "";
         if (itemString.contains("Category:")) {
             int catStartInd = itemString.indexOf("Category:") + 9;
-            category = itemString.substring(catStartInd, catStartInd + itemString.substring(catStartInd).indexOf("~"));
+            if (itemString.substring(catStartInd).contains("~")) {
+                category = itemString.substring(catStartInd, catStartInd + itemString.substring(catStartInd).indexOf("~"));
+            } else {
+                category = itemString.substring(catStartInd, catStartInd + itemString.substring(catStartInd).indexOf("|"));
+            }
+            nullItem = false;
         }
 
         String donationTime = "";
-        if (itemString.contains("Dontaion Time:")) {
+        if (itemString.contains("Donation Time:")) {
             int donStartInd = itemString.indexOf("Donation Time:") + 14;
-            donationTime = itemString.substring(donStartInd, donStartInd + itemString.substring(donStartInd).indexOf("~"));
+            if (itemString.substring(donStartInd).contains("~")) {
+                donationTime = itemString.substring(donStartInd, donStartInd + itemString.substring(donStartInd).indexOf("~"));
+            } else {
+                donationTime = itemString.substring(donStartInd, donStartInd + itemString.substring(donStartInd).indexOf("|"));
+            }
+            nullItem = false;
         }
 
         String saleTime = "";
         if (itemString.contains("Sale Time:")) {
             int saleStartInd = itemString.indexOf("Sale Time:") + 10;
-            saleTime = itemString.substring(saleStartInd, saleStartInd + itemString.substring(saleStartInd).indexOf("~"));
+            if (itemString.substring(saleStartInd).contains("~")) {
+                saleTime = itemString.substring(saleStartInd, saleStartInd + itemString.substring(saleStartInd).indexOf("~"));
+            } else {
+                saleTime = itemString.substring(saleStartInd, saleStartInd + itemString.substring(saleStartInd).indexOf("|"));
+            }
+            nullItem = false;
         }
 
         int enteredBy = 0;
         if (itemString.contains("Entered By:")) {
             int entStartInd = itemString.indexOf("Entered By:") + 11;
-            enteredBy = Integer.parseInt(itemString.substring(entStartInd, entStartInd + itemString.substring(entStartInd).indexOf("~")));
+            if (itemString.substring(entStartInd).contains("~")) {
+                enteredBy = Integer.parseInt(itemString.substring(entStartInd, entStartInd + itemString.substring(entStartInd).indexOf("~")));
+            } else {
+                enteredBy = Integer.parseInt(itemString.substring(entStartInd, entStartInd + itemString.substring(entStartInd).indexOf("|")));
+            }
+            nullItem = false;
         }
 
         int soldBy = 0;
         if (itemString.contains("Sold By:")) {
             int soldStartInd = itemString.indexOf("Sold By:") + 8;
-            soldBy = Integer.parseInt(itemString.substring(soldStartInd, soldStartInd + itemString.substring(soldStartInd).indexOf("~")));
+            if (itemString.substring(soldStartInd).contains("~")) {
+                soldBy = Integer.parseInt(itemString.substring(soldStartInd, soldStartInd + itemString.substring(soldStartInd).indexOf("~")));
+            } else {
+                soldBy = Integer.parseInt(itemString.substring(soldStartInd, soldStartInd + itemString.substring(soldStartInd).indexOf("|")));
+            }
+            nullItem = false;
         }
 
         int origin = 0;
         if (itemString.contains("Origin:")) {
             int originStartInd = itemString.indexOf("Origin:") + 7;
-            origin = Integer.parseInt(itemString.substring(originStartInd, originStartInd + itemString.substring(originStartInd).indexOf("~")));
+            if (itemString.substring(originStartInd).contains("~")) {
+                origin = Integer.parseInt(itemString.substring(originStartInd, originStartInd + itemString.substring(originStartInd).indexOf("~")));
+            } else {
+                origin = Integer.parseInt(itemString.substring(originStartInd, originStartInd + itemString.substring(originStartInd).indexOf("|")));
+            }
+            nullItem = false;
         }
 
         String picture = "";
         if (itemString.contains("Picture:")) {
             int picStartInd = itemString.indexOf("Picture:") + 8;
-            picture = itemString.substring(picStartInd, picStartInd + itemString.substring(picStartInd).indexOf("~"));
+            if (itemString.substring(picStartInd).contains("~")) {
+                picture = itemString.substring(picStartInd, picStartInd + itemString.substring(picStartInd).indexOf("~"));
+            } else {
+                picture = itemString.substring(picStartInd, picStartInd + itemString.substring(picStartInd).indexOf("|"));
+            }
+            nullItem = false;
         }
 
         String comments = "";
         if (itemString.contains("Comments:")) {
             int commStartInd = itemString.indexOf("Comments:") + 9;
-            comments = itemString.substring(commStartInd, commStartInd + itemString.substring(commStartInd).indexOf("~"));
+            if (itemString.substring(commStartInd).contains("~")) {
+                comments = itemString.substring(commStartInd, commStartInd + itemString.substring(commStartInd).indexOf("~"));
+            } else {
+                comments = itemString.substring(commStartInd, commStartInd + itemString.substring(commStartInd).indexOf("|"));
+            }
+            nullItem = false;
         }
 
         int currentLocation = 0;
         if (itemString.contains("Current Location:")) {
             int currStartInd = itemString.indexOf("Current Location:") + 17;
-            currentLocation = Integer.parseInt(itemString.substring(currStartInd, currStartInd + itemString.substring(currStartInd).indexOf("~")));
+            if (itemString.substring(currStartInd).contains("~")) {
+                currentLocation = Integer.parseInt(itemString.substring(currStartInd, currStartInd + itemString.substring(currStartInd).indexOf("~")));
+            } else {
+                currentLocation = Integer.parseInt(itemString.substring(currStartInd, currStartInd + itemString.substring(currStartInd).indexOf("|")));
+            }
+            nullItem = false;
         }
 
+        if (nullItem) {
+            return Model.getInstance().theNullItem;
+        }
         Item item = new Item(id, category, donationTime, value, picture, comments, name, description, origin, saleTime, enteredBy, soldBy, currentLocation);
         return item;
     }
