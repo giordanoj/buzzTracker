@@ -51,7 +51,7 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
 	while($row = $result->fetch_assoc()) {
-        echo "|Id:" . $row["id"] . "~ Name:" . $row["name"] . "~ Description:" . $row["description"] . "~ Value:" . $row["value"] . "~ Category:" . $row["category"] . "~ Donation Time:" . $row["donationTime"] . "~ Sale Time:" . $row["saleTime"] . "~ Entered By:" . $row["enteredBy"] . "~ Sold By:" . $row["soldBy"] . "~ Origin:" . $row["origin"] . "~ Picture:" . $row["picture"] . "~ Comments:" . $row["comments"] . "~ Current Location:" . $row["currentLocation"] . "~";
+        echo "|Id:" . $row["id"] . "~Name:" . $row["name"] . "~Description:" . $row["description"] . "~Value:" . $row["value"] . "~Category:" . $row["category"] . "~Donation Time:" . $row["donationTime"] . "~Sale Time:" . $row["saleTime"] . "~Entered By:" . $row["enteredBy"] . "~Sold By:" . $row["soldBy"] . "~Origin:" . $row["origin"] . "~Picture:" . $row["picture"] . "~Comments:" . $row["comments"] . "~Current Location:" . $row["currentLocation"];
     }
     echo "|";
 } else {
