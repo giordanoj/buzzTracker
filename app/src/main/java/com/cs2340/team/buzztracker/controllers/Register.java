@@ -18,6 +18,7 @@ import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Model;
 import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
+import com.cs2340.team.buzztracker.model.Util;
 
 public class Register extends AppCompatActivity {
 

@@ -17,6 +17,7 @@ import com.cs2340.team.buzztracker.model.Location;
 import com.cs2340.team.buzztracker.model.Model;
 import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
+import com.cs2340.team.buzztracker.model.Util;
 
 public class Login extends Activity {
 

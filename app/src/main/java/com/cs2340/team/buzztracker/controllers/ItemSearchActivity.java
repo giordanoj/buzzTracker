@@ -18,6 +18,7 @@ import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Inventory;
 import com.cs2340.team.buzztracker.model.Item;
 import com.cs2340.team.buzztracker.model.Model;
+import com.cs2340.team.buzztracker.model.Util;
 
 import java.util.ArrayList;
 

@@ -1,11 +1,7 @@
-package com.cs2340.team.buzztracker.controllers;
-
-import com.cs2340.team.buzztracker.model.Item;
-import com.cs2340.team.buzztracker.model.Model;
+package com.cs2340.team.buzztracker.model;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
 
 public class Util {
     public static String generateHash(String inputPass) {
