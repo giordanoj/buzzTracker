@@ -23,7 +23,7 @@ public class ApplicationActivity extends Activity {
         Model model = Model.getInstance();
 
         TextView usernameText = (TextView) findViewById(R.id.usernameView);
-        usernameText.setText("Welcome " + model.getCurrentUser().get_Name());
+        usernameText.setText("Welcome, " + model.getCurrentUser().get_Name());
 
         Button logoutBtn = (Button) findViewById(R.id.logoutBtn);
         logoutBtn.setOnClickListener(new View.OnClickListener() {

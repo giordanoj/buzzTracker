@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textColor="@android:color/white" />
+        android:textColor="@android:color/white" />
 
     <EditText
         android:id="@+id/tvEmail"
@@ -33,8 +33,7 @@
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginTitle"
-        tools:textColor="@android:color/white" />
+        app:layout_constraintTop_toBottomOf="@+id/LoginTitle" />
 
     <EditText
         android:id="@+id/tvPassword"

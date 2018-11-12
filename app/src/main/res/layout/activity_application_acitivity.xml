@@ -14,15 +14,15 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="TextView"
-        android:textSize="20sp"
+        android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textColor="@android:color/white" />
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/locationsBtn"
-        android:layout_marginTop="65dp"
+        android:layout_marginTop="32dp"
         android:text="Locations"
         android:layout_width="145dp"
         android:layout_height="wrap_content"

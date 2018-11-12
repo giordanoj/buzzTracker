@@ -51,7 +51,7 @@ public class ItemSearchActivity extends Activity {
         /**
             setting up adapter to pull in category types
          */
-        ArrayAdapter<String> categoryArrayAdapter = new ArrayAdapter (this,android.R.layout.simple_spinner_item, model.getCategories());
+        ArrayAdapter<String> categoryArrayAdapter = new ArrayAdapter (this,R.layout.simple_spinner_white_text, model.getCategories());
         categoryArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _category.setAdapter(categoryArrayAdapter);
 

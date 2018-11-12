@@ -20,7 +20,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:textColor="@android:color/white" />
+        android:textColor="@android:color/white" />
 
     <FrameLayout
         android:id="@+id/frameLayout"
@@ -31,8 +31,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/LocationTitle"
-        android:textColor="@android:color/white"
-        android:backgroundTint="@android:color/white">
+        android:textColor="@android:color/white">
 
         <include
             layout="@layout/location_list"
