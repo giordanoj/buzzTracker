@@ -1,5 +1,7 @@
 package com.cs2340.team.buzztracker.model;
 
+import android.util.Log;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 

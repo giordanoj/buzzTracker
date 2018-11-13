@@ -159,7 +159,7 @@ public class ItemSearchActivity extends Activity {
                  * Move on to the Inventory screen
                  */
                 Intent invent = new Intent(ItemSearchActivity.this, InventoryActivity.class);
-                invent.putExtra("previous", "LocationDetailActivity");
+                invent.putExtra("previous", "ItemSearchActivity");
                 startActivity(invent);
                 finish();
             }
