@@ -152,6 +152,6 @@ public class Location {
 
     @Override
     public String toString() {
-        return _id + ": " +_name  ;
+        return _id + ": " + _name;
     }
 }

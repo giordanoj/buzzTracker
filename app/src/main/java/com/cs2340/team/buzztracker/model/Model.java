@@ -103,4 +103,16 @@ public class Model {
     public Item getCurrentItem() { return _currentItem;}
 
     public void setCurrentItem(Item item) { _currentItem = item; }
+
+    /**
+     * clears model, for unit testing only
+     */
+    public void resetModel() {
+        _locations = new ArrayList<>();
+        _categories = new ArrayList<>();
+
+        setCurrentLocation(theNullLocation);
+        setCurrentInventory(theNullInventory);
+        setCurrentItem(theNullItem);
+    }
 }

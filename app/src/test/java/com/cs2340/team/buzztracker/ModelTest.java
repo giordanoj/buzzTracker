@@ -9,24 +9,27 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
-import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
 
 public class ModelTest {
 
-    private ArrayList<Location> locationArray = new ArrayList<>();
+    private ArrayList<Location> locationArray;
 
-    private final Model model = Model.getInstance();
+    private Model model = Model.getInstance();
+    float[] coordinate;
+    Inventory invent;
 
     @Before
     public void setUp() {
 
-        List<Location> locationList = new ArrayList<>();
-        float[] coordinate = new float[2];
-        Inventory invent = new Inventory(null, null);
+        model.resetModel();
+        locationArray = new ArrayList<>();
+        coordinate = new float[2];
+        invent = new Inventory(null, null);
 
         Location one = new Location(125, "Georgia-0", coordinate, "1551 WestVeillag Street", "Atlanta",
                 "Georgia", "71220", "Department", "678-549-9562", "www.goodwill.com",
@@ -111,6 +114,17 @@ public class ModelTest {
         assertTrue("Add same location does not return true.", added);
     }
 
-//    @Test
-//    public void getLocationById
+    @Test
+    public void testGetLocationById() {
+        model.addLocation(locationArray.get(0));
+
+        Location check = model.getLocationById(125);
+        assertEquals(check, locationArray.get(0));
+    }
+
+    @Test
+    public void testGetLocationBadId() {
+        model.addLocation(locationArray.get(0));
+        assertNull(model.getLocationById(126));
+    }
 }
