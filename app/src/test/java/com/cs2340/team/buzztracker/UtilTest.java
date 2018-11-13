@@ -7,7 +7,6 @@ import com.cs2340.team.buzztracker.model.Util;
 import org.junit.Before;
 import org.junit.Test;
 
-import static junit.framework.Assert.assertSame;
 import static org.junit.Assert.assertEquals;
 
 public class UtilTest {

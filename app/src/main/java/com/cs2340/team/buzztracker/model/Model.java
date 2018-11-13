@@ -1,7 +1,6 @@
 package com.cs2340.team.buzztracker.model;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class Model {

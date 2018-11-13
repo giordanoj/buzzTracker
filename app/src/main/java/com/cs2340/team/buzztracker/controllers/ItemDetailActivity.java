@@ -1,23 +1,14 @@
 package com.cs2340.team.buzztracker.controllers;
 
 import android.app.Activity;
-import android.content.BroadcastReceiver;
-import android.content.Context;
-import android.content.Intent;
-import android.content.IntentFilter;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.cs2340.team.buzztracker.R;
-import com.cs2340.team.buzztracker.model.Inventory;
 import com.cs2340.team.buzztracker.model.Item;
-import com.cs2340.team.buzztracker.model.Location;
 import com.cs2340.team.buzztracker.model.Model;
-
-import java.util.ArrayList;
 
 public class ItemDetailActivity extends Activity{
     final Model model = Model.getInstance();

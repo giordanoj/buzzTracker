@@ -1,13 +1,10 @@
 package com.cs2340.team.buzztracker.model;
 
-import android.os.NetworkOnMainThreadException;
 import android.os.Parcel;
 import android.os.Parcelable;
 
 import java.util.ArrayList;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.List;
+
 
     /**
      * Represents a User Class Object
