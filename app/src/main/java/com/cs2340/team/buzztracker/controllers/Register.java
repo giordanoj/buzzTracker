@@ -29,8 +29,8 @@ public class Register extends AppCompatActivity {
     private EditText _email;
     private EditText _password;
     private EditText _name;
-    private TextView idField;
     private TextView badName;
+    private TextView idField;
     private TextView badEmail;
     private TextView badPassword;
     private final Model model = Model.getInstance();
