@@ -127,10 +127,10 @@ public class InventoryActivity extends AppCompatActivity {
                 viewHolderName = view.findViewById(R.id.name);
             }
 
-            @Override
-            public String toString() {
-                return super.toString();
-            }
+//            @Override
+//            public String toString() {
+//                return super.toString();
+//            }
         }
     }
 }

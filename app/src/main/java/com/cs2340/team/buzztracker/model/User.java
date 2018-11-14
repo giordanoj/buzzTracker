@@ -169,7 +169,7 @@ import java.util.ArrayList;
 
         @Override
         public String toString() {
-            return _id + ": " +_email.toString();
+            return _id + ": " +_email;
         }
 
 
@@ -208,10 +208,11 @@ import java.util.ArrayList;
          */
         public static final Parcelable.Creator<User> CREATOR
                 = new Parcelable.Creator<User>() {
+            @Override
             public User createFromParcel(Parcel in) {
                 return new User(in);
             }
-
+            @Override
             public User[] newArray(int size) {
                 return new User[size];
             }

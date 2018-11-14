@@ -1,5 +1,7 @@
 package com.cs2340.team.buzztracker.model;
 
+import java.util.Arrays;
+
 /**
  * Class that contains all the data of a location
  */
@@ -253,7 +255,7 @@ public class Location {
     @Override
     public boolean equals(Object c) {
         Location o = (Location) c;
-        return (o.get_name().equals(_name) && o.get_coordinates().equals(_coordinates));
+        return (o.get_name().equals(_name) && Arrays.equals(o.get_coordinates(), _coordinates));
     }
 
     @Override
