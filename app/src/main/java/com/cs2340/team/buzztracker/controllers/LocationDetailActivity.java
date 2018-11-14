@@ -55,7 +55,7 @@ public class LocationDetailActivity extends Activity{
                 Intent inventory = new Intent(LocationDetailActivity.this,
                         GetInventoryIntentService.class);
                 inventory.putExtra("location",
-                        Model.getInstance().getCurrentLocation().get_id() + "");
+                        model.getCurrentLocation().get_id() + "");
                 startService(inventory);
             }}
         );
@@ -122,7 +122,6 @@ public class LocationDetailActivity extends Activity{
                 Toast.makeText(getBaseContext(), "Location inventory is empty.",
                         Toast.LENGTH_LONG).show();
             } else {
-                Model model = Model.getInstance();
                 ArrayList<Item> items = new ArrayList<>();
                 /*
                   Create an Inventory object and make it the current Inventory in the Model

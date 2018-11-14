@@ -42,7 +42,6 @@ public class addItemUnitTest {
         items.add(nonTrivialItem1);
         emptyInventory = new Inventory(emptyItems, null);
         nonEmptyInventory = new Inventory(items, null);
-
     }
 
     @Test

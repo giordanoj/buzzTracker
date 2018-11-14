@@ -8,7 +8,7 @@ public class Item {
     /**
      * this is the unique id number for the item
      */
-    private int _id;
+    private final int _id;
 
     /**
      * this is the category for a particular item

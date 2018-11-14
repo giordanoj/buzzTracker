@@ -44,7 +44,7 @@ public class ItemSearchActivity extends Activity {
         _search = findViewById(R.id.etSearch);
         _category = findViewById(R.id.etCategory);
 
-        Model model = Model.getInstance();
+        final Model model = Model.getInstance();
 
         if (model.getCurrentLocation() != model.theNullLocation) {
             _location.setText("Location: " + model.getCurrentLocation().get_name());
@@ -64,7 +64,6 @@ public class ItemSearchActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Model model = Model.getInstance();
                 Intent back;
                 if (model.getCurrentLocation() == model.theNullLocation) {
                     back = new Intent(ItemSearchActivity.this, ApplicationActivity.class);
@@ -96,7 +95,6 @@ public class ItemSearchActivity extends Activity {
                     /*
                       Retrieve all necessary information
                      */
-                    Model model = Model.getInstance();
                     String query = _search.getText().toString().trim();
                     if ("".equals(query)) {
                         query = "~blank~";
@@ -141,7 +139,7 @@ public class ItemSearchActivity extends Activity {
                 Toast.makeText(getBaseContext(), "No items were found",
                         Toast.LENGTH_LONG).show();
             } else {
-                Model model = Model.getInstance();
+                final Model model = Model.getInstance();
                 ArrayList<Item> items = new ArrayList<>();
                 /*
                   Create an Inventory object and make it the current Inventory in the Model

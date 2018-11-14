@@ -139,12 +139,12 @@ public class Login extends Activity {
                     uType = UserTypes.User;
                 }
 
-                Model model = Model.getInstance();
+                final Model model = Model.getInstance();
 
                 int locStartInd = userString.indexOf("Location:") + 9;
                 int location = Integer.parseInt(userString.substring(locStartInd,
                         locStartInd + userString.substring(locStartInd).indexOf(",")));
-                Location uLocation = Model.getInstance().theNullLocation;
+                Location uLocation = model.theNullLocation;
                 for (Location l : model.getLocations()) {
                     if (l.get_id() == location) {
                         uLocation = l;

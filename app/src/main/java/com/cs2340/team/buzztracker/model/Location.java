@@ -6,7 +6,7 @@ package com.cs2340.team.buzztracker.model;
 public class Location {
 
     /** this is the id for a location */
-    private int _id;
+    private final int _id;
 
     /** this is the name of the location */
     private String _name;

@@ -44,7 +44,7 @@ public class AddDonationActivity extends Activity {
         _category = findViewById(R.id.etCategory);
         _description = findViewById(R.id.etFullDescription);
 
-        Model model = Model.getInstance();
+        final Model model = Model.getInstance();
         /*
             setting up adapter to pull in category types
          */
@@ -124,8 +124,8 @@ public class AddDonationActivity extends Activity {
                     category = category.replaceAll("\"","~2~");
                     Calendar calender = Calendar.getInstance();
                     String donationTime = calender.getTime().toString();
-                    String enteredBy = Model.getInstance().getCurrentUser().getId() + "";
-                    String origin = Model.getInstance().getCurrentUser().get_Location().get_id()
+                    String enteredBy = model.getCurrentUser().getId() + "";
+                    String origin = model.getCurrentUser().get_Location().get_id()
                             + "";
                     String currentLocation = origin;
 

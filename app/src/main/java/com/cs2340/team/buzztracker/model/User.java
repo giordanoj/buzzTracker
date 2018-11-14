@@ -14,7 +14,7 @@ import java.util.ArrayList;
     public class User implements Parcelable {
 
         /** this user id number */
-        private int _id;
+        private final int _id;
 
         /** this user's Name */
         private String _name;
