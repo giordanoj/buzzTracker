@@ -31,7 +31,7 @@ public class LocationDetailActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.location_details);
 
-        Button backBtn = (Button) findViewById(R.id.backButton);
+        Button backBtn = findViewById(R.id.backButton);
         backBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -43,7 +43,7 @@ public class LocationDetailActivity extends Activity{
             }}
         );
 
-        Button inventoryBtn = (Button) findViewById(R.id.inventoryButton);
+        Button inventoryBtn = findViewById(R.id.inventoryButton);
         inventoryBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -60,7 +60,7 @@ public class LocationDetailActivity extends Activity{
             }}
         );
 
-        Button itemSearchBtn = (Button) findViewById(R.id.searchButton);
+        Button itemSearchBtn = findViewById(R.id.searchButton);
         itemSearchBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -75,17 +75,17 @@ public class LocationDetailActivity extends Activity{
         if (!model.getCurrentLocation().equals(model.theNullLocation)) {
             Location currentLocation = model.getCurrentLocation();
 
-            TextView idText = (TextView) findViewById(R.id.idText);
-            TextView nameText = (TextView) findViewById(R.id.nameText);
-            TextView latitudeText = (TextView) findViewById(R.id.descriptionText);
-            TextView longitudeText = (TextView) findViewById(R.id.valueText);
-            TextView addressText = (TextView) findViewById(R.id.categoryText);
-            TextView cityText = (TextView) findViewById(R.id.donationTimeText);
-            TextView stateText = (TextView) findViewById(R.id.saleTimeText);
-            TextView zipText = (TextView) findViewById(R.id.enteredByText);
-            TextView typeText = (TextView) findViewById(R.id.soldByText);
-            TextView phoneText = (TextView) findViewById(R.id.originText);
-            TextView websiteText = (TextView) findViewById(R.id.currentLocationText);
+            TextView idText = findViewById(R.id.idText);
+            TextView nameText = findViewById(R.id.nameText);
+            TextView latitudeText = findViewById(R.id.descriptionText);
+            TextView longitudeText = findViewById(R.id.valueText);
+            TextView addressText = findViewById(R.id.categoryText);
+            TextView cityText = findViewById(R.id.donationTimeText);
+            TextView stateText = findViewById(R.id.saleTimeText);
+            TextView zipText = findViewById(R.id.enteredByText);
+            TextView typeText = findViewById(R.id.soldByText);
+            TextView phoneText = findViewById(R.id.originText);
+            TextView websiteText = findViewById(R.id.currentLocationText);
 
 
             idText.setText("ID: " + currentLocation.get_id());

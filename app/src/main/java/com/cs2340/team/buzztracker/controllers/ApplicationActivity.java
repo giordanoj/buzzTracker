@@ -26,10 +26,10 @@ public class ApplicationActivity extends Activity {
 
         final Model model = Model.getInstance();
 
-        TextView usernameText = (TextView) findViewById(R.id.usernameView);
+        TextView usernameText = findViewById(R.id.usernameView);
         usernameText.setText("Welcome, " + model.getCurrentUser().get_Name());
 
-        Button logoutBtn = (Button) findViewById(R.id.logoutBtn);
+        Button logoutBtn = findViewById(R.id.logoutBtn);
         logoutBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -41,7 +41,7 @@ public class ApplicationActivity extends Activity {
             }}
         );
 
-        Button locationsBtn = (Button) findViewById(R.id.locationsBtn);
+        Button locationsBtn = findViewById(R.id.locationsBtn);
         locationsBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -53,7 +53,7 @@ public class ApplicationActivity extends Activity {
             }}
         );
 
-        Button addDonationBtn = (Button) findViewById(R.id.addDonationBtn);
+        Button addDonationBtn = findViewById(R.id.addDonationBtn);
         addDonationBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -65,7 +65,7 @@ public class ApplicationActivity extends Activity {
             }}
         );
 
-        Button itemSearchBtn = (Button) findViewById(R.id.itemSearchBtn);
+        Button itemSearchBtn = findViewById(R.id.itemSearchBtn);
         itemSearchBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -76,7 +76,7 @@ public class ApplicationActivity extends Activity {
             }}
         );
 
-        Button mapBtn = (Button) findViewById(R.id.mapBtn);
+        Button mapBtn = findViewById(R.id.mapBtn);
         mapBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override

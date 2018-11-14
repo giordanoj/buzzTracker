@@ -38,7 +38,7 @@ public class InventoryActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
-        Button backBtn = (Button) findViewById(R.id.backButton);
+        Button backBtn = findViewById(R.id.backButton);
         backBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -124,7 +124,7 @@ public class InventoryActivity extends AppCompatActivity {
             public ViewHolder(View view) {
                 super(view);
                 viewHolderView = view;
-                viewHolderName = (TextView) view.findViewById(R.id.name);
+                viewHolderName = view.findViewById(R.id.name);
             }
 
             @Override

@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button loginButton = (Button) findViewById(R.id.loginButton);
+        Button loginButton = findViewById(R.id.loginButton);
         loginButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
 
         );
 
-        Button registerBtn = (Button) findViewById(R.id.registerButton);
+        Button registerBtn = findViewById(R.id.registerButton);
         registerBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override

@@ -21,7 +21,7 @@ public class ItemDetailActivity extends Activity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.item_details);
 
-        Button backBtn = (Button) findViewById(R.id.backButton);
+        Button backBtn = findViewById(R.id.backButton);
         backBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -34,17 +34,17 @@ public class ItemDetailActivity extends Activity{
         if (!model.getCurrentItem().equals(model.theNullItem)) {
             Item currentItem = model.getCurrentItem();
 
-            TextView idText = (TextView) findViewById(R.id.idText);
-            TextView nameText = (TextView) findViewById(R.id.nameText);
-            TextView descriptionText = (TextView) findViewById(R.id.descriptionText);
-            TextView valueText = (TextView) findViewById(R.id.valueText);
-            TextView categoryText = (TextView) findViewById(R.id.categoryText);
-            TextView donationTimeText = (TextView) findViewById(R.id.donationTimeText);
-            TextView saleTimeText = (TextView) findViewById(R.id.saleTimeText);
-            TextView enteredByText = (TextView) findViewById(R.id.enteredByText);
-            TextView soldByText = (TextView) findViewById(R.id.soldByText);
-            TextView originText = (TextView) findViewById(R.id.originText);
-            TextView currentLocationText = (TextView) findViewById(R.id.currentLocationText);
+            TextView idText = findViewById(R.id.idText);
+            TextView nameText = findViewById(R.id.nameText);
+            TextView descriptionText = findViewById(R.id.descriptionText);
+            TextView valueText = findViewById(R.id.valueText);
+            TextView categoryText = findViewById(R.id.categoryText);
+            TextView donationTimeText = findViewById(R.id.donationTimeText);
+            TextView saleTimeText = findViewById(R.id.saleTimeText);
+            TextView enteredByText = findViewById(R.id.enteredByText);
+            TextView soldByText = findViewById(R.id.soldByText);
+            TextView originText = findViewById(R.id.originText);
+            TextView currentLocationText = findViewById(R.id.currentLocationText);
 
             idText.setText("ID: " + currentItem.get_id());
             nameText.setText("Name: " + currentItem.get_shortDescription());

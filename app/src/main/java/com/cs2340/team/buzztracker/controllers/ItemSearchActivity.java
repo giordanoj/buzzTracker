@@ -40,9 +40,9 @@ public class ItemSearchActivity extends Activity {
           Grab the dialog widgets so we can get info for later
          */
 
-        _location = (TextView) findViewById(R.id.tvLocation);
-        _search =  (EditText) findViewById(R.id.etSearch);
-        _category = (Spinner) findViewById(R.id.etCategory);
+        _location = findViewById(R.id.tvLocation);
+        _search = findViewById(R.id.etSearch);
+        _category = findViewById(R.id.etCategory);
 
         Model model = Model.getInstance();
 
@@ -59,7 +59,7 @@ public class ItemSearchActivity extends Activity {
         categoryArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _category.setAdapter(categoryArrayAdapter);
 
-        Button backBtn = (Button) findViewById(R.id.bBack);
+        Button backBtn = findViewById(R.id.bBack);
         backBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -77,7 +77,7 @@ public class ItemSearchActivity extends Activity {
             }}
         );
 
-        Button searchBtn = (Button) findViewById(R.id.bSearch);
+        Button searchBtn = findViewById(R.id.bSearch);
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

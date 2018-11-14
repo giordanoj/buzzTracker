@@ -34,7 +34,7 @@ public class Login extends Activity {
         setContentView(R.layout.activity_login);
 
 
-        Button cancelButton = (Button) findViewById(R.id.cancelbtn);
+        Button cancelButton = findViewById(R.id.cancelbtn);
         cancelButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -48,11 +48,11 @@ public class Login extends Activity {
 
         );
 
-        loginEmail = (EditText) findViewById(R.id.tvEmail);
-        loginPassword = (EditText) findViewById(R.id.tvPassword);
-        badLogin = (TextView) findViewById(R.id.badLogin);
+        loginEmail = findViewById(R.id.tvEmail);
+        loginPassword = findViewById(R.id.tvPassword);
+        badLogin = findViewById(R.id.badLogin);
         badLogin.setVisibility(View.INVISIBLE);
-        Button loginBtn = (Button) findViewById(R.id.loginbtn);
+        Button loginBtn = findViewById(R.id.loginbtn);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
 

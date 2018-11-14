@@ -49,16 +49,16 @@ public class Register extends AppCompatActivity {
           Grab the dialog widgets so we can get info for later
          */
 
-        userSpinner = (Spinner) findViewById(R.id.typeUser);
-        _name = (EditText) findViewById(R.id.nameText);
-        _email =  (EditText) findViewById(R.id.emailText);
-        _password = (EditText) findViewById(R.id.passwordText);
-        idField = (TextView) findViewById(R.id.idView);
-        badName = (TextView)findViewById(R.id.badName);
-        badEmail = (TextView)findViewById(R.id.badEmail);
-        badPassword = (TextView)findViewById(R.id.badPassword);
+        userSpinner = findViewById(R.id.typeUser);
+        _name = findViewById(R.id.nameText);
+        _email = findViewById(R.id.emailText);
+        _password = findViewById(R.id.passwordText);
+        idField = findViewById(R.id.idView);
+        badName = findViewById(R.id.badName);
+        badEmail = findViewById(R.id.badEmail);
+        badPassword = findViewById(R.id.badPassword);
 
-        Button cancelButton = (Button) findViewById(R.id.cancelButton);
+        Button cancelButton = findViewById(R.id.cancelButton);
         cancelButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -71,7 +71,7 @@ public class Register extends AppCompatActivity {
 
         );
 
-        Button registerButton = (Button) findViewById(R.id.registerBtn);
+        Button registerButton = findViewById(R.id.registerBtn);
         registerButton.setOnClickListener(new View.OnClickListener() {
 
             @Override

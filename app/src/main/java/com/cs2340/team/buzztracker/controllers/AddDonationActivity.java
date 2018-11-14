@@ -39,10 +39,10 @@ public class AddDonationActivity extends Activity {
          * Grab the dialog widgets so we can get info for later
          */
 
-        _name = (EditText) findViewById(R.id.etName);
-        _value =  (EditText) findViewById(R.id.etValue);
-        _category = (Spinner) findViewById(R.id.etCategory);
-        _description = (EditText) findViewById(R.id.etFullDescription);
+        _name = findViewById(R.id.etName);
+        _value = findViewById(R.id.etValue);
+        _category = findViewById(R.id.etCategory);
+        _description = findViewById(R.id.etFullDescription);
 
         Model model = Model.getInstance();
         /*
@@ -60,7 +60,7 @@ public class AddDonationActivity extends Activity {
         categoryArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _category.setAdapter(categoryArrayAdapter);
 
-        Button cancelBtn = (Button) findViewById(R.id.bCancel);
+        Button cancelBtn = findViewById(R.id.bCancel);
         cancelBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -71,7 +71,7 @@ public class AddDonationActivity extends Activity {
             }}
         );
 
-        Button addBtn = (Button) findViewById(R.id.bAddDonation);
+        Button addBtn = findViewById(R.id.bAddDonation);
         addBtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
