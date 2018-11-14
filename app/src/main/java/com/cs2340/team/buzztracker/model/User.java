@@ -132,7 +132,7 @@ import java.util.ArrayList;
          * @param userType      the User's account type
          * @param location      the User's home location (only applies to Users of type
          *                      Location Employee
-         * @param
+         *
          */
         public User(int id, String name, String email, String password, boolean locked,
                     UserTypes userType, Location location) {

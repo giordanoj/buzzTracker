@@ -33,8 +33,8 @@ public class ItemSearchActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_search);
 
-        /**
-         * Grab the dialog widgets so we can get info for later
+        /*
+          Grab the dialog widgets so we can get info for later
          */
 
         _location = (TextView) findViewById(R.id.tvLocation);
@@ -48,7 +48,7 @@ public class ItemSearchActivity extends Activity {
         } else {
             _location.setText("Location: All Locations");
         }
-        /**
+        /*
             setting up adapter to pull in category types
          */
         ArrayAdapter<String> categoryArrayAdapter =
@@ -78,8 +78,8 @@ public class ItemSearchActivity extends Activity {
         searchBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /**
-                 * Check that the entered information is valid
+                /*
+                  Check that the entered information is valid
                  */
                 boolean validRegistration = true;
 
@@ -90,8 +90,8 @@ public class ItemSearchActivity extends Activity {
                 }
 
                 if (validRegistration) {
-                    /**
-                     * Retrieve all necessary information
+                    /*
+                      Retrieve all necessary information
                      */
                     Model model = Model.getInstance();
                     String query = _search.getText().toString().trim();
@@ -103,8 +103,8 @@ public class ItemSearchActivity extends Activity {
                     String location = model.getCurrentLocation().get_id() + "";
                     String category = _category.getSelectedItem().toString().trim();
 
-                    /**
-                     * Send query to the database
+                    /*
+                      Send query to the database
                      */
                     Intent search = new Intent(ItemSearchActivity.this,
                             ItemSearchIntentService.class);
@@ -116,8 +116,8 @@ public class ItemSearchActivity extends Activity {
             }}
         );
 
-        /**
-         *  Register all the ResponseReceivers to receive async results
+        /*
+           Register all the ResponseReceivers to receive async results
          */
         ItemSearchActivity.ItemSearchResponseReceiver receiver1;
         IntentFilter filter1 =
@@ -140,15 +140,15 @@ public class ItemSearchActivity extends Activity {
             } else {
                 Model model = Model.getInstance();
                 ArrayList<Item> items = new ArrayList<>();
-                /**
-                 * Create an Inventory object and make it the current Inventory in the Model
+                /*
+                  Create an Inventory object and make it the current Inventory in the Model
                  */
                 Inventory inventory = new Inventory(items, model.getCurrentLocation());
                 model.setCurrentInventory(inventory);
 
-                /**
-                 * For each item in the response String, parse the Item data, put the data into
-                 * an Item object, and add that item to the Model
+                /*
+                  For each item in the response String, parse the Item data, put the data into
+                  an Item object, and add that item to the Model
                  */
                 while (result.trim().length() > 1) {
                     int startInd = result.indexOf("|");
@@ -160,8 +160,8 @@ public class ItemSearchActivity extends Activity {
                     model.getCurrentInventory().addItem(Util.parseItemString(itemString));
                 }
 
-                /**
-                 * Move on to the Inventory screen
+                /*
+                  Move on to the Inventory screen
                  */
                 Intent invent = new Intent(ItemSearchActivity.this, InventoryActivity.class);
                 invent.putExtra("previous", "ItemSearchActivity");

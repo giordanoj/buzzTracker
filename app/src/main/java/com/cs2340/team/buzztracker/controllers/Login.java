@@ -59,9 +59,9 @@ public class Login extends Activity {
                 public void onClick(View v) {
                     String inputEmail = loginEmail.getText().toString();
                     String inputPassword = loginPassword.getText().toString();
-                    /**
-                     *  Check with the database to validate login info
-                     *  If valid, log the user in
+                    /*
+                       Check with the database to validate login info
+                       If valid, log the user in
                      */
                     Intent login = new Intent(Login.this, LoginIntentService.class);
                     login.putExtra("email", inputEmail);
@@ -72,8 +72,8 @@ public class Login extends Activity {
 
         );
 
-        /**
-         *  Register all the ResponseReceivers to receive async results
+        /*
+           Register all the ResponseReceivers to receive async results
          */
         Login.LoginResponseReceiver receiver1;
         IntentFilter filter1 = new IntentFilter(Login.LoginResponseReceiver.ACTION_RESP);
@@ -93,9 +93,9 @@ public class Login extends Activity {
                 Toast.makeText(getBaseContext(), "Incorrect email/password",
                         Toast.LENGTH_LONG).show();
             } else {
-                /**
-                 * Parse the response String with all of the User data, then create a User object
-                 * out of the data and set it as the current User in the Model
+                /*
+                  Parse the response String with all of the User data, then create a User object
+                  out of the data and set it as the current User in the Model
                  */
                 int startInd = result.indexOf("|");
                 int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") +

@@ -42,8 +42,8 @@ public class Register extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        /**
-         * Grab the dialog widgets so we can get info for later
+        /*
+          Grab the dialog widgets so we can get info for later
          */
 
         userSpinner = (Spinner) findViewById(R.id.typeUser);
@@ -76,8 +76,8 @@ public class Register extends AppCompatActivity {
 
                 boolean validRegistration = true;
 
-                /**
-                 *  Make sure none of the text fields are empty
+                /*
+                   Make sure none of the text fields are empty
                  */
                 if (_name.getText().toString().trim().equals("")) {
                     badName.setText("Name cannot be blank!");
@@ -107,9 +107,9 @@ public class Register extends AppCompatActivity {
                 }
 
                 if (validRegistration) {
-                    /**
-                     *  Check with the database to make sure the username isn't already used
-                     *  If unused, add the user to the database and return to the welcome page
+                    /*
+                       Check with the database to make sure the username isn't already used
+                       If unused, add the user to the database and return to the welcome page
                      */
                     Intent checkRegistration = new Intent(Register.this,
                             CheckRegistrationIntentService.class);
@@ -120,7 +120,7 @@ public class Register extends AppCompatActivity {
 
         });
 
-        /**
+        /*
           Set up the adapter to display the allowable Users in the spinner
          */
         ArrayAdapter<UserTypes> userAdapter =
@@ -128,8 +128,8 @@ public class Register extends AppCompatActivity {
         userAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userSpinner.setAdapter(userAdapter);
 
-        /**
-         *  Register all the ResponseReceivers to receive async results
+        /*
+           Register all the ResponseReceivers to receive async results
          */
         CheckRegistrationResponseReceiver receiver1;
         IntentFilter filter1 = new IntentFilter(CheckRegistrationResponseReceiver.ACTION_RESP);

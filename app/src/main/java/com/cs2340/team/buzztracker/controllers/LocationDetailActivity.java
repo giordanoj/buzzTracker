@@ -45,9 +45,9 @@ public class LocationDetailActivity extends Activity{
 
             @Override
             public void onClick(View v) {
-                /**
-                 * Get all of the items from this location from the database, then put then into
-                 * the current Inventory in the Model
+                /*
+                  Get all of the items from this location from the database, then put then into
+                  the current Inventory in the Model
                  */
                 Intent inventory = new Intent(LocationDetailActivity.this,
                         GetInventoryIntentService.class);
@@ -99,8 +99,8 @@ public class LocationDetailActivity extends Activity{
 
         }
 
-        /**
-         *  Register all the ResponseReceivers to receive async results
+        /*
+           Register all the ResponseReceivers to receive async results
          */
         GetInventoryResponseReceiver receiver1;
         IntentFilter filter1 = new IntentFilter(GetInventoryResponseReceiver.ACTION_RESP);
@@ -121,15 +121,15 @@ public class LocationDetailActivity extends Activity{
             } else {
                 Model model = Model.getInstance();
                 ArrayList<Item> items = new ArrayList<>();
-                /**
-                 * Create an Inventory object and make it the current Inventory in the Model
+                /*
+                  Create an Inventory object and make it the current Inventory in the Model
                  */
                 Inventory inventory = new Inventory(items, model.getCurrentLocation());
                 model.setCurrentInventory(inventory);
 
-                /**
-                 * For each item in the response String, parse the Item data, put the data into
-                 * an Item object, and add that item to the Model
+                /*
+                  For each item in the response String, parse the Item data, put the data into
+                  an Item object, and add that item to the Model
                  */
                 while (result.trim().length() > 1) {
                     int startInd = result.indexOf("|");
@@ -141,8 +141,8 @@ public class LocationDetailActivity extends Activity{
                     model.getCurrentInventory().addItem(Util.parseItemString(itemString));
                 }
 
-                /**
-                 * Move on to the Inventory screen
+                /*
+                  Move on to the Inventory screen
                 */
                 Intent invent = new Intent(LocationDetailActivity.this, InventoryActivity.class);
                 invent.putExtra("previous", "LocationDetailActivity");

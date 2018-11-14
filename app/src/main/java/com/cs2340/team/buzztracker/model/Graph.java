@@ -2,9 +2,9 @@ package com.cs2340.team.buzztracker.model;
 
 public class Graph {
 
-    /**
-     * as of now this class is unused
-     * please give this implementation
+    /*
+      as of now this class is unused
+      please give this implementation
      */
 
     /**

@@ -50,20 +50,20 @@ public class MainActivity extends AppCompatActivity {
 
         );
 
-        /**
-         *  Get location data from database, create Location objects and put them into the Model
+        /*
+           Get location data from database, create Location objects and put them into the Model
          */
         Intent getLocations = new Intent(this, GetLocationsIntentService.class);
         startService(getLocations);
 
-        /**
-         *  Get category names from database and put them in a list in the Model
+        /*
+           Get category names from database and put them in a list in the Model
          */
         Intent getCategories = new Intent(this, GetCategoriesIntentService.class);
         startService(getCategories);
 
-        /**
-         *  Register all the ResponseReceivers to receive async results
+        /*
+           Register all the ResponseReceivers to receive async results
          */
         GetLocationsResponseReceiver receiver1;
         IntentFilter filter1 = new IntentFilter(GetLocationsResponseReceiver.ACTION_RESP);
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Model model = Model.getInstance();
 
-                /** Parse each of the location's data and store them as Locations in Model */
+                /* Parse each of the location's data and store them as Locations in Model */
                 while (result.trim().length() > 1) {
                     int startInd = result.indexOf("|");
                     int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") +

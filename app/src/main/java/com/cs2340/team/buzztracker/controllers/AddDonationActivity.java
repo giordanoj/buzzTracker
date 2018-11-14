@@ -20,6 +20,7 @@ import com.cs2340.team.buzztracker.model.Model;
 import java.util.ArrayList;
 import java.util.Calendar;
 
+
 public class AddDonationActivity extends Activity {
 
     private EditText _name;
@@ -32,7 +33,7 @@ public class AddDonationActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_donation);
 
-        /**
+        /*
          * Grab the dialog widgets so we can get info for later
          */
 
@@ -42,7 +43,7 @@ public class AddDonationActivity extends Activity {
         _description = (EditText) findViewById(R.id.etFullDescription);
 
         Model model = Model.getInstance();
-        /**
+        /*
             setting up adapter to pull in category types
          */
         ArrayList<String> categories = new ArrayList<>();
@@ -73,7 +74,7 @@ public class AddDonationActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                /**
+                /*
                  * Check that the entered information is valid
                  */
                 boolean validRegistration = true;
@@ -106,7 +107,7 @@ public class AddDonationActivity extends Activity {
                 }
 
                 if (validRegistration) {
-                    /**
+                    /*
                      * Retrieve all necessary information
                      */
                     String name = _name.getText().toString().trim();
@@ -126,8 +127,8 @@ public class AddDonationActivity extends Activity {
                             + "";
                     String currentLocation = origin;
 
-                    /**
-                     * Add the new item to the database
+                    /*
+                      Add the new item to the database
                      */
                     Intent addDonation = new Intent(AddDonationActivity.this,
                             AddDonationIntentService.class);
@@ -144,8 +145,8 @@ public class AddDonationActivity extends Activity {
             }}
         );
 
-        /**
-         *  Register all the ResponseReceivers to receive async results
+        /*
+           Register all the ResponseReceivers to receive async results
          */
         AddDonationActivity.AddDonationResponseReceiver receiver1;
         IntentFilter filter1 =

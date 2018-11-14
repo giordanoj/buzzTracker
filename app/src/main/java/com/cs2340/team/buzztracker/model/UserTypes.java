@@ -28,7 +28,7 @@ public enum  UserTypes {
 
     /**
      * 
-     * @param String value representing the User Type
+     * @param value representing the User Type
      */
 
     UserTypes(String value) {

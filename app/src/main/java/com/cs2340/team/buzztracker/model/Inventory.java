@@ -19,6 +19,7 @@ public class Inventory {
         getters and setters
      */
 
+
     public ArrayList<Item> get_items() {
         return _items;
     }
