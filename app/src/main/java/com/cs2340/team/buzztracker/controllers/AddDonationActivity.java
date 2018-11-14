@@ -29,6 +29,7 @@ public class AddDonationActivity extends Activity {
     private EditText _value;
     private Spinner _category;
     private EditText _description;
+    private final Model model = Model.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,7 +45,6 @@ public class AddDonationActivity extends Activity {
         _category = findViewById(R.id.etCategory);
         _description = findViewById(R.id.etFullDescription);
 
-        final Model model = Model.getInstance();
         /*
             setting up adapter to pull in category types
          */

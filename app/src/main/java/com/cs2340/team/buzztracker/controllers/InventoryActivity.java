@@ -24,12 +24,13 @@ import java.util.List;
  */
 public class InventoryActivity extends AppCompatActivity {
 
+    private final Model model = Model.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_inventory);
 
-        Model model = Model.getInstance();
         RecyclerView recyclerView = findViewById(R.id.item_list);
         assert recyclerView != null;
 
@@ -88,7 +89,6 @@ public class InventoryActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
-            final Model model = Model.getInstance();
             final Item item = itemsData.get(position);
 
             holder.viewHolderName.setText(itemsData.get(position).get_shortDescription());
@@ -127,10 +127,10 @@ public class InventoryActivity extends AppCompatActivity {
                 viewHolderName = view.findViewById(R.id.name);
             }
 
-            @Override
-            public String toString() {
-                return super.toString();
-            }
+//            @Override
+//            public String toString() {
+//                return super.toString();
+//            }
         }
     }
 }

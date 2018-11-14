@@ -30,6 +30,7 @@ public class ItemSearchActivity extends Activity {
     private TextView _location;
     private EditText _search;
     private Spinner _category;
+    private final Model model = Model.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +44,6 @@ public class ItemSearchActivity extends Activity {
         _location = findViewById(R.id.tvLocation);
         _search = findViewById(R.id.etSearch);
         _category = findViewById(R.id.etCategory);
-
-        final Model model = Model.getInstance();
 
         if (model.getCurrentLocation() != model.theNullLocation) {
             _location.setText("Location: " + model.getCurrentLocation().get_name());

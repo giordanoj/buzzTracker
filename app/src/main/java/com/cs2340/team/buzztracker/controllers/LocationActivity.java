@@ -25,12 +25,13 @@ import java.util.List;
  */
 public class LocationActivity extends AppCompatActivity {
 
+    private final Model model = Model.getInstance();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
 
-        Model model = Model.getInstance();
         RecyclerView recyclerView = findViewById(R.id.location_list);
         assert recyclerView != null;
 
@@ -67,11 +68,6 @@ public class LocationActivity extends AppCompatActivity {
             this.context = context;
         }
 
-
-
-
-
-
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             View view = LayoutInflater.from(parent.getContext())
@@ -81,7 +77,6 @@ public class LocationActivity extends AppCompatActivity {
 
         @Override
         public void onBindViewHolder(final ViewHolder holder, int position) {
-            final Model model = Model.getInstance();
             final Location location = locationsData.get(position);
 
             holder.viewHolderName.setText(locationsData.get(position).get_name());
@@ -121,10 +116,10 @@ public class LocationActivity extends AppCompatActivity {
                 viewHolderName = view.findViewById(R.id.name);
             }
 
-            @Override
-            public String toString() {
-                return super.toString();
-            }
+//            @Override
+//            public String toString() {
+//                return super.toString();
+//            }
         }
     }
 }

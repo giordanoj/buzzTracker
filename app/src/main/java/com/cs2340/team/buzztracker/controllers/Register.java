@@ -33,6 +33,7 @@ public class Register extends AppCompatActivity {
     private TextView badName;
     private TextView badEmail;
     private TextView badPassword;
+    private final Model model = Model.getInstance();
 
 
     /* ***********************
@@ -180,7 +181,6 @@ public class Register extends AppCompatActivity {
                 Toast.makeText(getBaseContext(), "An error occurred: new user not added.",
                         Toast.LENGTH_LONG).show();
             } else {
-                Model model = Model.getInstance();
 
                 int id;
                 id = Integer.parseInt(result.trim());

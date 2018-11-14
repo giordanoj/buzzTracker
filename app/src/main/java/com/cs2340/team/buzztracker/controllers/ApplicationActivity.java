@@ -9,7 +9,6 @@ import android.widget.TextView;
 
 import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Model;
-import com.cs2340.team.buzztracker.model.User;
 
 /**
  * For the main purpose of the application
@@ -17,14 +16,12 @@ import com.cs2340.team.buzztracker.model.User;
  */
 public class ApplicationActivity extends Activity {
 
-    private User user;
+    private final Model model = Model.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_application_acitivity);
-
-        final Model model = Model.getInstance();
 
         TextView usernameText = findViewById(R.id.usernameView);
         usernameText.setText("Welcome, " + model.getCurrentUser().get_Name());
