@@ -14,10 +14,9 @@ import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Location;
 import com.cs2340.team.buzztracker.model.Model;
 
-/*
+/**
    Main screen that displays Login and Registration
  */
-
 public class MainActivity extends AppCompatActivity {
 
     @Override

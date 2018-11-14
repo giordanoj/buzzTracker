@@ -20,6 +20,9 @@ import com.cs2340.team.buzztracker.model.Model;
 
 import java.util.List;
 
+/**
+ * for accessing data base
+ */
 public class LocationActivity extends AppCompatActivity {
 
     @Override
@@ -54,6 +57,11 @@ public class LocationActivity extends AppCompatActivity {
         private final List<Location> locationsData;
         Context context;
 
+        /**
+         *
+         * @param data list of locations to change locationsData to
+         * @param context the context of it
+         */
         public RecyclerViewAdapter(List<Location> data, Context context) {
             locationsData = data;
             this.context = context;
@@ -103,6 +111,10 @@ public class LocationActivity extends AppCompatActivity {
             public final View viewHolderView;
             public final TextView viewHolderName;
 
+            /**
+             *
+             * @param view the view for showing the information
+             */
             public ViewHolder(View view) {
                 super(view);
                 viewHolderView = view;

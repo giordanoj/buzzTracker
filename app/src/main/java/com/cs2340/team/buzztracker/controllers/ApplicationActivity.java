@@ -11,6 +11,10 @@ import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Model;
 import com.cs2340.team.buzztracker.model.User;
 
+/**
+ * For the main purpose of the application
+ *
+ */
 public class ApplicationActivity extends Activity {
 
     private User user;

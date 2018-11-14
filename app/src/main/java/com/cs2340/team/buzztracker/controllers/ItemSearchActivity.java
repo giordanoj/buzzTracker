@@ -22,6 +22,9 @@ import com.cs2340.team.buzztracker.model.Util;
 
 import java.util.ArrayList;
 
+/**
+ * for searching database for an item
+ */
 public class ItemSearchActivity extends Activity {
 
     private TextView _location;

@@ -9,8 +9,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * for making call to database
+ */
 public class GetCategoriesIntentService extends IntentService {
 
+    /**
+     * for naming intent service
+     */
     public GetCategoriesIntentService() {
         super("GetLocationsIntentService");
     }

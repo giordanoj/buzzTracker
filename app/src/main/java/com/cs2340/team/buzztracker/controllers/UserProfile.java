@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 
 import com.cs2340.team.buzztracker.R;
 
+/**
+ * a class for holding a user profile
+ */
 public class UserProfile extends AppCompatActivity {
 
     @Override

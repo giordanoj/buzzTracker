@@ -1,5 +1,8 @@
 package com.cs2340.team.buzztracker.model;
 
+/**
+ * Class that contains all the data of a location
+ */
 public class Location {
 
     /** this is the id for a location */
@@ -42,71 +45,174 @@ public class Location {
      *  getters and setters
      */
 
+    /**
+     *
+     * @return id of location
+     */
     public int get_id() {return _id; }
 
+    /**
+     *
+     * @return name of location
+     */
     public String get_name() {
         return _name;
     }
+
+    /**
+     *
+     * @param _name the name to set locatino to
+     */
     public void set_name(String _name) {
         this._name = _name;
     }
 
+    /**
+     *
+     * @return coordinates of location
+     */
     public float[] get_coordinates() {
         return _coordinates;
     }
+
+    /**
+     *
+     * @param _coordinates coordinates to set to a location
+     */
     public void set_coordinates(float[] _coordinates) {
         this._coordinates = _coordinates;
     }
 
+    /**
+     *
+     * @return the address of a location
+     */
     public String get_address() { return _address; }
+
+    /**
+     *
+     * @param _address the address to change a location's address to
+     */
     public void set_address(String _address) {this._address = _address; }
 
+    /**
+     *
+     * @return the city the location is in
+     */
     public String get_city() {
         return _city;
     }
+
+    /**
+     *
+     * @param _city the city to change a location to
+     */
     public void set_city(String _city) {this._city = _city; }
 
+    /**
+     *
+     * @return the State i.e.(Georgia, Florida, etc) the location is in
+     */
     public String get_state() {
         return _state;
     }
+
+    /**
+     *
+     * @param _state the state to change the locatinoto
+     */
     public void set_state(String _state) {this._state= _state; }
 
+    /**
+     *
+     * @return zipCode of current location
+     */
     public String get_zip() {
         return _zip;
     }
+
+    /**
+     *
+     * @param _zip the zipCode to change the location to
+     */
     public void set_zip(String _zip) {this._zip = _zip; }
 
+    /**
+     *
+     * @return the type of location it is
+     */
     public String get_type() {
         return _type;
     }
+
+    /**
+     *
+     * @param _type the type to change the location to
+     */
     public void set_type(String _type) {
         this._type = _type;
     }
 
+    /**
+     *
+     * @return phone number of location
+     */
     public String get_phoneNumber() {
         return _phoneNumber;
     }
+
+    /**
+     *
+     * @param _phoneNumber the new phone number of a location
+     */
     public void set_phoneNumber(String _phoneNumber) {
         this._phoneNumber = _phoneNumber;
     }
 
+    /**
+     *
+     * @return the url of the website of a location
+     */
     public String get_website() {
         return _website;
     }
+
+    /**
+     *
+     * @param _website the new url of the locations website
+     */
     public void set_website(String _website) {
         this._website = _website;
     }
 
+    /**
+     *
+     * @return the inventory of the location
+     */
     public Inventory get_inventory() {
         return _inventory;
     }
+
+    /**
+     *
+     * @param _inventory the new inventory of a location
+     */
     public void set_inventory(Inventory _inventory) {
         this._inventory = _inventory;
     }
 
+    /**
+     *
+     * @return an analytics graph of the location
+     */
     public Graph get_graph() {
         return _graph;
     }
+
+    /**
+     *
+     * @param _graph the graph to change to
+     */
     public void set_graph(Graph _graph) {
         this._graph = _graph;
     }

@@ -10,6 +10,9 @@ import com.cs2340.team.buzztracker.R;
 import com.cs2340.team.buzztracker.model.Item;
 import com.cs2340.team.buzztracker.model.Model;
 
+/**
+ * for getting item details from database
+ */
 public class ItemDetailActivity extends Activity{
     final Model model = Model.getInstance();
 

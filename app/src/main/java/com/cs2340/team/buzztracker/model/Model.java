@@ -2,10 +2,17 @@ package com.cs2340.team.buzztracker.model;
 
 import java.util.ArrayList;
 
-
+/**
+ * the main model class for all things the application does
+ */
 public final class Model {
     /** Singleton instance */
     private static final Model _instance = new Model();
+
+    /**
+     *
+     * @return an instance of teh model
+     */
     public static Model getInstance() { return _instance; }
 
     /** holds the list of all courses */
@@ -54,8 +61,17 @@ public final class Model {
         setCurrentItem(theNullItem);
     }
 
+    /**
+     *
+     * @return an arraylist of all locations
+     */
     public ArrayList<Location> getLocations() { return _locations; }
 
+    /**
+     *
+     * @param location the location to be added to the device
+     * @return whether the operation succeeded
+     */
     public boolean addLocation(Location location) {
         if (location != null) {
             for (Location l : _locations ) {
@@ -68,6 +84,11 @@ public final class Model {
         }
     }
 
+    /**
+     *
+     * @param id the id of the location we want
+     * @return the location we are looking for, or null if not found
+     */
     public Location getLocationById(int id) {
         for (Location l : _locations) {
             if (l.get_id() == id) {
@@ -77,8 +98,17 @@ public final class Model {
         return null;
     }
 
+    /**
+     *
+     * @return the categories items can be sorted into
+     */
     public ArrayList<String> getCategories() { return _categories; }
 
+    /**
+     *
+     * @param category the category to add
+     * @return whether the addition succeeded or not
+     */
     public boolean addCategory(String category) {
         for (String c : _categories) {
             if (c.equals(category)) return false;
@@ -87,20 +117,52 @@ public final class Model {
         return true;
     }
 
+    /**
+     *
+     * @return the current location
+     */
     public Location getCurrentLocation() { return _currentLocation;}
 
+    /**
+     *
+     * @param location the location we want the device to see
+     */
     public void setCurrentLocation(Location location) { _currentLocation = location; }
 
+    /**
+     *
+     * @return the current user profile we are using
+     */
     public User getCurrentUser() { return _currentUser;}
 
+    /**
+     *
+     * @param user the user we want the application to use for verfication
+     */
     public void setCurrentUser(User user) { _currentUser = user; }
 
+    /**
+     *
+     * @return the current inventory
+     */
     public Inventory getCurrentInventory() { return _currentInventory;}
 
+    /**
+     *
+     * @param inventory the inventory to change to
+     */
     public void setCurrentInventory(Inventory inventory) { _currentInventory = inventory; }
 
+    /**
+     *
+     * @return the current item
+     */
     public Item getCurrentItem() { return _currentItem;}
 
+    /**
+     *
+     * @param item the item we want to change to
+     */
     public void setCurrentItem(Item item) { _currentItem = item; }
 
     /**

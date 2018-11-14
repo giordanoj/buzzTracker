@@ -2,6 +2,9 @@ package com.cs2340.team.buzztracker.model;
 
 import java.util.ArrayList;
 
+/**
+ * class for the information of an inventory
+ */
 public class Inventory {
 
 
@@ -19,19 +22,34 @@ public class Inventory {
         getters and setters
      */
 
-
+    /**
+     *
+     * @return the times at a particular inventory
+     */
     public ArrayList<Item> get_items() {
         return _items;
     }
 
+    /**
+     * this will likely never be used
+     * @param _items the arraylist of items to set at an inventory
+     */
     public void set_items(ArrayList<Item> _items) {
         this._items = _items;
     }
 
+    /**
+     *
+     * @return the location of an inventory
+     */
     public Location get_location() {
         return _location;
     }
 
+    /**
+     *
+     * @param _location set the location of an inventory to param
+     */
     public void set_location(Location _location) {
         this._location = _location;
     }
@@ -47,6 +65,11 @@ public class Inventory {
         this._location = _location;
     }
 
+    /**
+     *
+     * @param item to add at a location
+     * @return whether the operation succeded or not
+     */
     public boolean addItem(Item item) {
         if (item != null) {
             for (Item i : _items) {

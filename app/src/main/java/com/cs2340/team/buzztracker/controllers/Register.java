@@ -20,6 +20,9 @@ import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
 import com.cs2340.team.buzztracker.model.Util;
 
+/**
+ * class for registering new users
+ */
 public class Register extends AppCompatActivity {
 
     private Spinner userSpinner;

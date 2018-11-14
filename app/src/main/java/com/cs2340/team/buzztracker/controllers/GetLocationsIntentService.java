@@ -9,8 +9,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * for making call to databse
+ */
 public class GetLocationsIntentService extends IntentService {
 
+    /**
+     * for naming intent service
+     */
     public GetLocationsIntentService() {
         super("GetLocationsIntentService");
     }

@@ -9,8 +9,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * for call to the datase
+ */
 public class AddDonationIntentService extends IntentService {
 
+    /**
+     * for naming the intent service
+     */
     public AddDonationIntentService() {
         super("AddDonationIntentService");
     }

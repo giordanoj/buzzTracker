@@ -19,6 +19,9 @@ import com.cs2340.team.buzztracker.model.Model;
 
 import java.util.List;
 
+/**
+ * for getting inventory from database
+ */
 public class InventoryActivity extends AppCompatActivity {
 
     @Override
@@ -61,6 +64,11 @@ public class InventoryActivity extends AppCompatActivity {
         private final List<Item> itemsData;
         Context context;
 
+        /**
+         *
+         * @param data the list of items to put into itemsData
+         * @param context the context of operation
+         */
         public RecyclerViewAdapter(List<Item> data, Context context) {
             itemsData = data;
             this.context = context;
@@ -109,6 +117,10 @@ public class InventoryActivity extends AppCompatActivity {
             public final View viewHolderView;
             public final TextView viewHolderName;
 
+            /**
+             *
+             * @param view the view to display information in
+             */
             public ViewHolder(View view) {
                 super(view);
                 viewHolderView = view;

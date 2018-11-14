@@ -5,7 +5,15 @@ package com.cs2340.team.buzztracker.model;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
+/**
+ * a class to contain utility functions that have nowhere else to go
+ */
 public class Util {
+    /**
+     *
+     * @param inputPass the password to hash
+     * @return the hash of the password
+     */
     public static String generateHash(String inputPass) {
         final String SALT = "thisIsTheSALT";
 
@@ -27,6 +35,11 @@ public class Util {
         return hash.toString();
     }
 
+    /**
+     *
+     * @param itemString the string from the database containing item information
+     * @return the item object of the information
+     */
     public static Item parseItemString(String itemString) {
         if (itemString == null || itemString.trim().equals("")) {
             return Model.getInstance().theNullItem;

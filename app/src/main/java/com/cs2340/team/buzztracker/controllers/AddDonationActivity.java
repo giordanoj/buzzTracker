@@ -20,7 +20,9 @@ import com.cs2340.team.buzztracker.model.Model;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-
+/**
+ * class for adding a donation to database
+ */
 public class AddDonationActivity extends Activity {
 
     private EditText _name;

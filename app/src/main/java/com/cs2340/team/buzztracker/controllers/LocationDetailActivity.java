@@ -20,6 +20,9 @@ import com.cs2340.team.buzztracker.model.Util;
 
 import java.util.ArrayList;
 
+/**
+ * for getting location details from database
+ */
 public class LocationDetailActivity extends Activity{
     final Model model = Model.getInstance();
 

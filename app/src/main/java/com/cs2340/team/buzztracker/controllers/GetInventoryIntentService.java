@@ -9,8 +9,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * for making call to database
+ */
 public class GetInventoryIntentService extends IntentService {
 
+    /**
+     * naming the intent service
+     */
     public GetInventoryIntentService() {
         super("CheckRegistrationIntentService");
     }

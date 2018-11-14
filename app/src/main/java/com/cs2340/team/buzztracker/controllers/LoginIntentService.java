@@ -9,8 +9,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
+/**
+ * for making call to check if user is in database
+ */
 public class LoginIntentService extends IntentService {
 
+    /**
+     * for naming the intent service
+     */
     public LoginIntentService() {
         super("CheckRegistrationIntentService");
     }

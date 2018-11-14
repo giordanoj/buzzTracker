@@ -19,6 +19,9 @@ import com.cs2340.team.buzztracker.model.User;
 import com.cs2340.team.buzztracker.model.UserTypes;
 import com.cs2340.team.buzztracker.model.Util;
 
+/**
+ * this class handles getting the information for login data
+ */
 public class Login extends Activity {
 
     private EditText loginEmail;
