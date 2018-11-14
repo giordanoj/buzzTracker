@@ -63,7 +63,7 @@ public final class Model {
 
     /**
      *
-     * @return an arraylist of all locations
+     * @return an arrayList of all locations
      */
     public ArrayList<Location> getLocations() { return _locations; }
 
@@ -137,7 +137,7 @@ public final class Model {
 
     /**
      *
-     * @param user the user we want the application to use for verfication
+     * @param user the user we want the application to use for verification
      */
     public void setCurrentUser(User user) { _currentUser = user; }
 

@@ -10,7 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * for making call to databse
+ * for making call to database
  */
 public class GetLocationsIntentService extends IntentService {
 

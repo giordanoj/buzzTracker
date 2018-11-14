@@ -10,7 +10,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 /**
- * for call to the datase
+ * for call to the database
  */
 public class AddDonationIntentService extends IntentService {
 

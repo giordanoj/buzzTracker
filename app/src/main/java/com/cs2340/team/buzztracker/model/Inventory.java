@@ -32,7 +32,7 @@ public class Inventory {
 
     /**
      * this will likely never be used
-     * @param _items the arraylist of items to set at an inventory
+     * @param _items the arrayList of items to set at an inventory
      */
     public void set_items(ArrayList<Item> _items) {
         this._items = _items;
@@ -68,7 +68,7 @@ public class Inventory {
     /**
      *
      * @param item to add at a location
-     * @return whether the operation succeded or not
+     * @return whether the operation succeeded or not
      */
     public boolean addItem(Item item) {
         if (item != null) {

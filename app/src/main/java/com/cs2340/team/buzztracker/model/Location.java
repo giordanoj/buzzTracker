@@ -61,7 +61,7 @@ public class Location {
 
     /**
      *
-     * @param _name the name to set locatino to
+     * @param _name the name to set location to
      */
     public void set_name(String _name) {
         this._name = _name;
@@ -119,7 +119,7 @@ public class Location {
 
     /**
      *
-     * @param _state the state to change the locatinoto
+     * @param _state the state to change the location to
      */
     public void set_state(String _state) {this._state= _state; }
 
