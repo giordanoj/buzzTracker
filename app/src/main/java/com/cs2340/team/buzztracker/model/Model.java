@@ -3,7 +3,7 @@ package com.cs2340.team.buzztracker.model;
 import java.util.ArrayList;
 
 
-public class Model {
+public final class Model {
     /** Singleton instance */
     private static final Model _instance = new Model();
     public static Model getInstance() { return _instance; }

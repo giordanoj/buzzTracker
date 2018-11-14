@@ -20,7 +20,7 @@ public class ApplicationActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_application_acitivity);
 
-        Model model = Model.getInstance();
+        final Model model = Model.getInstance();
 
         TextView usernameText = (TextView) findViewById(R.id.usernameView);
         usernameText.setText("Welcome, " + model.getCurrentUser().get_Name());
@@ -30,7 +30,6 @@ public class ApplicationActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Model model = Model.getInstance();
                 model.setCurrentUser(model.theNullUser);
                 Intent logout = new Intent(ApplicationActivity.this, MainActivity.class);
                 startActivity(logout);
@@ -43,7 +42,8 @@ public class ApplicationActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent locations = new Intent(ApplicationActivity.this, LocationActivity.class);
+                Intent locations = new Intent(ApplicationActivity.this,
+                        LocationActivity.class);
                 startActivity(locations);
                 finish();
             }}

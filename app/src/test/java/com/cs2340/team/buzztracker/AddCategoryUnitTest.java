@@ -6,13 +6,14 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 
 import static org.junit.Assert.assertEquals;
 
 public class AddCategoryUnitTest {
     private Model testModel;
-    private ArrayList<String> _categories;
+    private List<String> _categories;
 
 
 

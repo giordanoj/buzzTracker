@@ -9,6 +9,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
@@ -17,7 +18,7 @@ import static org.junit.Assert.assertNull;
 
 public class ModelTest {
 
-    private ArrayList<Location> locationArray;
+    private List<Location> locationArray;
 
     private Model model = Model.getInstance();
     float[] coordinate;

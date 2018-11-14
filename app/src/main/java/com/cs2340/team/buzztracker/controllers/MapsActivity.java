@@ -21,6 +21,7 @@ import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -54,7 +55,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         final Model model = Model.getInstance();
 
         //get the data to display
-        ArrayList<Location> locationList = model.getLocations();
+        List<Location> locationList = model.getLocations();
 
         //iterate through the list and add a pin for each element in the model
         for (Location l : locationList) {

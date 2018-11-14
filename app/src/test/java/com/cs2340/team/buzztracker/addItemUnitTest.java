@@ -64,7 +64,8 @@ public class addItemUnitTest {
 
     @Test
     public void addRepeatItem() {
-        assertFalse("Adding a repeat Item doesn't return false.", nonEmptyInventory.addItem(nonTrivialItem1));
+        assertFalse("Adding a repeat Item doesn't return false.", nonEmptyInventory
+                .addItem(nonTrivialItem1));
     }
     //Assert.assertTrue(message, condition)
     //Assert.assertEquals(message, expect, actual)
