@@ -73,7 +73,9 @@ public class Inventory {
     public boolean addItem(Item item) {
         if (item != null) {
             for (Item i : _items) {
-                if (i.equals(item)) return false;
+                if (i.equals(item)) {
+                    return false;
+                }
             }
             _items.add(item);
             return true;

@@ -98,7 +98,7 @@ public class ItemSearchActivity extends Activity {
                      */
                     Model model = Model.getInstance();
                     String query = _search.getText().toString().trim();
-                    if (query.equals("")) {
+                    if ("".equals(query)) {
                         query = "~blank~";
                     }
                     query = query.replaceAll("'", "~1~");

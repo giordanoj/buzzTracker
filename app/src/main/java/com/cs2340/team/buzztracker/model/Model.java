@@ -75,7 +75,9 @@ public final class Model {
     public boolean addLocation(Location location) {
         if (location != null) {
             for (Location l : _locations ) {
-                if (l.equals(location)) return false;
+                if (l.equals(location)) {
+                    return false;
+                }
             }
             _locations.add(location);
             return true;
@@ -111,7 +113,10 @@ public final class Model {
      */
     public boolean addCategory(String category) {
         for (String c : _categories) {
-            if (c.equals(category)) return false;
+            if (c.equals(category)) {
+                return false;
+            }
+
         }
         _categories.add(category);
         return true;

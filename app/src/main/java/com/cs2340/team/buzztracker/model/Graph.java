@@ -10,10 +10,5 @@ public class Graph {
       please give this implementation
      */
 
-    /**
-     * no arg constructor for an empty class
-     * delete once this class is implemented
-     */
-    public Graph() {
-    }
+
 }

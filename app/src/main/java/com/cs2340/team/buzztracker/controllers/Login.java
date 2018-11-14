@@ -129,11 +129,11 @@ public class Login extends Activity {
                 String type = userString.substring(typeStartInd, typeStartInd +
                         userString.substring(typeStartInd).indexOf(","));
                 UserTypes uType;
-                if (type.equals("Admin")) {
+                if ("Admin".equals(type)) {
                     uType = UserTypes.Admin;
-                } else if (type.equals("Location Employee")) {
+                } else if ("Location Employee".equals(type)) {
                     uType = UserTypes.Location_Employee;
-                } else if (type.equals("Manager")) {
+                } else if ("Manager".equals(type)) {
                     uType = UserTypes.Manager;
                 } else {
                     uType = UserTypes.User;

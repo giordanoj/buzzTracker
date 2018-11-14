@@ -41,7 +41,7 @@ public class Util {
      * @return the item object of the information
      */
     public static Item parseItemString(String itemString) {
-        if (itemString == null || itemString.trim().equals("")) {
+        if (itemString == null || "".equals(itemString.trim())) {
             return Model.getInstance().theNullItem;
         }
 

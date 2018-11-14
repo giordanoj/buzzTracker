@@ -50,7 +50,7 @@ public class AddDonationActivity extends Activity {
          */
         ArrayList<String> categories = new ArrayList<>();
         for (String s : model.getCategories()) {
-            if (!s.equals("All Categories")) {
+            if (!"All Categories".equals(s)) {
                 categories.add(s);
             }
         }
@@ -81,7 +81,7 @@ public class AddDonationActivity extends Activity {
                  */
                 boolean validRegistration = true;
 
-                if (_name.getText().toString().trim().equals("")) {
+                if ("".equals(_name.getText().toString().trim())) {
                     Toast.makeText(getBaseContext(), "Item name cannot be blank.",
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;
@@ -89,7 +89,7 @@ public class AddDonationActivity extends Activity {
                     Toast.makeText(getBaseContext(), "Item name contains an illegal character.",
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;
-                } else if (_value.getText().toString().trim().equals("")) {
+                } else if ("".equals(_value.getText().toString().trim())) {
                     Toast.makeText(getBaseContext(), "Item value cannot be blank.",
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;
@@ -97,7 +97,7 @@ public class AddDonationActivity extends Activity {
                     Toast.makeText(getBaseContext(), "Item value contains an illegal character.",
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;
-                }else if (_description.getText().toString().trim().equals("")) {
+                }else if ("".equals(_description.getText().toString().trim())) {
                     Toast.makeText(getBaseContext(), "Item description cannot be blank.",
                             Toast.LENGTH_LONG).show();
                     validRegistration = false;

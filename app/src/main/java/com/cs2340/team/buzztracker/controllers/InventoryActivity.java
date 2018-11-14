@@ -45,11 +45,11 @@ public class InventoryActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String previous = getIntent().getStringExtra("previous");
                 Log.e("hi",previous);
-                if (previous.equals("LocationDetailActivity")) {
+                if ("LocationDetailActivity".equals(previous)) {
                     Intent back = new Intent(InventoryActivity.this, LocationDetailActivity.class);
                     startActivity(back);
                     finish();
-                } else if (previous.equals("ItemSearchActivity")) {
+                } else if ("ItemSearchActivity".equals(previous)) {
                     Intent back = new Intent(InventoryActivity.this, ItemSearchActivity.class);
                     startActivity(back);
                     finish();

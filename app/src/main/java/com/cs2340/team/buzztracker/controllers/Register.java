@@ -82,7 +82,7 @@ public class Register extends AppCompatActivity {
                 /*
                    Make sure none of the text fields are empty
                  */
-                if (_name.getText().toString().trim().equals("")) {
+                if ("".equals(_name.getText().toString().trim())) {
                     badName.setText("Name cannot be blank!");
                     validRegistration = false;
                 } else if (_name.getText().toString().contains("|")
@@ -92,7 +92,7 @@ public class Register extends AppCompatActivity {
                 } else {
                     badName.setText("");
                 }
-                if (_email.getText().toString().trim().equals("")) {
+                if ("".equals(_email.getText().toString().trim())) {
                     badEmail.setText("Email cannot be blank!");
                     validRegistration = false;
                 } else if (_email.getText().toString().contains("|")
@@ -102,7 +102,7 @@ public class Register extends AppCompatActivity {
                 } else {
                     badEmail.setText("");
                 }
-                if (_password.getText().toString().trim().equals("")) {
+                if ("".equals(_password.getText().toString().trim())) {
                     badPassword.setText("Password cannot be blank!");
                     validRegistration = false;
                 } else {
