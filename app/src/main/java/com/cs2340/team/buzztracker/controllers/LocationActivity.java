@@ -62,7 +62,7 @@ public class LocationActivity extends AppCompatActivity {
          * @param data list of locations to change locationsData to
          * @param context the context of it
          */
-        public RecyclerViewAdapter(List<Location> data, Context context) {
+        private RecyclerViewAdapter(List<Location> data, Context context) {
             locationsData = data;
             this.context = context;
         }
@@ -108,14 +108,14 @@ public class LocationActivity extends AppCompatActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
 
-            public final View viewHolderView;
-            public final TextView viewHolderName;
+            private final View viewHolderView;
+            private final TextView viewHolderName;
 
             /**
              *
              * @param view the view for showing the information
              */
-            public ViewHolder(View view) {
+            private ViewHolder(View view) {
                 super(view);
                 viewHolderView = view;
                 viewHolderName = view.findViewById(R.id.name);

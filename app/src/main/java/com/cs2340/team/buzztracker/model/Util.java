@@ -25,8 +25,10 @@ public class Util {
             char[] digits = {'0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f'};
             for (int idx = 0; idx < hashedBytes.length; ++idx) {
                 byte b = hashedBytes[idx];
-                hash.append(digits[(b & 0xf0) >> 4]);
-                hash.append(digits[b & 0x0f]);
+                final int mask1 = 0xf0;
+                final int mask2 = 0x0f;
+                hash.append(digits[(b & mask1) >> 4]);
+                hash.append(digits[b & mask2]);
             }
         } catch (NoSuchAlgorithmException e) {
             return null;
@@ -41,7 +43,7 @@ public class Util {
      * @return the item object of the information
      */
     public static Item parseItemString(String itemString) {
-        if (itemString == null || "".equals(itemString.trim())) {
+        if ((itemString == null) || ("".equals(itemString.trim()))) {
             return Model.getInstance().theNullItem;
         }
 
@@ -75,7 +77,8 @@ public class Util {
 
         String description = "";
         if (itemString.contains("Description:")) {
-            int descStartInd = itemString.indexOf("Description:") + 12;
+            final int shiftInd = 12;
+            int descStartInd = itemString.indexOf("Description:") + shiftInd;
             if (itemString.substring(descStartInd).contains("~")) {
                 description = itemString.substring(descStartInd, descStartInd +
                         itemString.substring(descStartInd).indexOf("~"));
@@ -114,7 +117,8 @@ public class Util {
 
         String donationTime = "";
         if (itemString.contains("Donation Time:")) {
-            int donStartInd = itemString.indexOf("Donation Time:") + 14;
+            final int shiftInd = 14;
+            int donStartInd = itemString.indexOf("Donation Time:") + shiftInd;
             if (itemString.substring(donStartInd).contains("~")) {
                 donationTime = itemString.substring(donStartInd, donStartInd +
                         itemString.substring(donStartInd).indexOf("~"));
@@ -140,7 +144,8 @@ public class Util {
 
         int enteredBy = 0;
         if (itemString.contains("Entered By:")) {
-            int entStartInd = itemString.indexOf("Entered By:") + 11;
+            final int shiftInd = 11;
+            int entStartInd = itemString.indexOf("Entered By:") + shiftInd;
             if (itemString.substring(entStartInd).contains("~")) {
                 enteredBy = Integer.parseInt(itemString.substring(entStartInd,
                         entStartInd + itemString.substring(entStartInd).indexOf("~")));
@@ -205,7 +210,8 @@ public class Util {
 
         int currentLocation = 0;
         if (itemString.contains("Current Location:")) {
-            int currStartInd = itemString.indexOf("Current Location:") + 17;
+            final int shiftInd = 17;
+            int currStartInd = itemString.indexOf("Current Location:") + shiftInd;
             if (itemString.substring(currStartInd).contains("~")) {
                 currentLocation = Integer.parseInt(itemString.substring(currStartInd,
                         currStartInd + itemString.substring(currStartInd).indexOf("~")));
@@ -219,9 +225,8 @@ public class Util {
         if (nullItem) {
             return Model.getInstance().theNullItem;
         }
-        Item item = new Item(id, category, donationTime, value, picture, comments,
+        return new Item(id, category, donationTime, value, picture, comments,
                 name, description, origin, saleTime, enteredBy, soldBy, currentLocation);
-        return item;
     }
 
 }

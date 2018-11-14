@@ -127,7 +127,7 @@ public class Register extends AppCompatActivity {
           Set up the adapter to display the allowable Users in the spinner
          */
         ArrayAdapter<UserTypes> userAdapter =
-                new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserTypes.values());
+                new ArrayAdapter<>(this,android.R.layout.simple_spinner_item, UserTypes.values());
         userAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userSpinner.setAdapter(userAdapter);
 

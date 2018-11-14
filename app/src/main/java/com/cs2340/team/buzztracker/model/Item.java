@@ -319,14 +319,14 @@ public class Item {
     @Override
     public boolean equals(Object c) {
         Item i = (Item) c;
-        return (i.get_id() == _id && i.get_category().equals(_category)
-                && i.get_donationTime().equals(_donationTime) && i.get_value().equals(_value)
-                && i.get_picture().equals(_picture) && i.get_comment().equals(_comment)
-                && i.get_shortDescription().equals(_shortDescription)
-                && i.get_fullDescription().equals(_fullDescription)
-                && i.get_origin() == _origin && i.get_saleTime().equals(_saleTime)
-                && i.get_enteredBy() == _enteredBy && i.get_soldBy() == _soldBy
-                && i.get_currentLocation() == _currentLocation
+        return ( (i.get_id() == _id) && (i.get_category().equals(_category))
+                && (i.get_donationTime().equals(_donationTime) && i.get_value().equals(_value))
+                && (i.get_picture().equals(_picture) && i.get_comment().equals(_comment))
+                && (i.get_shortDescription().equals(_shortDescription))
+                && (i.get_fullDescription().equals(_fullDescription))
+                && (i.get_origin() == _origin && i.get_saleTime().equals(_saleTime))
+                && (i.get_enteredBy() == _enteredBy && i.get_soldBy() == _soldBy)
+                && (i.get_currentLocation() == _currentLocation)
         );
     }
 }

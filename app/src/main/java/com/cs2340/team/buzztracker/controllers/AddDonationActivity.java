@@ -56,7 +56,7 @@ public class AddDonationActivity extends Activity {
         }
 
         ArrayAdapter<String> categoryArrayAdapter =
-                new ArrayAdapter (this,android.R.layout.simple_spinner_item, categories);
+                new ArrayAdapter<> (this,android.R.layout.simple_spinner_item, categories);
         categoryArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _category.setAdapter(categoryArrayAdapter);
 

@@ -24,7 +24,7 @@ import java.util.ArrayList;
  * for getting location details from database
  */
 public class LocationDetailActivity extends Activity{
-    final Model model = Model.getInstance();
+    private final Model model = Model.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -42,7 +42,7 @@ public final class Model {
             "", false, null, null);
 
     /** Null Inventory pattern, returned when no inventory is found */
-    public final Inventory theNullInventory = new Inventory(null, null);
+    private final Inventory theNullInventory = new Inventory(null, null);
 
     /** Null Item pattern, returned when no item is found */
     public final Item theNullItem = new Item(0, "", "", "", ""
@@ -116,7 +116,6 @@ public final class Model {
             if (c.equals(category)) {
                 return false;
             }
-
         }
         _categories.add(category);
         return true;

@@ -14,7 +14,7 @@ import com.cs2340.team.buzztracker.model.Model;
  * for getting item details from database
  */
 public class ItemDetailActivity extends Activity{
-    final Model model = Model.getInstance();
+    private final Model model = Model.getInstance();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

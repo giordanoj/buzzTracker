@@ -69,7 +69,7 @@ public class InventoryActivity extends AppCompatActivity {
          * @param data the list of items to put into itemsData
          * @param context the context of operation
          */
-        public RecyclerViewAdapter(List<Item> data, Context context) {
+        private RecyclerViewAdapter(List<Item> data, Context context) {
             itemsData = data;
             this.context = context;
         }
@@ -114,14 +114,14 @@ public class InventoryActivity extends AppCompatActivity {
 
         public class ViewHolder extends RecyclerView.ViewHolder {
 
-            public final View viewHolderView;
-            public final TextView viewHolderName;
+            private final View viewHolderView;
+            private final TextView viewHolderName;
 
             /**
              *
              * @param view the view to display information in
              */
-            public ViewHolder(View view) {
+            private ViewHolder(View view) {
                 super(view);
                 viewHolderView = view;
                 viewHolderName = view.findViewById(R.id.name);
