@@ -52,8 +52,10 @@ public class ItemDetailActivity extends Activity{
             saleTimeText.setText("Sale Time: " + currentItem.get_saleTime());
             enteredByText.setText("Entered by: " + currentItem.get_enteredBy());
             soldByText.setText("Sold by: " + currentItem.get_soldBy());
-            originText.setText("Origin: " + model.getLocationById(currentItem.get_origin()).get_name());
-            currentLocationText.setText("Current Location: " + model.getLocationById(currentItem.get_currentLocation()).get_name());
+            originText.setText("Origin: " +
+                    model.getLocationById(currentItem.get_origin()).get_name());
+            currentLocationText.setText("Current Location: " +
+                    model.getLocationById(currentItem.get_currentLocation()).get_name());
 
         }
 

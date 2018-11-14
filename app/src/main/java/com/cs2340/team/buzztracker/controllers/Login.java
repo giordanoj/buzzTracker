@@ -98,26 +98,33 @@ public class Login extends Activity {
                  * out of the data and set it as the current User in the Model
                  */
                 int startInd = result.indexOf("|");
-                int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") + result.indexOf("|") + 1;
+                int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") +
+                        result.indexOf("|") + 1;
                 String userString = result.substring(startInd + 1, endInd);
 
                 int idStartInd = userString.indexOf("Id:") + 3;
-                int id = Integer.parseInt(userString.substring(idStartInd, idStartInd + userString.substring(idStartInd).indexOf(",")));
+                int id = Integer.parseInt(userString.substring(idStartInd, idStartInd +
+                        userString.substring(idStartInd).indexOf(",")));
 
                 int nameStartInd = userString.indexOf("Name:") + 5;
-                String name = userString.substring(nameStartInd, nameStartInd + userString.substring(nameStartInd).indexOf(","));
+                String name = userString.substring(nameStartInd, nameStartInd +
+                        userString.substring(nameStartInd).indexOf(","));
 
                 int emailStartInd = userString.indexOf("Email:") + 6;
-                String email = userString.substring(emailStartInd, emailStartInd + userString.substring(emailStartInd).indexOf(","));
+                String email = userString.substring(emailStartInd, emailStartInd +
+                        userString.substring(emailStartInd).indexOf(","));
 
                 int passStartInd = userString.indexOf("Password:") + 9;
-                String password = userString.substring(passStartInd, passStartInd + userString.substring(passStartInd).indexOf(","));
+                String password = userString.substring(passStartInd, passStartInd +
+                        userString.substring(passStartInd).indexOf(","));
 
                 int lockStartInd = userString.indexOf("Locked:") + 7;
-                boolean locked = Boolean.getBoolean(userString.substring(lockStartInd, lockStartInd + userString.substring(lockStartInd).indexOf(",")));
+                boolean locked = Boolean.getBoolean(userString.substring(lockStartInd,
+                        lockStartInd + userString.substring(lockStartInd).indexOf(",")));
 
                 int typeStartInd = userString.indexOf("Type:") + 5;
-                String type = userString.substring(typeStartInd, typeStartInd + userString.substring(typeStartInd).indexOf(","));
+                String type = userString.substring(typeStartInd, typeStartInd +
+                        userString.substring(typeStartInd).indexOf(","));
                 UserTypes uType;
                 if (type.equals("Admin")) {
                     uType = UserTypes.Admin;
@@ -132,7 +139,8 @@ public class Login extends Activity {
                 Model model = Model.getInstance();
 
                 int locStartInd = userString.indexOf("Location:") + 9;
-                int location = Integer.parseInt(userString.substring(locStartInd, locStartInd + userString.substring(locStartInd).indexOf(",")));
+                int location = Integer.parseInt(userString.substring(locStartInd,
+                        locStartInd + userString.substring(locStartInd).indexOf(",")));
                 Location uLocation = Model.getInstance().theNullLocation;
                 for (Location l : model.getLocations()) {
                     if (l.get_id() == location) {

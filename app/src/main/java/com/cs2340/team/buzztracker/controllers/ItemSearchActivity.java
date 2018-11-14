@@ -51,7 +51,8 @@ public class ItemSearchActivity extends Activity {
         /**
             setting up adapter to pull in category types
          */
-        ArrayAdapter<String> categoryArrayAdapter = new ArrayAdapter (this,R.layout.simple_spinner_white_text, model.getCategories());
+        ArrayAdapter<String> categoryArrayAdapter =
+                new ArrayAdapter (this,R.layout.simple_spinner_white_text, model.getCategories());
         categoryArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         _category.setAdapter(categoryArrayAdapter);
 
@@ -105,7 +106,8 @@ public class ItemSearchActivity extends Activity {
                     /**
                      * Send query to the database
                      */
-                    Intent search = new Intent(ItemSearchActivity.this, ItemSearchIntentService.class);
+                    Intent search = new Intent(ItemSearchActivity.this,
+                            ItemSearchIntentService.class);
                     search.putExtra("query", query);
                     search.putExtra("location", location);
                     search.putExtra("category", category);
@@ -118,14 +120,16 @@ public class ItemSearchActivity extends Activity {
          *  Register all the ResponseReceivers to receive async results
          */
         ItemSearchActivity.ItemSearchResponseReceiver receiver1;
-        IntentFilter filter1 = new IntentFilter(ItemSearchActivity.ItemSearchResponseReceiver.ACTION_RESP);
+        IntentFilter filter1 =
+                new IntentFilter(ItemSearchActivity.ItemSearchResponseReceiver.ACTION_RESP);
         filter1.addCategory(Intent.CATEGORY_DEFAULT);
         receiver1 = new ItemSearchActivity.ItemSearchResponseReceiver();
         registerReceiver(receiver1, filter1);
     }
 
     public class ItemSearchResponseReceiver extends BroadcastReceiver {
-        public static final String ACTION_RESP = "Search for items for the database based on a query";
+        public static final String ACTION_RESP =
+                "Search for items for the database based on a query";
         @Override
         public void onReceive(Context context, Intent intent) {
             String result = intent.getStringExtra("output");
@@ -148,7 +152,8 @@ public class ItemSearchActivity extends Activity {
                  */
                 while (result.trim().length() > 1) {
                     int startInd = result.indexOf("|");
-                    int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") + result.indexOf("|") + 1;
+                    int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") +
+                            result.indexOf("|") + 1;
                     String itemString = result.substring(startInd + 1, endInd);
                     result = result.substring(endInd );
 

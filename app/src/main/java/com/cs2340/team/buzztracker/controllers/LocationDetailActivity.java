@@ -49,8 +49,10 @@ public class LocationDetailActivity extends Activity{
                  * Get all of the items from this location from the database, then put then into
                  * the current Inventory in the Model
                  */
-                Intent inventory = new Intent(LocationDetailActivity.this, GetInventoryIntentService.class);
-                inventory.putExtra("location", Model.getInstance().getCurrentLocation().get_id() + "");
+                Intent inventory = new Intent(LocationDetailActivity.this,
+                        GetInventoryIntentService.class);
+                inventory.putExtra("location",
+                        Model.getInstance().getCurrentLocation().get_id() + "");
                 startService(inventory);
             }}
         );
@@ -60,7 +62,8 @@ public class LocationDetailActivity extends Activity{
 
             @Override
             public void onClick(View v) {
-                Intent itemSearch = new Intent(LocationDetailActivity.this, ItemSearchActivity.class);
+                Intent itemSearch = new Intent(LocationDetailActivity.this,
+                        ItemSearchActivity.class);
                 startActivity(itemSearch);
                 finish();
             }}
@@ -130,7 +133,8 @@ public class LocationDetailActivity extends Activity{
                  */
                 while (result.trim().length() > 1) {
                     int startInd = result.indexOf("|");
-                    int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") + result.indexOf("|") + 1;
+                    int endInd = result.substring(result.indexOf("|") + 1).indexOf("|") +
+                            result.indexOf("|") + 1;
                     String itemString = result.substring(startInd + 1, endInd);
                     result = result.substring(endInd );
 

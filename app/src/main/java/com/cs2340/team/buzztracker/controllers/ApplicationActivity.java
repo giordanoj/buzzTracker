@@ -54,7 +54,8 @@ public class ApplicationActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                Intent addDonation = new Intent(ApplicationActivity.this, AddDonationActivity.class);
+                Intent addDonation = new Intent(ApplicationActivity.this,
+                        AddDonationActivity.class);
                 startActivity(addDonation);
                 finish();
             }}

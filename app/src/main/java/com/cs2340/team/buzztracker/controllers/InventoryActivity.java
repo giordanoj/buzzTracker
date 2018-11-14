@@ -30,7 +30,8 @@ public class InventoryActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.item_list);
         assert recyclerView != null;
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(model.getCurrentInventory().get_items(), getApplication());
+        RecyclerViewAdapter adapter =
+                new RecyclerViewAdapter(model.getCurrentInventory().get_items(), getApplication());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -90,7 +91,8 @@ public class InventoryActivity extends AppCompatActivity {
 
                     model.setCurrentItem(item);
 
-                    Intent itemDetail = new Intent(InventoryActivity.this, ItemDetailActivity.class);
+                    Intent itemDetail = new Intent(InventoryActivity.this,
+                            ItemDetailActivity.class);
 
                     startActivity(itemDetail);
                 }

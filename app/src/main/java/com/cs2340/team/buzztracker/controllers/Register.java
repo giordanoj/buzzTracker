@@ -82,7 +82,8 @@ public class Register extends AppCompatActivity {
                 if (_name.getText().toString().trim().equals("")) {
                     badName.setText("Name cannot be blank!");
                     validRegistration = false;
-                } else if (_name.getText().toString().contains("|") || _name.getText().toString().contains(",")) {
+                } else if (_name.getText().toString().contains("|")
+                        || _name.getText().toString().contains(",")) {
                     badName.setText("Name contains an illegal character.");
                     validRegistration = false;
                 } else {
@@ -91,7 +92,8 @@ public class Register extends AppCompatActivity {
                 if (_email.getText().toString().trim().equals("")) {
                     badEmail.setText("Email cannot be blank!");
                     validRegistration = false;
-                } else if (_email.getText().toString().contains("|") || _email.getText().toString().contains(",")) {
+                } else if (_email.getText().toString().contains("|")
+                        || _email.getText().toString().contains(",")) {
                     badEmail.setText("Email contains an illegal character.");
                     validRegistration = false;
                 } else {
@@ -109,7 +111,8 @@ public class Register extends AppCompatActivity {
                      *  Check with the database to make sure the username isn't already used
                      *  If unused, add the user to the database and return to the welcome page
                      */
-                    Intent checkRegistration = new Intent(Register.this, CheckRegistrationIntentService.class);
+                    Intent checkRegistration = new Intent(Register.this,
+                            CheckRegistrationIntentService.class);
                     checkRegistration.putExtra("email", _email.getText().toString());
                     startService(checkRegistration);
                 }
@@ -120,7 +123,8 @@ public class Register extends AppCompatActivity {
         /**
           Set up the adapter to display the allowable Users in the spinner
          */
-        ArrayAdapter<UserTypes> userAdapter = new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserTypes.values());
+        ArrayAdapter<UserTypes> userAdapter =
+                new ArrayAdapter(this,android.R.layout.simple_spinner_item, UserTypes.values());
         userAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         userSpinner.setAdapter(userAdapter);
 

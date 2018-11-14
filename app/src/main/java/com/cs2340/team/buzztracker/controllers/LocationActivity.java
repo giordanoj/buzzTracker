@@ -31,7 +31,8 @@ public class LocationActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.location_list);
         assert recyclerView != null;
 
-        RecyclerViewAdapter adapter = new RecyclerViewAdapter(model.getLocations(), getApplication());
+        RecyclerViewAdapter adapter = new RecyclerViewAdapter(model.getLocations(),
+                getApplication());
         recyclerView.setAdapter(adapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -83,7 +84,8 @@ public class LocationActivity extends AppCompatActivity {
 
                     model.setCurrentLocation(location);
 
-                    Intent locationDetail = new Intent(LocationActivity.this, LocationDetailActivity.class);
+                    Intent locationDetail = new Intent(LocationActivity.this,
+                            LocationDetailActivity.class);
 
                     startActivity(locationDetail);
                     finish();
