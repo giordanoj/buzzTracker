@@ -52,6 +52,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/cs4good_symbol_white" />
+        app:srcCompat="@mipmap/cs4good_symbol_white" />
 
 </android.support.constraint.ConstraintLayout>
