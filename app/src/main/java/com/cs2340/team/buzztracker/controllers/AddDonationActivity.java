@@ -6,6 +6,7 @@ import android.content.IntentFilter;
 import android.os.Bundle;
 import android.content.Intent;
 import android.app.Activity;
+import android.text.Editable;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -81,30 +82,18 @@ public class AddDonationActivity extends Activity {
                  */
                 boolean validRegistration = true;
 
-                if ("".equals(_name.getText().toString().trim())) {
-                    Toast.makeText(getBaseContext(), "Item name cannot be blank.",
-                            Toast.LENGTH_LONG).show();
-                    validRegistration = false;
-                } else if (_name.getText().toString().contains("~")) {
-                    Toast.makeText(getBaseContext(), "Item name contains an illegal character.",
-                            Toast.LENGTH_LONG).show();
-                    validRegistration = false;
-                } else if ("".equals(_value.getText().toString().trim())) {
-                    Toast.makeText(getBaseContext(), "Item value cannot be blank.",
-                            Toast.LENGTH_LONG).show();
-                    validRegistration = false;
-                } else if (_value.getText().toString().contains("~")) {
-                    Toast.makeText(getBaseContext(), "Item value contains an illegal character.",
-                            Toast.LENGTH_LONG).show();
-                    validRegistration = false;
-                }else if ("".equals(_description.getText().toString().trim())) {
-                    Toast.makeText(getBaseContext(), "Item description cannot be blank.",
-                            Toast.LENGTH_LONG).show();
-                    validRegistration = false;
-                } else if (_description.getText().toString().contains("~")) {
-                    Toast.makeText(getBaseContext(),
-                            "Item description contains an illegal character.",
-                            Toast.LENGTH_LONG).show();
+                Editable editName = _name.getText();
+                Editable editValue = _value.getText();
+                Editable editDescription = _description.getText();
+
+                String name = editName.toString();
+                String value = editValue.toString();
+                String description = editDescription.toString();
+
+                String validationMessage = model.validateDonationName(name, value, description);
+
+                if ("".equals(validationMessage)) {
+                    Toast.makeText(getBaseContext(), validationMessage, Toast.LENGTH_LONG).show();
                     validRegistration = false;
                 }
 
@@ -112,13 +101,13 @@ public class AddDonationActivity extends Activity {
                     /*
                      * Retrieve all necessary information
                      */
-                    String name = _name.getText().toString().trim();
-                    name = name.replaceAll("'", "~1~");
-                    name = name.replaceAll("\"","~2~");
-                    String description = _description.getText().toString().trim();
-                    description = description.replaceAll("'", "~1~");
-                    description = description.replaceAll("\"","~2~");
-                    String value = _value.getText().toString().trim();
+                    String nameTrim = name.trim();
+                    nameTrim = nameTrim.replaceAll("'", "~1~");
+                    nameTrim = nameTrim.replaceAll("\"","~2~");
+                    String descriptionTrim =description.trim();
+                    descriptionTrim = descriptionTrim.replaceAll("'", "~1~");
+                    descriptionTrim = descriptionTrim.replaceAll("\"","~2~");
+                    String valueTrim = value.trim();
                     String category = _category.getSelectedItem().toString().trim();
                     category = category.replaceAll("'", "~1~");
                     category = category.replaceAll("\"","~2~");
@@ -134,9 +123,9 @@ public class AddDonationActivity extends Activity {
                      */
                     Intent addDonation = new Intent(AddDonationActivity.this,
                             AddDonationIntentService.class);
-                    addDonation.putExtra("name", name);
-                    addDonation.putExtra("description", description);
-                    addDonation.putExtra("value", value);
+                    addDonation.putExtra("name", nameTrim);
+                    addDonation.putExtra("description", descriptionTrim);
+                    addDonation.putExtra("value", valueTrim);
                     addDonation.putExtra("category", category);
                     addDonation.putExtra("donationTime", donationTime);
                     addDonation.putExtra("enteredBy", enteredBy);

@@ -1,5 +1,8 @@
 package com.cs2340.team.buzztracker.model;
 
+import android.text.Editable;
+import android.widget.Toast;
+
 import java.util.ArrayList;
 
 /**
@@ -179,5 +182,22 @@ public final class Model {
         setCurrentLocation(theNullLocation);
         setCurrentInventory(theNullInventory);
         setCurrentItem(theNullItem);
+    }
+
+    public String validateDonationName(String name, String value, String description) {
+        if ("".equals(name.trim())) {
+            return "Item name cannot be blank";
+        } else if (name.contains("~")) {
+            return "Item name contains an illegal character.";
+        } else if ("".equals(value.trim())) {
+            return "Item value cannot be blank.";
+        } else if (value.contains("~")) {
+            return "Item value contains an illegal character.";
+        }else if ("".equals(description.trim())) {
+            return "Item description cannot be blank.";
+        } else if (description.contains("~")) {
+            return "Item description contains an illegal character.";
+        }
+        return "";
     }
 }
