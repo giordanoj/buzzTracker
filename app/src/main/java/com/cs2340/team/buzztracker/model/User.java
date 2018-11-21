@@ -35,11 +35,28 @@ import java.util.ArrayList;
         private Location _location;
 
 
+        /**this is the user's location*/
+        private boolean _googleUser;
+
+
         /* **********************
          * Getters and setters
          */
 
         //no setter for this.  id is a read only field
+
+        /**
+         * getter for the if sign in by Google
+         * @return boolean _googleUser
+         */
+        public boolean getGoogleUser() { return _googleUser; }
+
+
+        /**
+         * setter for the if sign in by Google
+         *
+         */
+        public void setGoogleUser(boolean googleUser) {  _googleUser = googleUser; }
 
         /**
          * getter for the User ID

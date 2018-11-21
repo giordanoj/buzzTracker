@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cs2340.team.buzztracker">
 
@@ -99,7 +98,8 @@
 
         <activity
             android:name=".controllers.MapsActivity"
-            android:label="@string/title_activity_maps"></activity>
+            android:label="@string/title_activity_maps" />
+        <activity android:name=".controllers.GoogleLogin"></activity>
     </application>
 
 </manifest>

@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1090630920994",
+    "firebase_url": "https://buzz1-1542808990885.firebaseio.com",
+    "project_id": "buzz1-1542808990885",
+    "storage_bucket": "buzz1-1542808990885.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090630920994:android:6fc8d3ae7b1e00b4",
+        "android_client_info": {
+          "package_name": "com.cs2340.team.buzztracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090630920994-87f16k1g10o3t3absig8lbd2q0mq5f53.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cs2340.team.buzztracker",
+            "certificate_hash": "fde17c988c9e4ac3715187b2433cd68051a53565"
+          }
+        },
+        {
+          "client_id": "1090630920994-k0a19250lah519ifm765g27v2elvrtrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB_ImlJnzyKmnjzFi21xMzcTZGYEy3Iq6Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090630920994-k0a19250lah519ifm765g27v2elvrtrg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

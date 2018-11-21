@@ -37,13 +37,26 @@ public class Login extends Activity {
         Button cancelButton = findViewById(R.id.cancelbtn);
         cancelButton.setOnClickListener(new View.OnClickListener() {
 
-            @Override
-            public void onClick(View v) {
-                Intent cancel = new Intent(Login.this, MainActivity.class);
-                startActivity(cancel);
-                finish();
-            }
-        }
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent cancel = new Intent(Login.this, MainActivity.class);
+                                                startActivity(cancel);
+                                                finish();
+                                            }
+                                        }
+            );
+
+
+        Button googleLogin = findViewById(R.id.googleLogin);
+        googleLogin.setOnClickListener(new View.OnClickListener() {
+
+                                            @Override
+                                            public void onClick(View v) {
+                                                Intent cancel = new Intent(Login.this, GoogleLogin.class);
+                                                startActivity(cancel);
+                                                finish();
+                                            }
+                                        }
 
 
         );

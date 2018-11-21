@@ -3,6 +3,7 @@ package com.cs2340.team.buzztracker.controllers;
 import android.content.Intent;
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -31,10 +32,19 @@ public class ApplicationActivity extends Activity {
 
             @Override
             public void onClick(View v) {
-                model.setCurrentUser(model.theNullUser);
-                Intent logout = new Intent(ApplicationActivity.this, MainActivity.class);
-                startActivity(logout);
-                finish();
+                if(model.getCurrentUser().getGoogleUser()) {
+                    Intent logout = new Intent(ApplicationActivity.this, GoogleLogin.class);
+                    startActivity(logout);
+                    finish();
+                } else {
+
+                    model.setCurrentUser(model.theNullUser);
+
+                    Intent logout = new Intent(ApplicationActivity.this, MainActivity.class);
+                    startActivity(logout);
+                    finish();
+                }
+
             }}
         );
 
