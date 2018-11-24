@@ -28,7 +28,7 @@
 
   <meta name="viewport" content="width=device-width">
   
-  <title>buzzTracker/getCategories.php at 9a11d446e830fca660e8f491998111ad3fd25843 · giordanoj/buzzTracker</title>
+  <title>buzzTracker/checkRegistration.php at 9a11d446e830fca660e8f491998111ad3fd25843 · giordanoj/buzzTracker</title>
     <meta name="description" content="cs2340 android app. Contribute to giordanoj/buzzTracker development by creating an account on GitHub.">
     <link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="GitHub">
   <link rel="fluid-icon" href="https://github.com/fluidicon.png" title="GitHub">
@@ -38,10 +38,10 @@
     <meta property="og:image" content="https://avatars1.githubusercontent.com/u/31679853?s=400&amp;v=4" /><meta property="og:site_name" content="GitHub" /><meta property="og:type" content="object" /><meta property="og:title" content="giordanoj/buzzTracker" /><meta property="og:url" content="https://github.com/giordanoj/buzzTracker" /><meta property="og:description" content="cs2340 android app. Contribute to giordanoj/buzzTracker development by creating an account on GitHub." />
 
   <link rel="assets" href="https://assets-cdn.github.com/">
-  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzI3NTQ0OTY1Ojg1NjdjNjczMTkyN2Q1MDI3NjkxN2UyZGYzOThkMTFhZDFmNzM0ZDJlYzAyYzg3YzdiYzBmNTM0YjAwOTEwMGU=--ade031c3646d8fb69b0e8a919b728da8dbf22cb5">
+  <link rel="web-socket" href="wss://live.github.com/_sockets/VjI6MzI3NTQ0OTY1OmQxMjA1MGRhODViYzM3MzA2NzdjNmMxZGVkYTljYmEzZmExNTY5Y2ZjYjY1YmZlYWExMmY2YTEzZGU0MjBmN2I=--a6e029faf9c1827c69ae29fc424c6dbde27bfd75">
   <meta name="pjax-timeout" content="1000">
   <link rel="sudo-modal" href="/sessions/sudo_modal">
-  <meta name="request-id" content="D93E:7050:AF1DAF:18A2CAF:5BF9B786" data-pjax-transient>
+  <meta name="request-id" content="D93E:7050:AF1C8E:18A26F5:5BF9B764" data-pjax-transient>
 
 
   
@@ -52,7 +52,7 @@
     <meta name="google-site-verification" content="ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA">
     <meta name="google-site-verification" content="GXs5KoUUkNCoaAZn7wPN-t01Pywp9M3sEjnt_3_ZWPc">
 
-  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="D93E:7050:AF1DAF:18A2CAF:5BF9B786" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="32271101" /><meta name="octolytics-actor-login" content="johnlanders" /><meta name="octolytics-actor-hash" content="fae9ae8d81d233d22cd1423d13ff1129e9a0db1d40d7e3418587fda3c522f919" />
+  <meta name="octolytics-host" content="collector.githubapp.com" /><meta name="octolytics-app-id" content="github" /><meta name="octolytics-event-url" content="https://collector.githubapp.com/github-external/browser_event" /><meta name="octolytics-dimension-request_id" content="D93E:7050:AF1C8E:18A26F5:5BF9B764" /><meta name="octolytics-dimension-region_edge" content="iad" /><meta name="octolytics-dimension-region_render" content="iad" /><meta name="octolytics-actor-id" content="32271101" /><meta name="octolytics-actor-login" content="johnlanders" /><meta name="octolytics-actor-hash" content="fae9ae8d81d233d22cd1423d13ff1129e9a0db1d40d7e3418587fda3c522f919" />
 <meta name="analytics-location" content="/&lt;user-name&gt;/&lt;repo-name&gt;/blob/show" data-pjax-transient="true" />
 
 
@@ -71,7 +71,7 @@
     <meta name="user-login" content="johnlanders">
 
       <meta name="expected-hostname" content="github.com">
-    <meta name="js-proxy-site-detection-payload" content="YmRhMTBjNjA1YjYxYmFiYTM5ZDg3NDBkMjFhNTQyMGZkYzMzMGQ2ZDYyOTNjZmZkODA3ZjYzZjRkODM0OTdmMXx7InJlbW90ZV9hZGRyZXNzIjoiMTc0LjgwLjE4MC4xOTQiLCJyZXF1ZXN0X2lkIjoiRDkzRTo3MDUwOkFGMURBRjoxOEEyQ0FGOjVCRjlCNzg2IiwidGltZXN0YW1wIjoxNTQzMDkyMTA3LCJob3N0IjoiZ2l0aHViLmNvbSJ9">
+    <meta name="js-proxy-site-detection-payload" content="NzZhZGFmYTMyMDJjZTQ4YzA1ZDk3MzUyODdlODA5ZmZmYmE1YmU1OWVkN2FkMDY3OTJlMDgyZTM2Y2VjMDA4YXx7InJlbW90ZV9hZGRyZXNzIjoiMTc0LjgwLjE4MC4xOTQiLCJyZXF1ZXN0X2lkIjoiRDkzRTo3MDUwOkFGMUM4RToxOEEyNkY1OjVCRjlCNzY0IiwidGltZXN0YW1wIjoxNTQzMDkyMDkzLCJob3N0IjoiZ2l0aHViLmNvbSJ9">
 
     <meta name="enabled-features" content="DASHBOARD_V2_LAYOUT_OPT_IN,EXPLORE_DISCOVER_REPOSITORIES,UNIVERSE_BANNER,MARKETPLACE_PLAN_RESTRICTION_EDITOR,NOTIFY_ON_BLOCK,SAVED_THREADS,TIMELINE_COMMENT_UPDATES,SUGGESTED_CHANGES_UX_TEST,SUGGESTED_CHANGES_BATCH,RELATED_ISSUES,MARKETPLACE_INSIGHTS_V2">
 
@@ -87,7 +87,7 @@
   <meta name="octolytics-dimension-user_id" content="31679853" /><meta name="octolytics-dimension-user_login" content="giordanoj" /><meta name="octolytics-dimension-repository_id" content="149678901" /><meta name="octolytics-dimension-repository_nwo" content="giordanoj/buzzTracker" /><meta name="octolytics-dimension-repository_public" content="true" /><meta name="octolytics-dimension-repository_is_fork" content="false" /><meta name="octolytics-dimension-repository_network_root_id" content="149678901" /><meta name="octolytics-dimension-repository_network_root_nwo" content="giordanoj/buzzTracker" /><meta name="octolytics-dimension-repository_explore_github_marketplace_ci_cta_shown" content="false" />
 
 
-    <link rel="canonical" href="https://github.com/giordanoj/buzzTracker/blob/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/getCategories.php" data-pjax-transient>
+    <link rel="canonical" href="https://github.com/giordanoj/buzzTracker/blob/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/checkRegistration.php" data-pjax-transient>
 
 
   <meta name="browser-stats-url" content="https://api.github.com/_private/browser/stats">
@@ -157,7 +157,7 @@
           aria-autocomplete="list"
           aria-controls="jump-to-results"
           aria-label="Search or jump to…"
-          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=kLgnf+RUUXgeVt/+6rZYn+I5UWJIENR+a7FQ4L2uCQn92Vj2dWMtIcRw949i5HIOk6+zLkSOUwigERojDIMWBg=="
+          data-jump-to-suggestions-path="/_graphql/GetSuggestedNavigationDestinations#csrf-token=CjcyOn5GjakmYJuwVWSMIh3wSBPwTX9/KgzZzrkU0pdnVk2z73Hx8PxGs8HdNqazbGaqX/zT+AnhrJMNCDnNmA=="
           spellcheck="false"
           autocomplete="off"
           >
@@ -311,7 +311,7 @@
           <li><a role="menuitem" class="dropdown-item" href="https://help.github.com" data-ga-click="Header, go to help, text:help">Help</a></li>
           <li><a role="menuitem" class="dropdown-item" href="/settings/profile" data-ga-click="Header, go to settings, icon:settings">Settings</a></li>
           <li>
-            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="eI/wl1qRyvtBqulG4UBJP0Le0cuDNweaY4pCSSufC96mFYuZQuUalm5KpLXxGRutUJZ2S7rGlFyfgdqdD3ILww==" />
+            <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="logout-form" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="RmnqM1iPeuCsA0iTRrMroKx4PLMzr16K472y5sf8tsaY85E9QPuqjYPjBWBW6nkyvjCbMwpezUwftioy4xG22w==" />
               <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout" role="menuitem">
                 Sign out
               </button>
@@ -324,7 +324,7 @@
 
 
 
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="opZLCefnQjC+raKGKCaehy8MyG7SAxzXulEB0OdetSV8DDAH/5OSXZFN73U4f8wVPURv7uvyjxFGWpkEw7O1OA==" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="sr-only right-0" action="/logout" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="xBoFd3oOo+bnUsTX9xo8XIDjpNYvKOURGqty1zT15SEagH55Ynpzi8iyiSTnQ27OkqsDVhbZdtfmoOoDEBjlPA==" />
           <button type="submit" class="dropdown-item dropdown-signout" data-ga-click="Header, sign out, icon:logout">
             Sign out
           </button>
@@ -362,7 +362,7 @@
 
       <ul class="pagehead-actions">
   <li>
-        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="XKk6EqWlRxtC6sjWS7queXTBVertQxXnZyyIEHizqocMtH0b3xmY75asIIDdAloQfaHqqN29LF93hMKP0YpwFg==" />      <input type="hidden" name="repository_id" id="repository_id" value="149678901" class="form-control" />
+        <!-- '"` --><!-- </textarea></xmp> --></option></form><form data-remote="true" class="js-social-form js-social-container" action="/notifications/subscribe" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="ODfDkYp6Lb84Po9XiXmCdJSfWuo+elPcCrL7WIgniZFoKoSY8MbyS+x4ZwEfwXYdnf/lqA6EamQaGrHHIR5TAA==" />      <input type="hidden" name="repository_id" id="repository_id" value="149678901" class="form-control" />
 
       <details class="details-reset details-overlay select-menu float-left">
         <summary class="btn btn-sm btn-with-count select-menu-button" data-ga-click="Repository, click Watch settings, action:blob#show">
@@ -426,7 +426,7 @@
   <li>
     
   <div class="js-toggler-container js-social-container starring-container on">
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/giordanoj/buzzTracker/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="xBCEuNH28GNGjSPoZYvyMM1yaKH47nkYQnMguMm65c/T3ZKOKOxLSDCvfmgqgjZVv14KOYh1W+dEwJeAQi5YSg==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="starred js-social-form" action="/giordanoj/buzzTracker/unstar" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="tRCyvGu8h72BsFMDobex/jR4tsqvIGwmeGMBQjh229Wi3aSKkqY8lveSDoPuvnWbRlTUUt+7Ttl+0LZ6s+JmUA==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -441,7 +441,7 @@
           2
         </a>
 </form>
-    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/giordanoj/buzzTracker/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="nTalRZP/9LpxKnWq6HT4waXh3Pzir8L/rNWhQm5FnU2Hw/ekGnoR8ejGzZjLikDWMV7cpp7S8Y43dm/dCaC+kQ==" />
+    <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="unstarred js-social-form" action="/giordanoj/buzzTracker/star" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="LMVKohbMs8W67XM0irnneTy1qmkQZXPIfDkZVoMh98U2MBhDn0lWjiMBywapR19uqAqqM2wYQLnnmtfJ5MTUGQ==" />
       <input type="hidden" name="context" value="repository"></input>
       <button
         type="submit"
@@ -460,7 +460,7 @@
   </li>
 
   <li>
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/giordanoj/buzzTracker/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="8aubpv+K+Dvt7QPjB+f2q7+o1GV7r0z/wIg0KRwkoLTVPvPhIO3AzFC73IH+LXhUnp47Z50fGFT2WBkx/HDkeg==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="btn-with-count" action="/giordanoj/buzzTracker/fork" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="QzBMVHljEqJGKTMHDsff2llmGRxDe5qrqfE6DghFswtnpSQTpgQqVft/7GX3DVEleFD2HqXLzgCfIRcW6BH3xQ==" />
             <button
                 type="submit"
                 class="btn btn-sm btn-with-count"
@@ -544,9 +544,9 @@
     
 
   
-    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/giordanoj/buzzTracker/blob/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/getCategories.php">Permalink</a>
+    <a class="d-none js-permalink-shortcut" data-hotkey="y" href="/giordanoj/buzzTracker/blob/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/checkRegistration.php">Permalink</a>
 
-    <!-- blob contrib key: blob_contributors:v21:910c58937bffe202ec1a11dde6142bb0 -->
+    <!-- blob contrib key: blob_contributors:v21:1b8e1c5f234966aaad20376e33cb2078 -->
 
     
 
@@ -590,7 +590,7 @@
 
 
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/Junit/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/Junit/buzzTrackerScripts/checkRegistration.php"
                data-name="Junit"
                data-skip-pjax="true"
                rel="nofollow">
@@ -600,7 +600,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/MySQL/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/MySQL/buzzTrackerScripts/checkRegistration.php"
                data-name="MySQL"
                data-skip-pjax="true"
                rel="nofollow">
@@ -610,7 +610,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/UMLClasses/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/UMLClasses/buzzTrackerScripts/checkRegistration.php"
                data-name="UMLClasses"
                data-skip-pjax="true"
                rel="nofollow">
@@ -620,7 +620,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/User-Profile-%26-Items/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/User-Profile-%26-Items/buzzTrackerScripts/checkRegistration.php"
                data-name="User-Profile-&amp;-Items"
                data-skip-pjax="true"
                rel="nofollow">
@@ -630,7 +630,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/firebaseTest/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/firebaseTest/buzzTrackerScripts/checkRegistration.php"
                data-name="firebaseTest"
                data-skip-pjax="true"
                rel="nofollow">
@@ -640,7 +640,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/junchen/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/junchen/buzzTrackerScripts/checkRegistration.php"
                data-name="junchen"
                data-skip-pjax="true"
                rel="nofollow">
@@ -650,7 +650,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/master/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/master/buzzTrackerScripts/checkRegistration.php"
                data-name="master"
                data-skip-pjax="true"
                rel="nofollow">
@@ -660,7 +660,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/readingLocation/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/readingLocation/buzzTrackerScripts/checkRegistration.php"
                data-name="readingLocation"
                data-skip-pjax="true"
                rel="nofollow">
@@ -670,7 +670,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/register/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/register/buzzTrackerScripts/checkRegistration.php"
                data-name="register"
                data-skip-pjax="true"
                rel="nofollow">
@@ -680,7 +680,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/signWithGmail/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/signWithGmail/buzzTrackerScripts/checkRegistration.php"
                data-name="signWithGmail"
                data-skip-pjax="true"
                rel="nofollow">
@@ -690,7 +690,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/testing/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/testing/buzzTrackerScripts/checkRegistration.php"
                data-name="testing"
                data-skip-pjax="true"
                rel="nofollow">
@@ -700,7 +700,7 @@
               </span>
             </a>
             <a class="select-menu-item js-navigation-item js-navigation-open "
-               href="/giordanoj/buzzTracker/blob/userProfile/buzzTrackerScripts/getCategories.php"
+               href="/giordanoj/buzzTracker/blob/userProfile/buzzTrackerScripts/checkRegistration.php"
                data-name="userProfile"
                data-skip-pjax="true"
                rel="nofollow">
@@ -711,10 +711,10 @@
             </a>
         </div>
 
-          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="select-menu-new-item-form js-new-item-form" action="/giordanoj/buzzTracker/branches" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="0c/m7UyQ8LnjhXZ7T2GCZV6UFBHJkw8SKudIqOoL2toV42YNVtqdPpS1R989L49Z1p8ZCpRU/pfDt+YXGqlyNQ==" />
+          <!-- '"` --><!-- </textarea></xmp> --></option></form><form class="select-menu-new-item-form js-new-item-form" action="/giordanoj/buzzTracker/branches" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="&#x2713;" /><input type="hidden" name="authenticity_token" value="AM73EkvS3LpDxW3z4+SU9L5dGg7bdocdrFVUsGR3VczE4nfyUZixPTT1XFeRqpnINlYXFYaxdphFBfoPlNX9Iw==" />
             <input type="hidden" name="name" id="name" class="js-new-item-value">
             <input type="hidden" name="branch" id="branch" value="9a11d446e830fca660e8f491998111ad3fd25843">
-            <input type="hidden" name="path_binary" id="path_binary" value="YnV6elRyYWNrZXJTY3JpcHRzL2dldENhdGVnb3JpZXMucGhw">
+            <input type="hidden" name="path_binary" id="path_binary" value="YnV6elRyYWNrZXJTY3JpcHRzL2NoZWNrUmVnaXN0cmF0aW9uLnBocA==">
 
             <button type="submit" class="width-full select-menu-item js-navigation-open js-navigation-item">
               <svg class="octicon octicon-git-branch select-menu-item-icon" viewBox="0 0 10 16" version="1.1" width="10" height="16" aria-hidden="true"><path fill-rule="evenodd" d="M10 5c0-1.11-.89-2-2-2a1.993 1.993 0 0 0-1 3.72v.3c-.02.52-.23.98-.63 1.38-.4.4-.86.61-1.38.63-.83.02-1.48.16-2 .45V4.72a1.993 1.993 0 0 0-1-3.72C.88 1 0 1.89 0 3a2 2 0 0 0 1 1.72v6.56c-.59.35-1 .99-1 1.72 0 1.11.89 2 2 2 1.11 0 2-.89 2-2 0-.53-.2-1-.53-1.36.09-.06.48-.41.59-.47.25-.11.56-.17.94-.17 1.05-.05 1.95-.45 2.75-1.25S8.95 7.77 9 6.73h-.02C9.59 6.37 10 5.73 10 5zM2 1.8c.66 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2C1.35 4.2.8 3.65.8 3c0-.65.55-1.2 1.2-1.2zm0 12.41c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2zm6-8c-.66 0-1.2-.55-1.2-1.2 0-.65.55-1.2 1.2-1.2.65 0 1.2.55 1.2 1.2 0 .65-.55 1.2-1.2 1.2z"/></svg>
@@ -751,12 +751,12 @@
         </clipboard-copy>
       </div>
       <div id="blob-path" class="breadcrumb">
-        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/giordanoj/buzzTracker/tree/9a11d446e830fca660e8f491998111ad3fd25843"><span>buzzTracker</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/giordanoj/buzzTracker/tree/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts"><span>buzzTrackerScripts</span></a></span><span class="separator">/</span><strong class="final-path">getCategories.php</strong>
+        <span class="repo-root js-repo-root"><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/giordanoj/buzzTracker/tree/9a11d446e830fca660e8f491998111ad3fd25843"><span>buzzTracker</span></a></span></span><span class="separator">/</span><span class="js-path-segment"><a data-pjax="true" rel="nofollow" href="/giordanoj/buzzTracker/tree/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts"><span>buzzTrackerScripts</span></a></span><span class="separator">/</span><strong class="final-path">checkRegistration.php</strong>
       </div>
     </div>
 
 
-    <include-fragment src="/giordanoj/buzzTracker/contributors/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/getCategories.php" class="commit-tease commit-loader">
+    <include-fragment src="/giordanoj/buzzTracker/contributors/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/checkRegistration.php" class="commit-tease commit-loader">
       <div>
         Fetching contributors&hellip;
       </div>
@@ -774,9 +774,9 @@
 
 
     <div class="BtnGroup">
-      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/giordanoj/buzzTracker/raw/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/getCategories.php">Raw</a>
-        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/giordanoj/buzzTracker/blame/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/getCategories.php">Blame</a>
-      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/giordanoj/buzzTracker/commits/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/getCategories.php">History</a>
+      <a id="raw-url" class="btn btn-sm BtnGroup-item" href="/giordanoj/buzzTracker/raw/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/checkRegistration.php">Raw</a>
+        <a class="btn btn-sm js-update-url-with-hash BtnGroup-item" data-hotkey="b" href="/giordanoj/buzzTracker/blame/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/checkRegistration.php">Blame</a>
+      <a rel="nofollow" class="btn btn-sm BtnGroup-item" href="/giordanoj/buzzTracker/commits/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/checkRegistration.php">History</a>
     </div>
 
         <button class="btn-octicon disabled tooltipped tooltipped-nw"
@@ -797,9 +797,9 @@
   </div>
 
   <div class="file-info">
-      33 lines (24 sloc)
+      32 lines (22 sloc)
       <span class="file-info-divider"></span>
-    608 Bytes
+    576 Bytes
   </div>
 </div>
 
@@ -833,7 +833,7 @@
       </tr>
       <tr>
         <td id="L7" class="blob-num js-line-number" data-line-number="7"></td>
-        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$table_name</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>categories<span class="pl-pds">&quot;</span></span>;</span></td>
+        <td id="LC7" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$table_name</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span>user<span class="pl-pds">&quot;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L8" class="blob-num js-line-number" data-line-number="8"></td>
@@ -841,35 +841,35 @@
       </tr>
       <tr>
         <td id="L9" class="blob-num js-line-number" data-line-number="9"></td>
-        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">//</span> Create connection</span></span></td>
+        <td id="LC9" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$input_email</span> <span class="pl-k">=</span> <span class="pl-smi">$_REQUEST</span>[<span class="pl-s"><span class="pl-pds">&quot;</span>email<span class="pl-pds">&quot;</span></span>];</span></td>
       </tr>
       <tr>
         <td id="L10" class="blob-num js-line-number" data-line-number="10"></td>
-        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$conn</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">mysqli</span>(<span class="pl-smi">$servername</span>, <span class="pl-smi">$username</span>, <span class="pl-smi">$password</span>, <span class="pl-smi">$db_name</span>);</span></td>
+        <td id="LC10" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span></td>
       </tr>
       <tr>
         <td id="L11" class="blob-num js-line-number" data-line-number="11"></td>
-        <td id="LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">//</span> Check connection</span></span></td>
+        <td id="LC11" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">//</span> Create connection</span></span></td>
       </tr>
       <tr>
         <td id="L12" class="blob-num js-line-number" data-line-number="12"></td>
-        <td id="LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">if</span> (<span class="pl-smi">$conn</span><span class="pl-k">-&gt;</span><span class="pl-smi">connect_error</span>) {</span></td>
+        <td id="LC12" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$conn</span> <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-c1">mysqli</span>(<span class="pl-smi">$servername</span>, <span class="pl-smi">$username</span>, <span class="pl-smi">$password</span>, <span class="pl-smi">$db_name</span>);</span></td>
       </tr>
       <tr>
         <td id="L13" class="blob-num js-line-number" data-line-number="13"></td>
-        <td id="LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-k">die</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Connection failed: <span class="pl-pds">&quot;</span></span> <span class="pl-k">.</span> <span class="pl-smi">$conn</span><span class="pl-k">-&gt;</span><span class="pl-smi">connect_error</span>);</span></td>
+        <td id="LC13" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-c"><span class="pl-c">//</span> Check connection</span></span></td>
       </tr>
       <tr>
         <td id="L14" class="blob-num js-line-number" data-line-number="14"></td>
-        <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">}</span></td>
+        <td id="LC14" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">if</span> (<span class="pl-smi">$conn</span><span class="pl-k">-&gt;</span><span class="pl-smi">connect_error</span>) {</span></td>
       </tr>
       <tr>
         <td id="L15" class="blob-num js-line-number" data-line-number="15"></td>
-        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span></td>
+        <td id="LC15" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-k">die</span>(<span class="pl-s"><span class="pl-pds">&quot;</span>Connection failed: <span class="pl-pds">&quot;</span></span> <span class="pl-k">.</span> <span class="pl-smi">$conn</span><span class="pl-k">-&gt;</span><span class="pl-smi">connect_error</span>);</span></td>
       </tr>
       <tr>
         <td id="L16" class="blob-num js-line-number" data-line-number="16"></td>
-        <td id="LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$sql</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-s1"><span class="pl-k">SELECT</span> <span class="pl-k">*</span> <span class="pl-k">FROM</span> <span class="pl-smi">$table_name</span></span><span class="pl-pds">&quot;</span></span>;</span></td>
+        <td id="LC16" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">}</span></td>
       </tr>
       <tr>
         <td id="L17" class="blob-num js-line-number" data-line-number="17"></td>
@@ -877,7 +877,7 @@
       </tr>
       <tr>
         <td id="L18" class="blob-num js-line-number" data-line-number="18"></td>
-        <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$result</span> <span class="pl-k">=</span> <span class="pl-smi">$conn</span><span class="pl-k">-&gt;</span>query(<span class="pl-smi">$sql</span>);</span></td>
+        <td id="LC18" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$sql</span> <span class="pl-k">=</span> <span class="pl-s"><span class="pl-pds">&quot;</span><span class="pl-s1"><span class="pl-k">SELECT</span> <span class="pl-k">*</span> <span class="pl-k">FROM</span> <span class="pl-smi">$table_name</span> <span class="pl-k">WHERE</span> email <span class="pl-k">=</span> <span class="pl-s">&#39;<span class="pl-smi">$input_email</span>&#39;</span></span><span class="pl-pds">&quot;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L19" class="blob-num js-line-number" data-line-number="19"></td>
@@ -885,55 +885,51 @@
       </tr>
       <tr>
         <td id="L20" class="blob-num js-line-number" data-line-number="20"></td>
-        <td id="LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">if</span> (<span class="pl-smi">$result</span><span class="pl-k">-&gt;</span><span class="pl-smi">num_rows</span> <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>) {</span></td>
+        <td id="LC20" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$result</span> <span class="pl-k">=</span> <span class="pl-smi">$conn</span><span class="pl-k">-&gt;</span>query(<span class="pl-smi">$sql</span>);</span></td>
       </tr>
       <tr>
         <td id="L21" class="blob-num js-line-number" data-line-number="21"></td>
-        <td id="LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">	<span class="pl-k">while</span>(<span class="pl-smi">$row</span> <span class="pl-k">=</span> <span class="pl-smi">$result</span><span class="pl-k">-&gt;</span>fetch_assoc()) {</span></td>
+        <td id="LC21" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span></td>
       </tr>
       <tr>
         <td id="L22" class="blob-num js-line-number" data-line-number="22"></td>
-        <td id="LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">        <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span>|<span class="pl-pds">&quot;</span></span> <span class="pl-k">.</span> <span class="pl-smi">$row</span>[<span class="pl-s"><span class="pl-pds">&quot;</span>name<span class="pl-pds">&quot;</span></span>];</span></td>
+        <td id="LC22" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-k">if</span> (<span class="pl-smi">$result</span><span class="pl-k">-&gt;</span><span class="pl-smi">num_rows</span> <span class="pl-k">&gt;</span> <span class="pl-c1">0</span>) {</span></td>
       </tr>
       <tr>
         <td id="L23" class="blob-num js-line-number" data-line-number="23"></td>
-        <td id="LC23" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    }</span></td>
+        <td id="LC23" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">	<span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span>invalid<span class="pl-pds">&quot;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L24" class="blob-num js-line-number" data-line-number="24"></td>
-        <td id="LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span>|<span class="pl-pds">&quot;</span></span>;</span></td>
+        <td id="LC24" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">} <span class="pl-k">else</span> {</span></td>
       </tr>
       <tr>
         <td id="L25" class="blob-num js-line-number" data-line-number="25"></td>
-        <td id="LC25" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">} <span class="pl-k">else</span> {</span></td>
+        <td id="LC25" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span>valid<span class="pl-pds">&quot;</span></span>;</span></td>
       </tr>
       <tr>
         <td id="L26" class="blob-num js-line-number" data-line-number="26"></td>
-        <td id="LC26" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">    <span class="pl-c1">echo</span> <span class="pl-s"><span class="pl-pds">&quot;</span>no categories found<span class="pl-pds">&quot;</span></span>;</span></td>
+        <td id="LC26" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">}</span></td>
       </tr>
       <tr>
         <td id="L27" class="blob-num js-line-number" data-line-number="27"></td>
-        <td id="LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-s1">}</span></td>
+        <td id="LC27" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span></td>
       </tr>
       <tr>
         <td id="L28" class="blob-num js-line-number" data-line-number="28"></td>
-        <td id="LC28" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span></td>
+        <td id="LC28" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$conn</span><span class="pl-k">-&gt;</span>close();</span></td>
       </tr>
       <tr>
         <td id="L29" class="blob-num js-line-number" data-line-number="29"></td>
-        <td id="LC29" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"><span class="pl-smi">$conn</span><span class="pl-k">-&gt;</span>close();</span></td>
+        <td id="LC29" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span></td>
       </tr>
       <tr>
         <td id="L30" class="blob-num js-line-number" data-line-number="30"></td>
-        <td id="LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span></td>
+        <td id="LC30" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span><span class="pl-pse"><span class="pl-s1">?</span>&gt;</span></td>
       </tr>
       <tr>
         <td id="L31" class="blob-num js-line-number" data-line-number="31"></td>
-        <td id="LC31" class="blob-code blob-code-inner js-file-line"><span class="pl-s1"></span><span class="pl-pse"><span class="pl-s1">?</span>&gt;</span></td>
-      </tr>
-      <tr>
-        <td id="L32" class="blob-num js-line-number" data-line-number="32"></td>
-        <td id="LC32" class="blob-code blob-code-inner js-file-line">
+        <td id="LC31" class="blob-code blob-code-inner js-file-line">
 </td>
       </tr>
 </table>
@@ -946,7 +942,7 @@
       <ul class="BlobToolbar-dropdown dropdown-menu dropdown-menu-se mt-2">
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-lines" style="cursor:pointer;" data-original-text="Copy lines">Copy lines</clipboard-copy></li>
         <li><clipboard-copy role="menuitem" class="dropdown-item" id="js-copy-permalink" style="cursor:pointer;" data-original-text="Copy permalink">Copy permalink</clipboard-copy></li>
-        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/giordanoj/buzzTracker/blame/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/getCategories.php">View git blame</a></li>
+        <li><a class="dropdown-item js-update-url-with-hash" id="js-view-git-blame" role="menuitem" href="/giordanoj/buzzTracker/blame/9a11d446e830fca660e8f491998111ad3fd25843/buzzTrackerScripts/checkRegistration.php">View git blame</a></li>
           <li><a class="dropdown-item" id="js-new-issue" role="menuitem" href="/giordanoj/buzzTracker/issues/new">Open new issue</a></li>
       </ul>
     </details-menu>
@@ -981,7 +977,7 @@
 <div class="footer container-lg px-3" role="contentinfo">
   <div class="position-relative d-flex flex-justify-between pt-6 pb-2 mt-6 f6 text-gray border-top border-gray-light ">
     <ul class="list-style-none d-flex flex-wrap ">
-      <li class="mr-3">&copy; 2018 <span title="0.26113s from unicorn-5965ff88d-tcg9h">GitHub</span>, Inc.</li>
+      <li class="mr-3">&copy; 2018 <span title="0.19131s from unicorn-5965ff88d-dzws2">GitHub</span>, Inc.</li>
         <li class="mr-3"><a data-ga-click="Footer, go to terms, text:terms" href="https://github.com/site/terms">Terms</a></li>
         <li class="mr-3"><a data-ga-click="Footer, go to privacy, text:privacy" href="https://github.com/site/privacy">Privacy</a></li>
         <li class="mr-3"><a href="/security" data-ga-click="Footer, go to security, text:security">Security</a></li>

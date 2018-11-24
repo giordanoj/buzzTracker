@@ -60,12 +60,12 @@
         android:layout_marginTop="32dp"
         android:background="@drawable/cs4good_button"
         android:text="Login"
-        android:textColor="#ffffff"
         app:layout_constraintEnd_toStartOf="@+id/cancelbtn"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvPassword"
-        tools:paddingLeft="20dp"
-        tools:paddingRight="20dp"
+        android:textColor="#ffffff"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         tools:textAlignment="center" />
 
     <Button
