@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.RecyclerView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/item_list"
     android:name="lab3.cs2340.gatech.edu.lab3.CourseListFragment"
@@ -9,4 +10,4 @@
     android:layout_marginRight="16dp"
     tools:context="com.cs2340.team.buzztracker.controllers.LocationActivity"
     tools:listitem="@layout/location_list_content"
-    android:textColor="@android:color/white"/>
+    android:textColor="@color/purple" />

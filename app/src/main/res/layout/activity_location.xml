@@ -30,8 +30,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LocationTitle"
-        android:textColor="@android:color/white">
+        app:layout_constraintTop_toBottomOf="@+id/LocationTitle">
 
         <include
             layout="@layout/location_list"

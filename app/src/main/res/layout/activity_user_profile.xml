@@ -97,17 +97,18 @@
         android:backgroundTint="@android:color/white"
         android:text="TextView" />
 
-
-    <TextView
+    <Button
         android:id="@+id/tvMainScreen"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/tvUsernameDisplay"
-        android:layout_alignStart="@+id/tvUsertype"
-        android:layout_marginTop="40dp"
-        android:contentDescription="link to Main Screen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="73dp"
+        android:background="@drawable/cs4good_button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:text="Main Screen"
-        android:textColor="#985F99"
-        android:textStyle="italic" />
+        android:textAlignment="center"
+        android:textColor="#ffffff" />
 
 </RelativeLayout>
