@@ -92,7 +92,7 @@ public class AddDonationActivity extends Activity {
 
                 String validationMessage = model.validateDonationName(name, value, description);
 
-                if ("".equals(validationMessage)) {
+                if (!("".equals(validationMessage))) {
                     Toast.makeText(getBaseContext(), validationMessage, Toast.LENGTH_LONG).show();
                     validRegistration = false;
                 }
